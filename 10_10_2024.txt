@@ -1,0 +1,122 @@
+Program 01 :
+-----------
+Create a Loan class to calculate loan payments based on principal, interest rate, and duration.
+
+Class name Loan with the Instance variable double principal ,private  
+ double interestRate ,private
+ int durationMonths ,private
+1.Create a public constructor with parameters are principal,interestRate and durationMonths. To initialise the instance variable.
+Access modifier:-
+
+public
+
+If any parameter value is 0 the print "Error".
+
+2.Create a method name as calculateMonthlyPayment().Public method to calculate the monthly loan payment
+
+Access modifier:-
+public
+return type:-
+double
+3.Create a method name as getPrincipal().To get the principal amount
+
+Access modifier:-
+
+public
+
+return type:-
+
+double
+
+4.Create a method name as getInterestRate().To get the interest rate
+
+Access modifier:-
+
+public
+return type:-
+double
+
+5.Create a method name as getDurationMonths().To get the loan duration in months
+
+Access modifier:-
+public
+return type:-
+
+int
+Create a Class CheckLoan to check your functionalities of the class.Like to intialise the instance variable which is present in Loan class.
+
+Program-2
+----------
+
+Design a Movie class with attributes like title, release year, and genre.
+
+Create a class Movie (Business Logic Class)
+Instance Variables: 
+String title - private
+int releaseYear - private
+String genre - private
+
+
+Create a parameterized constructor to initialilize all the fields.
+Create getters and setters method for all the fields.
+
+Create another class Main which contains main method (ELC class) which will receive all the instance variable value from BLC class.
+Use elc class for:-
+// Accessing movie details using getters
+// Modifying movie details using setters
+// Displaying modified movie details
+
+Question-3
+--------------
+
+Create a class Employee (Business Logic Class)
+
+ Instance Variables:
+
+Names		 Type
+---------	 ----------------
+ employeeNumber : int
+
+ employeeName 	: String
+
+ employeeSalary	: double
+
+ Access Modifier  :public (for all variables)
+
+ Create a parameterized constructor to initialilize all the fields.
+ 
+ Create another class Tester (ELC class)
+
+ which contains main method  which will receive all the instance variable value from BLC class.
+
+
+ In this ELC class print the following details
+
+ a) If salary is >=60000, Print Employee is a Developer
+
+ b) If salary is >=40000 and <60000 , Print Employee is a Designer
+
+ c) If Salary is <40000 , Print Employee is a Tester
+
+
+Input:
+
+232, "Naresh Kumar", 43000
+
+
+Output:
+
+Employee is a Designer
+
+
+Instruction:
+
+Test Cases :
+========
+
+Parameterized Constructor: Checks each input parameter (name, id, fee) for validity.
+
+--> If id is negative, it sets it to 0 and prints an error message like (id must be always positive integer)
+--> If fee is negative, it sets it to 0.0 and prints an error message like (Fee cannot be negative)
+--> If name is null, it sets it to an empty string and prints an error message.(name must initialize with any default name)
+

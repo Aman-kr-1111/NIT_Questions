@@ -1,0 +1,643 @@
+Ques -1
+-----------
+Find the output of the following program
+
+public class Test
+{
+    public static void main(String[] argv)
+    {
+       byte i=10;
+       byte j = 10;
+       byte z = i * j;
+       System.out.println(z);
+
+    }
+}
+
+A. Compilation Error
+B. 100
+C. Runtime Error
+D. 20
+
+Ans : A
+
+Ques -2
+--------------
+Find the output of the following program
+public class Test
+{
+        public static void main(String[] argv)
+        {
+            int a = 1;
+		while (false) {
+			System.out.println(a);
+		}
+		System.out.println(++a);
+	      
+        }
+}
+
+A. 1 will be print infinite times
+B. 1 will be print 0 time
+C. 2 is the output
+D. Compile time error
+
+Ans : D
+
+Ques -3
+-----------
+Find the output of the following program
+
+public class Test 
+{
+      public static void main(String[] argv) 
+      {
+          int x = 5;
+	  x += 10;
+	  x = ++x + +10;
+	  System.out.println(x);
+      }
+}
+
+a. 25
+b. 26
+c. Compile time error
+d. 27
+
+Ans : b
+
+Ques -4
+-----------
+
+What will be the result of attempting to compile and run the following program?
+public class KeepOnSwitching {
+ public static void main(String[] args) {
+ final int iLoc = 3;
+ final int iFour = 4;
+ int iRef = 4;
+ switch (iRef) {
+ case 1:
+ case iLoc:
+ case 2 * iLoc:
+ System.out.println("I am not OK.");
+ default:
+System.out.println("You are OK.");
+ case iFour:
+System.out.println("It’s OK.");
+ }
+ }
+}
+Select the one correct answer.
+(a) The code will fail to compile because of the value of one of the case labels.
+(b) The code will fail to compile because of the type of the switch expression.
+(c) The code will compile correctly and will only print the following, when run:
+You are OK.
+It's OK.
+(d) The code will compile correctly and will only print the following, when run:
+It's OK.
+
+Ans : d
+
+Ques -5
+-----------
+What will be printed when the following program is run?
+public class ParameterPass {
+ public static void main(String[] args) {
+ int i = 0;
+ addTwo(i++);
+ System.out.println(i);
+ }
+ static void addTwo(int i) {
+ i += 2;
+ }
+}
+Select the one correct answer.
+(a) 0
+(b) 1
+(c) 2
+(d) 3
+
+Ans : b
+
+
+Ques -6
+-----------
+Which of these method declarations are valid declarations of the main() method
+that would be called by the JVM in order to start the execution of a Java application?
+
+Select the three correct answers.
+(a) static void main(String[] args) { /* ... */ }
+(b) public static int main(String[] args) { /* ... */ }
+(c) public static void main(String args) { /* ... */ }
+(d) static public void main(String[] arguments) { /* ... */ }
+(e) public int main(Strings[] args, int argc) { /* ... */ }
+(f) static public void main(String args[]) { /* ... */ }
+
+options:
+1)a, b 
+2)d, f
+3)c, e
+4)a, f
+
+Ans : 2
+
+Ques -7
+-----------
+Given the class
+// File name: Args.java
+public class Args {
+ public static void main(String[] args) {
+ System.out.println(args[0] + " " + args[args.length-1]);
+ }
+}
+
+what would be the result of executing the following command line?
+>java Args In politics stupidity is not a handicap
+
+Select the one correct answer.
+
+(a) The program will throw an ArrayIndexOutOfBoundsException.
+(b) The program will print "java handicap".
+(c) The program will print "Args handicap".
+(d) The program will print "In handicap".
+(e) The program will print "In a".
+
+Ans : d
+
+
+Ques -8
+-----------
+Given the following declaration:
+char c = 'A';
+What is the simplest way to convert the character value in c into an int?
+Select the one correct answer.
+(a) int i = c;
+(b) int i = (int) c;
+(c) int i = Character.getNumericValue(c);
+
+Ans : a
+
+
+Ques -9
+-----------
+What will be the result of compiling and running the following program?
+public class Assignment {
+ public static void main(String[] args) {
+ int a, b, c;
+ b = 10;
+ a = b = c = 20;
+ System.out.println(a);
+ }
+}
+Select the one correct answer.
+(a) The program will fail to compile since the compiler will report that the variable c in the multiple assignment statement a = b = c = 20; has not been initialized.
+(b) The program will fail to compile, because the multiple assignment statement
+a = b = c = 20; is illegal.
+(c) The code will compile and print 10, when run.
+(d) The code will compile and print 20, when run.
+
+Ans : d
+
+
+Ques -10
+-----------
+What is the value of the expression (1 / 2 + 3 / 2 + 0.1)?
+Select the one correct answer.
+(a) 1
+(b) 1.1
+(c) 1.6
+(d) 2
+(e) 2.1
+
+Ans : b
+
+Ques -11
+-----------
+What will be the result of compiling and running the following program?
+public class Integers {
+ public static void main(String[] args) {
+ System.out.println(0x10 + 10 + 010);
+ }
+}
+Select the one correct answer.
+(a) The program will not compile because of errors in the expression 0x10 + 10 +
+010.
+(b) When run, the program will print 28.
+(c) When run, the program will print 30.
+(d) When run, the program will print 34.
+(e) When run, the program will print 36.
+(f) When run, the program will print 101010
+
+Ans : d
+
+Ques -12
+-----------
+What is the value of evaluating the following expression (- -1-3 * 10 / 5-1)?
+Select the one correct answer.
+(a) –8
+(b) –6
+(c) 7
+(d) 8
+(e) 10
+(f) None of the above
+
+Ans : b
+
+Ques -13
+-----------
+What happens when you try to compile and run the following program?
+
+public class Prog1 {
+ public static void main(String[] args) {
+ int k = 1;
+ int i = ++k + k++ + + k; // (1)
+ System.out.println(i);
+ }
+}
+Select the one correct answer.
+(a) The program will not compile, because of errors in the expression at (1).
+(b) The program will compile and print the value 3, when run.
+(c) The program will compile and print the value 4, when run.
+(d) The program will compile and print the value 7, when run.
+(e) The program will compile and print the value 8, when run
+
+Ans : d
+
+Ques -14
+-----------
+What is the label of the first line that will cause a compile time error in the following program?
+public class MyClass {
+ public static void main(String[] args) {
+ char c;
+ int i;
+ c = 'a'; // (1)
+ i = c; // (2)
+ i++; // (3)
+ c = i; // (4)
+ c++; // (5)
+ }
+}
+Select the one correct answer.
+(a) (1)
+(b) (2)
+(c) (3)
+(d) (4)
+Ans : d
+
+Ques -15
+-----------
+Which of the following expressions evaluate to true?
+Select the two correct answers.
+(i) (false | true)
+(ii) (null != null)
+(iii) (4 <= 4)
+(iv) (!true)
+(v) (true & false)
+
+Options :
+a)i, ii
+b)ii, iii
+c)i, iv
+d)i, iii
+
+Ans : d
+
+
+Ques -16
+-----------
+Which statements are true?
+Select the two correct answers.
+(a) The remainder operator % can only be used with integral operands.
+(b) Short-circuit evaluation occurs with boolean logical operators.
+(c) The arithmetic operators *, /, and % have the same level of precedence.
+(d) A short value ranges from -128 to +127, inclusive.
+(e) (+15) is a legal expression.
+
+options:
+1)a, b
+2)a, e
+3)b, e
+4)c, d
+
+Ans : 3
+
+Ques -17
+-----------
+Which statements are true about the output from the following program?
+public class Logic {
+ public static void main(String[] args) {
+ int i = 0;
+ int j = 0;
+ boolean t = true;
+ boolean r;
+ r = (t & 0 < (i+=1));
+ r = (t && 0 < (i+=2));
+ r = (t | 0 < (j+=1));
+ r = (t || 0 < (j+=2));
+ System.out.println(i + " " + j);
+ }
+}
+Select the two correct answers.
+(a) The first digit printed is 1.
+(b) The first digit printed is 2.
+(c) The first digit printed is 3.
+(d) The second digit printed is 1.
+(e) The second digit printed is 2.
+(f) The second digit printed is 3.
+
+options:
+1)a, d
+2)b, c
+3)c, d
+4)c, f
+
+Ans : 3
+
+Ques -18
+-----------
+What will be the result of attempting to compile and run the following class?
+public class IfTest {
+ public static void main(String[] args) {
+ if (true)
+ if (false)
+ System.out.println("a");
+ else
+ System.out.println("b");
+ }
+}
+Select the one correct answer.
+(a) The code will fail to compile because the syntax of the if statement is
+incorrect.
+(b) The code will fail to compile because the compiler will not be able to determine which if statement the else clause belongs to.
+(c) The code will compile correctly and display the letter a, when run.
+(d) The code will compile correctly and display the letter b, when run.
+(e) The code will compile correctly, but will not display any output.
+
+Ans - d
+
+Ques -19
+-----------
+What, if anything, is wrong with the following code?
+void test(int x) {
+ switch (x) {
+ case 1:
+ case 2:
+ case 0:
+ default:
+ case 4:
+ }
+}
+Select the one correct answer.
+(a) The variable x does not have the right type for a switch expression.
+(b) There is nothing wrong with the code.
+(c) Each case section must end with a break statement.
+(d) The default label must be the last label in the switch statement.
+(e) The body of the switch statement must contain at least one statement.
+ 
+Ans : b
+
+Ques -20
+-----------
+Which of these combinations of switch expression types and case label value types are legal within a switch statement?
+Select the one correct answers.
+(a) switch expression of type int and case label value of type char.
+(b) switch expression of type float and case label value of type int.
+(c) switch expression of type byte and case label value of type float.
+(d) switch expression of type char and case label value of type long.
+(e) switch expression of type boolean and case label value of type boolean.
+
+Ans : a
+
+Ques -21
+-----------
+Given:
+ 4. public class Frodo {
+ 5. public static void main(String[] args) {
+ 6. short myGold = 7;
+ 7. System.out.println(countGold(myGold, 6));
+ 8. }
+ 9. }
+10. class Hobbit {
+11. static int countGold(int x, int y) { return x  + y; }
+12. }
+
+What is the result?
+ A. 13
+ B. Compilation fails due to multiple errors
+ C. Compilation fails due to an error on line 6
+ D. Compilation fails due to an error on line 7
+ E. Compilation fails due to an error on line 11
+
+Ans : D
+
+Ques -22
+-----------
+Find the output of the following program
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		byte b =2;		
+		switch(b)
+		{	case 23:
+			case -128:
+                        case  128:
+		}
+                System.out.println(b);		
+	}
+}
+
+a. No output
+b. Compile time Error
+c. 2
+
+Ans : b
+
+Ques -23
+-----------
+Find the output of the following program
+
+public class Test
+{
+    public static void main(String[] argv)
+    {
+       System.out.println(0X012+0B101+011);
+    }
+}
+
+a. Compiletime Error
+b. 30
+c. 32
+d. 34
+
+Ans : c
+
+
+Ques -24
+-----------
+Find the output of the following program
+
+public class Test
+{
+    public static void main(String[] argv)
+    {
+       System.out.println(10+5+"abc");
+       System.out.println("def"+10-5);
+    }
+}
+
+a. 105abc
+   def105
+b. 15abc
+   def5
+c. 15abc
+   def105
+d. Compiletime error
+
+Ans : d
+
+Ques -25
+-----------
+Find the output of the following program
+
+public class Test
+{
+    public static void main(String[] argv)
+    {
+          int a=1,b=2,c=4,d;
+	  d = --c+ ++a - --c+ ++b;
+	  c = d;
+	  d = --d + ++c;
+	  System.out.println(d);
+    }
+}
+
+a. 9
+b. 10
+c. 11
+d. 12
+
+Ans : d
+
+Ques -26
+-----------
+Find the output of the following program
+
+public class Test
+{
+    public static void main(String[] argv)
+    {
+                float f = 10.5f;
+		double d = (int) f;
+		f += (char)(d += f += d);
+		System.out.println(d);
+		System.out.println(f);
+    }
+}
+
+a. Compile Time Error
+b. 30 40
+c. 30.0 40.0
+d. 30.5 40.5
+
+Ans : d
+
+
+Ques - 27
+-----------
+Find the output of the following program 
+
+public class Test
+{
+    public static void main(String[] argv)
+    {
+                int i = 6;
+		long l = 7l;
+		short s = 7;
+		s += i += l += s;
+		System.out.println(s);
+		byte b = (byte) (char) (int) (i + l + s);
+		System.out.println(b);
+    }
+}
+
+a. Compile Time Error
+b. 27 61
+C. 27 60
+d. 26 63
+
+Ans : b
+
+Ques - 28
+-----------
+Find the output of the following program
+
+public class Abc {
+
+	public static void main(String[] argv) {
+
+		float f = 2.5f;
+		double d = 1.5;
+		System.out.println(++f + d++ + ++f + ++d);
+	}
+}
+
+a. Compile time error
+b. 13.0
+c. 13
+d. 13.5
+
+Ans : b
+
+Ques -29
+-----------
+public class Abc {
+
+	public static void main(String[] argv) {
+
+		int $ = 7;
+		int $_$ = 7;
+		$+=$_$-=$*=$_$/=$;
+		System.out.println($+" "+$_$);
+	}
+}
+
+a. Compile Time Error
+b. 0 0
+c. 7 0
+d. 1 1
+e. 7 1
+
+Ans : c
+
+Ques - 30
+-----------
+public class Abc {
+
+	public static void main(String[] argv) {
+
+		while (true) {
+			if (false) {
+				System.out.println(false);
+				break;
+			} else {
+				System.out.println(true);
+			}
+			return;
+		}
+		System.out.println("out of the loop");
+	}
+}
+
+a. false
+   true 
+   out of the loop
+b. false
+   out of the loop
+c. true
+d. false
+e. Compile time error
+
+Ans : c
+
+

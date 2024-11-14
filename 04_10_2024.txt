@@ -1,0 +1,33 @@
+Read the class notes and develop the programs.
+Program 01:
+-----------
+Write a Program on OOPs to define Product class properties and behaviour.
+
+properties :
+productId : int
+productName : String
+productPrice : double
+
+Initialize these properties with the help of Methods using Scanner class not by using Object reference.
+
+behavior:
+setProductData() : public void
+getProductInfo() : public void
+
+Program 02:
+-----------
+Write a Program on OOPs to define Employee class properties and behaviour.
+
+properties :
+employeeId : int
+employeeName : String
+employeeSalary : double
+
+Initialize these properties with the help of Methods using Scanner class not by using Object reference.
+
+behavior:
+setEmployeeData() : public void
+getEmployeeData() : public void
+
+
+Note : Create two more programs based on your imagination

@@ -1,0 +1,225 @@
+package om.ravisir.batch38;
+
+public class Test08 {
+	public static void main(String[] args) {
+		/*
+		 int a = 10;
+		 System.out.println(a.toString()); // not valid
+		 int x = null; //CE: not valid
+		 */
+		Integer obj1 = null;
+		Integer obj2 = new Integer(11);
+		System.out.println(obj2.toString());
+		 
+		//Converting PDT to WO
+         //Upto 1.4v 
+		 Integer obj3 = new Integer(10);
+		 Integer obj4 = Integer.valueOf(100);
+		 
+		 //From java 1.5 onwards
+		 
+		 Integer obj5 = 100; //Auto Boxing
+		 /*
+		  * Developer source code
+		  * Integer obj5 = 100; 
+		  * Compiler converted code
+		  * Integer obj5 = Integer.valueOf(100);
+		  */
+		 Byte b = 10;  //Byte.valueOf(10)
+		 Short s = 11; //Short.valueOf(11)
+		 Long l = 100L; //Long.valueOf(100L)
+		 Float f = 10.5f; //Float.valueOf(10.5);
+		 Double d = 50.5; //Double.valueOf(50.5);
+		 Character ch = 'A'; //Character.valueOf('A')
+		 Boolean bool = false; //Boolean.valueOf(false);
+		 
+		 //Converting WO to PDT
+		 //upto 1.4
+		 int a  = obj5.intValue(); 
+		 
+		 //from java 1.5+ (Unboxing)
+		 int x = obj5;        //obj5.intValue()
+		 /*
+		  * Source code
+		  * int x = obj5;
+		  * 
+		  * compiler converted code
+		  * int x = obj5.intValue()
+		  */
+		  byte b1 = b;      //b.byteValue()
+		  short s1 = s;     //s.shortValue()    .... xxxValue()
+		  
+		 Integer i1 = new Integer(100);
+		 Integer i2 = new Integer(100);
+		 
+		 System.out.println(i1==i2);
+		 System.out.println(i1.equals(i2));
+		 
+		 Integer i3 = Integer.valueOf(100);
+		 Integer i4 = Integer.valueOf(100);
+		 
+		 System.out.println(i3==i4);
+		 System.out.println(i3.equals(i4));	 
+		
+	}
+}
+=========================================================
+package om.ravisir.batch38;
+
+import java.util.Scanner;
+
+public class Test10 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a num : ");
+		int num = sc.nextInt(); // 1
+		Integer obj = num;
+		switch (obj) { // obj.intValue();
+		case 1:
+			System.out.println("Case 1 : " + obj);
+			break;
+		case 2:
+			System.out.println("Case 2 : " + obj);
+			break;
+		default:
+			System.out.println("Default");
+		}
+	}
+}
+
+output:- 
+Case 1 : 1
+
+================================================================
+package om.ravisir.batch38;
+
+import java.nio.file.spi.FileSystemProvider;
+
+public class Test11 {
+public static void main(String[] args) {
+	//Integer pooling --> Object Pooling  -> cache(pre occupied memory)
+	/* (-128   to  127  = 256 (byte range))
+	 * 
+	 * Pool
+	 * ======
+	 * 1000x : value = 100    
+	 * 
+	 */
+	Integer i1 = 100; //Integer.valueOf(100) //1000x : value = 100
+	Integer i2 = 100; //Integer.valueOf(100) //1000x
+	
+	System.out.println("i1==i2: "+(i1==i2));  
+    System.out.println(i1.equals(i2));
+	
+	System.out.println(System.identityHashCode(i1));
+	System.out.println(System.identityHashCode(i2));
+	
+	Integer i3 = new Integer(100);
+	Integer i4 = new Integer(100);
+	
+	System.out.println("i3==i4: "+(i3==i4));  //false
+	System.out.println(System.identityHashCode(i3));
+	System.out.println(System.identityHashCode(i4));
+	
+	Integer i5 = Integer.valueOf(100);
+	Integer i6 = Integer.valueOf(100);
+	System.out.println("i5==i6: "+(i5==i6));  //true
+	System.out.println(System.identityHashCode(i5));
+	System.out.println(System.identityHashCode(i6));
+}
+}
+
+output:-
+
+==================================================================
+package om.ravisir.batch38;
+
+import java.util.Enumeration;
+
+public class Test12 {
+	public static void main(String[] args) {
+
+		Integer i1 = 100;
+		Integer i2 = 100;
+		System.out.println(i1 == i2); // true
+		System.out.println(i1.equals(i2));
+		System.out.println(System.identityHashCode(i1));
+		System.out.println(System.identityHashCode(i2));
+		Integer i3 = -128;
+		Integer i4 = -128;
+
+		System.out.println(i3 == i4);
+		System.out.println(i3.equals(i4));
+		System.out.println(System.identityHashCode(i3));
+		System.out.println(System.identityHashCode(i4));
+
+		Character.valueOf('a');
+
+	}
+}
+===========================================================================
+package om.ravisir.batch38;
+
+public class Test13 {
+  public static void main(String[] args) { 
+	Integer i1 = 100; // i1 : 1000x : value : 100
+	Integer i2 = 101; //2000x : value : 101
+	System.out.println("Before modification");
+	System.out.println(i1);//100
+	System.out.println(System.identityHashCode(i1));//1000x
+	
+	 ++i1; //++i1.intValue();  //Integer.valueOf(101) //i1:  2000x : value : 101   
+	System.out.println("After modification...");
+	System.out.println(i1);//101
+	System.out.println(System.identityHashCode(i1));//2000x	
+}
+}
+=================================================================================
+package om.ravisir.batch38;
+//setter -> mutator
+//getter -> accessor
+//Imutable class without accepting any modication
+final class CustomImutable {
+	private final int x;
+	
+	public CustomImutable(int x) {
+	this.x = x;
+	}
+
+	public int getX() {
+		return x;
+	}
+}
+//2. Imutable Object which accepts modification(Example: Integer, String...)
+ class ModifiableImmutableClass {
+	 private final int x;
+	 ModifiableImmutableClass(int x) {
+		 this.x = x;
+	 }
+	 public int getX() {
+		 return x;
+	 }
+	 public ModifiableImmutableClass modify(int newValue) {
+		return new ModifiableImmutableClass(newValue);
+	 } 
+ }
+
+public class Test14 {
+  public static void main(String[] args) {
+      CustomImutable  c1= new CustomImutable(10);
+      System.out.println(c1.getX());
+      
+      ModifiableImmutableClass m = new ModifiableImmutableClass(100);
+      System.out.println(m.getX());
+      System.out.println(m);
+      m = m.modify(200);
+      System.out.println(m.getX());
+      System.out.println(m);
+      
+      Integer i = Integer.valueOf(101);
+      Integer o = Integer.valueOf("13",20);  // 1*20^1 + 3*20^0
+      System.out.println(o);
+      
+}
+}
+

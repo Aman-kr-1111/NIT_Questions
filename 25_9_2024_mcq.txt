@@ -1,0 +1,438 @@
+Practise:
+Q1.
+ byte b1 = 10;
+ byte b2 = 20;
+ System.out.println(b1+b2);//30
+------------------------------------
+Q2.
+ byte b1 = 10;
+ byte b2 = 20;
+ byte result = b1 + b2; //error
+ System.out.println(b1+b2);
+------------------------------------
+Q3.
+ byte b1 = 10;
+ byte b2 = 20;
+ byte result = (byte)b1 + b2;  //error
+ System.out.println(result);
+ -----------------------------------
+Q4.
+ byte b1 = 10;
+ byte b2 = 20;
+ byte result = (byte)b1 + (byte)b2; /error
+ System.out.println(result);
+-------------------------------------
+Q5.
+ byte b1 = 10;
+ byte b2 = 20;
+ byte result = (byte)(b1 + b2);
+ System.out.println(result); //30
+ -----------------------------------
+ Q6.
+ byte b1 = 10;
+ byte b2 = 20;
+ byte result = 10+20;
+ System.out.println(result); //30
+ -----------------------------------
+ Q7.
+ byte b1 = 10;
+ byte b2 = 20;
+ byte result = 110+120;//error
+ System.out.println(result);
+ ----------------------------------------
+ Q8.
+ byte b1 = 10;
+ byte b2 = 20;
+ byte result = 10+20;
+ System.out.println(result);//30
+ -------------------------------------------
+ Q9.
+ byte b1 = 10L;//error
+ byte b2 = 20;
+ byte result = b1+b2;
+ System.out.println(result);
+ ----------------------------------------
+ Q10.
+ byte b1 = (byte)10L;
+ byte b2 = 20;
+ byte result = b1+b2; //error
+ System.out.println(result);
+ ------------------------------------
+ Q11.
+ byte b1 = (int)10L;
+ byte b2 = 20;
+ byte result = b1+b2;//error
+ System.out.println(result);
+ -------------------------------------
+ Q12.
+ long b1 = 10L;
+ byte b2 = b1;//error
+ byte result = b1+b2;
+ System.out.println(result);
+ --------------------------------------
+ Q13.
+ long b1 = 10L;
+ byte b2 = (byte)b1;
+ byte result = b1+b2;//error
+ System.out.println(result);
+ --------------------------------------
+ Q14.
+ long b1 = 10L;
+ byte b2 = (int)b1;//error
+ byte result = b1+b2;
+ System.out.println(result);
+ ----------------------------------
+ Q15.
+ byte b1 = 10;
+ byte b2 = 20;
+ byte result = b1 + 20;//error
+ System.out.println(result);
+
+---------------------------------
+Q16.
+ final byte b1 = 10;
+ byte b2 = b1+10;
+ byte result = b2;
+ System.out.println(result);//20
+ ----------------------------------
+ Q17.
+ final byte b1 = 10;
+ final byte b2 = 20;
+ byte result = b1 + b2;
+ System.out.println(result);//30
+ ------------------------------------
+ Q18.
+ final byte b1;
+ final byte b2;
+ b1= 10;
+ b2= 20;
+ byte result = b1 + b2;//error
+ System.out.println(result);
+ ----------------------------------------
+ Q19.
+ int i1 = 10;
+ int i2 = 20;
+ int result = i1+i2;
+ System.out.println(result);//30
+----------------------------------------
+ Q20.
+ int i1 = 10;
+ String i2 = "20";
+ int result = i1+i2;//error
+ System.out.println(result);
+ -----------------------------------------
+ Q21.
+ int i1 = 10;
+ String i2 = "20";
+ String result = i1+i2;
+ System.out.println(result);//1020
+ -----------------------------------------
+ Q22.
+ String i1 = "10"+"JB";
+ String i2 = "20";
+ String result = i1+i2;
+ System.out.println(result);// 10JB20
+-----------------------------------------
+ Q23.
+ int i1 = "10";//error
+ String i2 = "20";
+ String result = i1+i2;
+ System.out.println(result);
+ -----------------------------------------
+ Q24.
+ int i1 = "10";//error
+ String i2 = "20";
+ String result = i1-i2;
+ System.out.println(result);
+ -----------------------------------------
+ Q25.
+ String i1 = "10";
+ String i2 = "20";
+ String result = i1*i2;//error
+ System.out.println(result);
+-----------------------------------------
+ Q26.
+ String i1 = "10";
+ String i2 = "20";
+ String result = i1/i2;//error
+ System.out.println(result);
+-----------------------------------------
+ Q27.
+ String i1 = "10";
+ String i2 = "20";
+ String result = i1%i2;//error
+ System.out.println(result);
+ -----------------------------------------
+ Q28.
+ char i1 = "10";//error
+ String i2 = "20";
+ String result = i1+i2;
+ System.out.println(result);
+ -------------------------------------------
+ Q29.
+ char i1 = '10';//error
+ String i2 = "20";
+ String result = i1+i2;
+ System.out.println(result);
+ ----------------------------------------
+ Q30.
+ char i1 = 'A';
+ String i2 = "20";
+ String result = i1+i2;
+ System.out.println(result);//A20
+ ---------------------------------------
+ Q31.
+ char i1 = 'A';
+ char i2 = "A";//error
+ String result = i1+i2;
+ System.out.println(result);
+ ----------------------------------------
+ Q32.
+ char i1 = 'J';
+ char i2 = 'B';
+ char result = i1+i2;//error
+ System.out.println(result);
+ ----------------------------------------
+ Q33.
+ char i1 = 'J';
+ char i2 = 'B';
+ String result = i1+i2;//error
+ System.out.println(result);
+ ----------------------------------------
+ Q34.
+ char i1 = (char)"J";//error
+ char i2 = 'B';
+ char result = i1+i2;
+ System.out.println(result);
+ -------------------------------------------
+ Q35.
+ char i1 = (char)"J";//error
+ char i2 = (char)"B";
+ char result = i1+i2;
+ System.out.println(result);
+ -------------------------------------------
+ Q36.
+ char i1 = (char)'J';
+ char i2 = (char)'B';
+ char result = i1+i2;//error
+ System.out.println(result);
+ -------------------------------------------
+ Q37.
+ char i1 = (int)'J';
+ char i2 = (int)'B';
+ char result = i1+i2;//error
+ System.out.println(result);
+ -------------------------------------------
+ Q38.
+ char i1 = (int)'J';
+ char i2 = (int)'B';
+ int result = i1+i2;
+ System.out.println(result);//140
+ -------------------------------------------
+ Q39.
+ char i1 = (int)'J';
+ char i2 = (int)'B';
+ char result = (int)(i1+i2);//error
+ System.out.println(result);
+ -------------------------------------------
+ Q40.
+ char i1 = ()'J';
+ char i2 = ()'B';
+ char result = i1+i2;//error
+ System.out.println(result);
+ -----------------------------------------
+ Q41.
+ char i1 = ()'J';//error
+ char i2 = ()'B';
+ int result = (char)i1+i2;
+ System.out.println(result);
+ -------------------------------------------
+ Q42.
+ char i1 = 65;
+ char i2 = 65;
+ char result = i1+i2;//error
+ System.out.println(result);
+ -------------------------------------------
+ Q43.
+ char i1 = 'a';
+ char i2 = 'b';
+ char result = (char)(i1+i2);
+ System.out.println(result);//Ã
+ -------------------------------------------
+ Q44.
+ char i1 = 65;
+ char i2 = 65;
+ char result = i1+i2;//error
+ System.out.println((int)result);
+ -------------------------------------------
+ Q45.
+ char i1 = 65;
+ char i2 = 65;
+ char result = i1+i2;//error
+ System.out.println(result);
+ -------------------------------------------
+ Q46.
+ String i1 = "";
+ char i2 = 65;
+ System.out.println(i1+i2);//A
+ -------------------------------------------
+ Q47.
+ String i1 = "";
+ String i2 = ""+10+20+'A';
+ System.out.println(i1+i2);//1020A
+ -------------------------------------------
+ Q48.
+ String s1 = 10+20;//error
+ String s2 = "";
+ String result = s1+s2;
+ System.out.println(result);
+ -------------------------------------------
+ Q49.
+ String s1 = 10+20+"";
+ String s2 = "";
+ String result = s1+s2;
+ System.out.println(result);//30
+ -------------------------------------------
+ Q50.
+ String s1 = "";
+ String s2 = "";
+ String result = s1+s2;
+ System.out.println(result);//blank screen
+ -------------------------------------------
+ Q51.
+ int s1 = "";//error
+ String s2 = "A";
+ String result = s1+s2;
+ System.out.println(result);
+-------------------------------------------
+ Q52.
+ int s1 = 10;
+ int s2 = 20;
+ String s3 = s1+s2;//error
+ System.out.println(result);
+ -------------------------------------------
+ Q53.
+ int s1 = 10;
+ int s2 = 20;
+ String s3 = "s1"+s2;
+ System.out.println(s3);//s120
+ -------------------------------------------
+ Q54.
+ int s1 = 10;
+ int s2 = 20;
+ String s3 = "s1"+"s2";
+ System.out.println(s3);//s1s2
+-------------------------------------------
+ Q55.
+ int s1 = 10;
+ int s2 = 20;
+ String s3 = "s1+s2";
+ System.out.println(s3);//s1+s2
+-------------------------------------------
+Q56.
+ int s1 = 10;
+ int s2 = 20;
+ String s3 = s1+s2+"s1+s2";
+ System.out.println(s3);//30s1+s2
+ -------------------------------------------
+Q57.
+ int s1 = 10;
+ int s2 = 20;
+ String s3 = "s1+s2"+s1+s2;
+ System.out.println(s3);//s1+s21020
+  -------------------------------------------
+Q58.
+ int s1 = 10;
+ int s2 = 20;
+ String s3 = "s1+s2"+(s1+s2);
+ System.out.println(s3);//s1+s230
+   -------------------------------------------
+Q59.
+ int s1 = 10;
+ int s2 = 20;
+ String s3 = "s1+s2"+(s1-s2);
+ System.out.println(s3);//s1+s2-10
+    -------------------------------------------
+Q60.
+ int s1 = 10;
+ int s2 = 20;
+ String s3 = "s1-s2"+(s1-s2);
+ System.out.println(s3);//s1-s2-10
+    -------------------------------------------
+Q61.
+ int s1 = 10;
+ int s2 = 20;
+ System.out.println(22/7*s1*s2);//600
+ ---------------------------------------------
+Q62.
+ int s1 = 22;
+ int s2 = 7;
+ int s3 = 10;
+ int s4 = 10;
+ System.out.println(s1/s2*s1*s2);//462
+ ---------------------------------------------
+Q63.
+ int s1 = 0;
+ int s2 = 7;
+ System.out.println(s1/s2);//0
+  ---------------------------------------------
+Q64.
+ int s1 = 0;
+ int s2 = 1;
+ System.out.println(s1/s2);//0
+  ---------------------------------------------
+Q65.
+ int s1 = 0;
+ int s2 = 1;
+ System.out.println(s2/s1);//error
+   ---------------------------------------------
+Q66.
+ int s1 = 2;
+ int s2 = 1;
+ System.out.println(s1/s2);//2
+   ---------------------------------------------
+Q67.
+ int s1 = 0;
+ int s2 = 1;
+ System.out.println(s2/s1);//error
+   ---------------------------------------------
+Q68.
+ int s1 = 0;
+ int s2 = 0;
+ System.out.println(s1/s2);//error
+-----------------------------------------------------
+ Q69.
+ int s1 = 2;
+ int s2 = 1;
+ System.out.println(s2/s1);//0
+ -----------------------------------------------------
+ Q70.
+ double s1 = 0.0;
+ int s2 = 1;
+ System.out.println(s1/s2);//0.0
+ -----------------------------------------------------
+ Q71.
+ double s1 = 0.0;
+ double s2 = 1.0;
+ System.out.println(s2/s1);// Infinity
+   ---------------------------------------------
+ Q72.
+ double s1 = 0.0;
+ int s2 = 1;
+ System.out.println(s2/s1);//// Infinity
+    ---------------------------------------------
+ Q73.
+ double s1 = 1.0;
+ int s2 = 0;
+ System.out.println(s1/s2);//// Infinity
+    ---------------------------------------------
+ Q74.
+ double s1 = -1.0;
+ int s2 = 0;
+ System.out.println(s2/s1);//-0.0
+    ---------------------------------------------
+ Q75.
+ int s1 = 0;
+ int s2 = 0;
+ System.out.println(s1/s2);//error
+===================================================================

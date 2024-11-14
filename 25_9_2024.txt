@@ -1,0 +1,152 @@
+Que-1) Write a java program to calculate the curved surface area of a cube?
+ Formula-4*side Square.
+
+Que-2) write a java program to calculate the total surface area of a cylinder? 
+ Formula- 2 pi square r * 2 pi r h (take the pi as 3.14).
+
+Que-3) write a Java program to calculate compound interest for 3 years? 
+ Formula- amount=principle*((1+rate/100)*(1+rate/100)*(1+rate/100));
+
+Que-4) write Java Program Convert Fahrenheit To Celsius | Vice Versa
+ Formula-
+ Celsius=(Fahrenheit-32)*5/9;
+ Fahrenheit=((9*Celsius)/5)+32;
+ Note [ Write two seprate program for converting celsius into 
+Fahrenheit
+ and Fahrenheit into celsius ]
+
+Que-5) 
+--------------------------------------------------------------
+public class Literals_Integers 
+ {
+ public static void main (String args[])
+ {
+ int decimal_int=1234;
+ int octal_int=077;
+ int hexadec_int=0x1ff2;
+ int binary_int=0b1010101;
+ System.out.println("This is a Decimal Literal: "+decimal_int);
+ System.out.println("This is an Octal Literal: "+octal_int);
+ System.out.println("This is a Hexa Decimal Literal: "+hexadec_int);
+ System.out.println("This is a Binary Literal: "+binary_int);
+ }
+ }
+[What will be the output of the above program]
+
+This is a Decimal Literal: 1234
+This is an Octal Literal: 63
+This is a Hexa Decimal Literal: 8178
+This is a Binary Literal: 85
+
+
+_________________________________________________________________________
+Que-6) 
+--------------------------------------------------------------
+public class Literals_Float
+{
+ public static void main (String args[])
+ {
+ float val_float=1.7732f;
+ double val_double=1.7732d;
+ float val_exponent=123E4f;
+ System.out.println("This is a Floating Point Literal"+val_float);
+ System.out.println("This is a Decimal Literal"+val_double);
+ System.out.println("This is an Exponential 
+Literal"+val_exponent);
+ }
+} 
+[What will be the output of the above program]
+
+This is a Floating Point Literal1.7732
+This is a Decimal Literal1.7732
+This is an Exponential Literal1230000.0
+
+_________________________________________________________________________
+_________________________________________________________________________
+_
+Que-7)
+---------------------------------------------------------------
+public class AutomaticTypeConversion
+{
+ public static void main (String args[])
+ {
+ int intVariable = 100;
+ long longVariable = intVariable;
+ float floatVariable = longVariable;
+ System.out.println ("Integer Value is : " + intVariable);
+ System.out.println ("Float Value is : " + floatVariable);
+ System.out.println ("Long Value is : " + longVariable);
+ }
+}
+[What will be the output of the above program]
+
+Integer Value is : 100
+Float Value is : 100.0
+Long Value is : 100
+
+_________________________________________________________________________
+__
+Que-8)
+---------------------------------------------------------------
+public class ExplicitTypeCasting
+{
+ public static void main (String[]args)
+ {
+ double doubleVariable = 100.04;
+ long longVariable = (long) doubleVariable;
+ int intVariable = (int) longVariable;
+ System.out.println ("Double Value is : " + doubleVariable);
+ System.out.println ("Long Value is : " + longVariable);
+ System.out.println ("Integer Value is : " + intVariable);
+ }
+}
+[What will be the output of the above program]
+
+Double Value is : 100.04
+Long Value is : 100
+Integer Value is : 100
+________________________________________________________________________
+Que-9)
+----------------------------------------------------------------
+class Sample
+{
+ public static void main(String[] args) 
+ {
+ int a=10;
+ float b=4.5f;
+ double c=5.2;
+ long d=(long)-8.98;
+System.out.println(a);
+System.out.println(b); 
+System.out.println(c); 
+System.out.println(d);
+}
+}
+[What will be the output of the above program]
+
+10
+4.5
+5.2
+-8
+
+_________________________________________________________________________
+____
+Que-10)
+---------------------------------------------------------------
+public class Sample {
+public static void main(String[] args) {
+int a=10;
+float b=4.5f;
+double c=5.2;
+long d=378293L;
+ long e=(long)-8.98;
+System.out.println(a);
+System.out.println(b); 
+System.out.println(c); 
+System.out.println(d);
+ System.out.println(e);
+Sample.main("java"); //error
+}
+}
+
+________________________________________________________________________

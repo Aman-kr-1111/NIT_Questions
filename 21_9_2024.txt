@@ -1,0 +1,29 @@
+Program 01:
+-----------
+Write a  program in Java that will generate and print the bill at Dominos for four chicken rolls (@ Rs 60 per chicken rolls) and three vegetable puffs (@ Rs 25 per vegetable puffs). There is a special discount of Rs 50 on the final bill amount. Calculate and print final bill as well as all item bill.
+
+Program 02:
+-----------
+Write a Java program to check if a given number is a palindrome. A number is a palindrome if it remains the same when its digits are reversed.
+
+
+Program 03:
+----------
+Write a program in Java to display the following pattern on the screen without using loop.
+@@@@@@@@
+@      @
+@      @
+@      @
+@      @
+@      @
+@@@@@@@@
+
+Program 04:
+-----------
+Write a program to input the basic salary of a person. He gets 15% of the basic as HRA, 15% of the basic as Conveyance allowance and 10% of the basic as Entertainment allowance. The total salary is calculated by adding Basic + HRA + Conveyance + Entertainment Allowance. Calculate and print the total salary of person.
+Take the Basic Salary from Command Line Argument
+
+Program 05 :
+-------------
+Write a program in java to Fahrenheit to Celsius Program
+Formula is :-  celsius=((fahrenheit-32)*5)/9;

@@ -1,0 +1,393 @@
+
+1. What is the output of following code?
+class Test 
+{
+int a ;
+Test()
+{
+System.out.println("Constructor");
+}
+
+{
+System.out.println("Non-static block");
+}
+public static void main(String[] args) {
+System.out.println("main method");
+new Test();
+}
+}
+//output
+main method
+Non-static block
+Constructor
+
+2. what is the output of following code?
+class Test 
+{
+public static void main(String[] args)
+{
+Test t=new Test();
+t.fun();
+}
+void fun()
+{
+System.out.println("User method...");
+}
+}
+//output
+User method...
+
+3. What is the output of following code?
+class Test {
+public static void main(String[] args) {
+new Test();
+}
+Test()
+{
+System.out.println("Constructor");
+}
+}
+//output
+Constructor
+
+4. What is the output of following code?
+class Test
+{
+Test()
+{
+System.out.println("Object initialization process. ..");
+}
+{
+System.out.println("Object creation process... ");
+}
+public static void main(String[] args)
+{
+new Test();
+new Test();
+new Test();
+}
+}
+//output
+Object creation process... 
+Object initialization process. ..
+Object creation process... 
+Object initialization process. ..
+Object creation process... 
+Object initialization process. ..
+
+
+5. What is the output of following code?
+public class Test
+{
+static
+{
+}
+{
+}
+System.out.println("static block is executed");
+System.out.println(this);
+System.out.println( Non-static block is executed );
+public static void main(String[] args) {
+System.out.println( main );
+}
+}
+//output :- compile time error
+
+6. What is the output of following code?
+class Test
+{
+Test( )
+{
+System.out.println(this);
+System.out.println(this.hashCode());
+}
+public static void main(String args[ ])
+{
+new Test( );
+}
+}
+//output
+oct21.mcq.Test1@4ae82894
+1256728724
+
+7. What is the output of following code?
+class Test
+{
+int a ;
+public static void main(String args[ ])
+{
+new Test();
+}
+{
+System.out.println(this.a);
+this.a = 100 ;
+}
+Test()
+{
+System.out.println(this.a);
+}
+}
+//output
+0
+100
+
+8. What is the output of following code?
+class Test
+{
+Test( )
+{
+System.out.println("Object address inside constructor : "+this);
+}
+public static void main(String args[ ])
+{
+Test obj = new Test();
+System.out.println("Object address inside main : "+obj);
+}
+}
+//output
+Object address inside constructor : oct21.mcq.Test1@1da51a35
+Object address inside main : oct21.mcq.Test1@1da51a35
+
+9. What is the output of following code?
+class Employee
+{
+int eno ;
+String ename ;
+float esal ;
+public static void main(String[] args)
+{
+Employee e = new Employee();
+System.out.println("Eno : "+e.eno);
+System.out.println("Ename : "+e.ename);
+System.out.println("Esal : "+e.esal);
+}
+}
+//output
+Eno : 0
+Ename : null
+Esal : 0.0
+
+10.What is the output of following code?
+class Test 
+{
+int a;
+}
+{
+Test obj = new Test();
+System.out.println(a);
+public static void main(String[] args) {
+Test obj=new Test();
+System.out.println(obj);
+}
+}
+//output :- compile time error
+
+11. What is the output of following code?
+class Test 
+{
+int a;
+{
+Test obj = new Test();
+System.out.println(a);
+}
+public static void main(String[] args)
+{
+Test obj=new Test();
+System.out.println(obj);
+}
+}
+//output :- StackOverflowError
+
+12. What is the output of following code?
+class Laptop
+{
+void access()
+{
+System.out.println("Copy java soft copies... ");
+}
+}
+class Faculty
+{
+static Laptop password = new Laptop();
+}
+class Student
+{
+public static void main(String[] args)
+{
+Faculty.password.access();
+}
+}
+//output :- Copy java soft copies... 
+
+13. Write a java program how many objects can be created for a class?
+class Example
+{
+int x=10;
+int y=20;
+public static void main(String[] args)
+{
+Example e1=new Example();
+Example e2=new Example();
+System.out.println(e1.x+" ..."+e1.y);
+System.out.println(e2.x+" ..."+e2.y);
+}
+}
+//output
+10...20
+10...20
+
+14. Write a java program creating multiple objects and modifying their
+values?
+class Example
+{
+int a=10;
+int b=20;
+public static void main(String[] args)
+{
+Example e1=new Example();
+Example e2=new Example();
+System.out.println(e1.a+". .."+e1.b);
+System.out.println(e2.a+". .."+e2.b);
+e1.a=50;
+e2.b=60;
+System.out.println(e2.a+". .."+e2.b);
+System.out.println(e2.a+". .."+e2.b);
+}
+}
+//output
+10...20
+10...20
+10...60
+10...60
+
+15. Write a java program to show overriding toString() method to print
+object data?
+
+class Example
+{
+int eid;
+String ename;
+String company;
+public String toString(){
+return
+"eid:"+eid+"\n"+"ename:"+ename+"\n"+"company:"+company+"\n";
+}
+public static void main(String[] args)
+{
+Example e1=new Example();
+e1.eid=7279;
+e1.ename="Ganesh";
+e1.company="Naresh IT";
+System.out.println(e1);
+}
+}
+//output
+eid:7279
+ename:Ganesh
+company:Naresh IT
+
+16. Write a java program shows creating class with static and non-static
+variables and their modifications?
+class Example
+{
+static int a=10;
+static int b=20;
+int x=30;
+int y=40;
+public static void main(String[] args)
+{
+Example e1=new Example();
+Example e2=new Example();
+Example e3=null;
+e1.a=50;
+e1.b=60;
+e1.x=70;
+e1.y=80;
+}
+}
+//No output
+
+17. Write a java program can we create object without having non-static
+variable in the class?
+class Test
+{
+void m1(){
+System.out.println("m1() method");
+}
+public static void main(String[] args)
+{
+System.out .println("main method");
+Test t=new Test();
+t.m1();
+}
+}
+//output
+main method
+m1() method
+
+18. Write a java program to modifying current and argument objects in the single method?
+class Test
+{
+int x;
+int y;
+void m1(Test t){
+x=x+1;
+y=y+2;
+t.x=t.x+3;
+t.y=t.y+4;
+}
+public static void main(String[] args)
+{
+Test1 t1 = new Test1();
+Test1 t2 = new Test1();
+t1.m1(t2);
+System.out.println(t1.x + "... " + t1.y);// 1 2
+System.out.println(t2.x + "... " + t2.y);// 3 4
+t2.m1(t1);
+System.out.println(t1.x + "... " + t1.y);// 4 6
+System.out.println(t2.x + "... " + t2.y);// 4 6
+t1.m1(t1);
+System.out.println(t1.x + "... " + t1.y);// 8 12
+System.out.println(t2.x + "... " + t2.y);// 4 6
+t2.m1(t2);
+System.out.println(t1.x + "... " + t1.y);// 8 12
+System.out.println(t2.x + "... " + t2.y);// 8 12
+}
+}
+
+19. Write a java program to calling method by passing object reference?
+class Test
+{
+int x;
+int y;
+void m1(Test t)
+{
+System.out.println("\t t:"+t);
+t=new Test();
+System.out.println("\t t:"+t);
+}
+public static void main(String[] args)
+{
+Test t1=new Test();
+Test t2=new Test();
+System.out.println("t2:"+t2);
+t1.m1(t2);
+System.out.println("t2:"+t2);
+}
+}
+
+20. write a Java program to demonstrate non-static variables ?
+class Test
+{
+int a = 10;
+public static void main(String[] args)
+{
+Test t = new Test();
+System.out.println("Non static variable"+ " accessed using instance"
++ " of a class");
+System.out.println("Non Static variable "+ t.a);
+}
+}
+//output
+Non static variable accessed using instance of a class
+Non Static variable 10

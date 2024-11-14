@@ -1,0 +1,95 @@
+Create a Vehicle Class:
+
+Attributes:
+String vehicleModel
+String licensePlate
+String color
+double engineCapacity
+
+Methods:
+void setVehicleDetails(String vehicleModel, String licensePlate, String color, double engineCapacity)
+String getVehicleDetails(): Returns a formatted string with vehicle information.
+
+Take another ELC class TestVehicle which is having main method and create instance and call the method and  pass the argument by using Scanner Class.
+
+Q-2)
+----
+Owner Class:
+Attributes:
+
+String ownerName
+int ownerId
+String address
+Methods:
+
+void setOwnerDetails(String ownerName, int ownerId, String address)
+String getOwnerDetails(): Returns a formatted string with owner information.
+
+Take another ELC class TestOwner which is having main method and create instance and call the method and  pass the argument by using Scanner Class.
+
+Q-3)
+----
+Registration Class:
+Attributes:
+
+Vehicle vehicle
+Owner owner
+String registrationDate
+Methods:
+
+void setRegistrationDetails(Vehicle vehicle, Owner owner, String registrationDate)
+String getRegistrationDetails(): Returns a formatted string with registration information.
+
+Take another ELC class TestRegistration which is having main method and create instance and call the method and  pass the argument by using Scanner Class.
+
+Q-4)
+----
+Planet Class:
+Attributes:
+
+String planetName
+double mass (in kilograms)
+double radius (in kilometers)
+Methods:
+
+void setPlanetDetails(String planetName, double mass, double radius)
+String getPlanetDetails(): Returns a formatted string with planet information.
+
+Take another ELC class TestPlanet which is having main method and create instance and call the method and  pass the argument by using Scanner Class.
+
+
+
+Q5)
+-----
+Inventory Class:
+Attributes:
+
+Game game
+Developer developer
+int stockQuantity
+Methods:
+
+void setInventoryDetails(Game game, Developer developer, int stockQuantity)
+String getInventoryDetails(): Returns a formatted string with inventory information.
+4. InventoryApp Class:
+Functionality:
+Use the Scanner class to take user input for game, developer, and inventory details.
+Initialize Game, Developer, and Inventory objects by passing the inputs to their respective methods.
+Display the inventory details after initialization.
+
+Q-6)
+-----
+ElectricVehicle Class:
+Attributes:
+
+String vehicleModel
+String licensePlate
+double batteryCapacity (in kWh)
+double rentalPricePerHour
+Methods:
+
+void setElectricVehicleDetails(String vehicleModel, String licensePlate, double batteryCapacity, double rentalPricePerHour)
+String getElectricVehicleDetails(): Returns a formatted string with vehicle information.
+
+Take another ELC class TestVehicle which is having main method and create instance and call the method and  pass the argument by using Scanner Class.
+

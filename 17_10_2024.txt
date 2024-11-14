@@ -1,0 +1,106 @@
+1. What is the output of following Program? Create Heap and Stack 
+diagram for the following Program. 
+class Customer
+{
+private String name;
+private int id;
+public Customer(String name , int id)
+{
+this.name=name;
+this.id=id;
+}
+public void setId(int id) //setter 
+{
+this.id=id;
+}
+public int getId() //getter
+{
+return id;
+}
+}
+class Test 
+{
+public static void main(String[] args) 
+{
+int val=100;
+Customer c = new Customer("Ravi",2);
+m1(c);
+//GC
+System.out.println(c.getId());
+}
+public static void m1(Customer c)
+{
+c.setId(5);
+c = new Customer("Rahul",7);
+c.setId(9);
+System.out.println(c.getId());
+}
+}
+
+2 What is the output of following Program? Create Heap and Stack 
+diagram for the following Program. 
+
+public class Employee
+{
+int id=100;
+public static void main(String[] args) 
+{
+int val=200;
+Employee e1 = new Employee();
+e1.id=val;
+update(e1);
+System.out.println(e1.id);
+ Employee e2 = new Employee(); 
+e2.id=500;
+switchEmployees(e2,e1);
+ //GC 
+System.out.println(e1.id);
+ System.out.println(e2.id);
+ } 
+public static void update(Employee e)
+{
+ e.id=900;
+e=new Employee();
+e.id=400;
+}
+public static void switchEmployees(Employee e1,Employee e2)
+ {
+int temp=e1.id;
+e1.id=e2.id;
+e2= new Employee();
+e2.id=temp;
+ }
+ }
+
+Create HEAP and STACK Diagram for the following program?
+---------------------------------------------------------
+Program 03 :
+-------------
+public class Sample
+{	
+	private Integer i1 = 900;
+	public static void main(String[] args) 
+	{
+		Sample s1 = new Sample();
+
+		Sample s2 = new Sample();
+
+		Sample s3 = modify(s2);
+
+		s1=null;
+                //GC 
+		System.out.println(s2.i1);
+	}
+	public static Sample modify(Sample s)
+	{
+		s.i1=9;
+		s = new Sample();
+		s.i1= 20;  
+        System.out.println(s.i1);
+		s=null;
+		return s;
+	}
+}
+
+
+

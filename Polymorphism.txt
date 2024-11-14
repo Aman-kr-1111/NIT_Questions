@@ -1,0 +1,524 @@
+What is polymorphism?
+  -> Poly -> multiple
+  -> Morphism -> forms(diff behaviour / different implementation)
+
+  - It is one of OO principle
+  - It suggest to provide multiple implementations to the same operation of an object.
+  - The process of providing multiple implementation to an operation to execute diff behaviours of an object based on the sub type and argument is called polymorphism.
+  
+    Examples : 
+   -------------
+         1. Playground                    -> play() ---> everyone is playing game
+               -> CricketPlayground       -> play() --> playing cricket
+               -> FootballPlaygrond       -> play() --> playing football
+               -> HokeyPlaygraound        -> play() --> playing hokey
+ 
+
+         2. Person behaviour
+               -> eat(Rice)
+               -> eat(Burger)
+               -> eat(Pizza)
+               -> eat(Chapati)
+
+
+
+Based on sub type:
+
+ Bank  
+=====================================================
+  deposit()
+  withdraw()
+  currentBalance()
+
+
+
+
+Based on method arguments:
+     deposit()
+
+-> Two ways we can achieve polymorphism:
+     1. Method overloading  -> changing the parameters of a method
+        (Compile time Polymorphism/ static binding/ Early binding
+
+     2. Method overriding   -> changing the logic from parent class to child 
+                               class.
+
+
+
+Sample Program(MOL & MOR):
+---------------------------
+- What is method overloading?
+  Defining multiple methods with same name but with diff parameters type or list or order is called method overloading.
+
+   class Addition {
+
+       void add(int a, int b) {sopln(a+b);}
+       void add(float a, float b) {sopln(a+b);}
+       void addString(String a, String b) { sopln(a+b);}
+       void add(int a, double d){sopln(a+d);}
+       
+       void add(int a, int b, int c){sopln(a+b+c);}
+       
+       
+       void add(double d, int a) {sopln(d+a);}
+
+    }
+
+    class Test {
+            void m1() {  } 
+     static void m1(){}       //CE : Duplicate method
+            void m1(int a){}
+     static void m1(int a, int b) { } //Valid
+            void m1(int a, int b){} //CE : Duplicate method
+
+            void m2(){} 
+             int m2(int a, double d) {return 0; }
+    static  void m2(int a , double d) {} //CE: Duplicate method
+
+
+
+
+
+     public static void main(String [] args){
+             Test obj = new Test();
+             obj.m1();
+             obj.m1(7);
+             Test.m1(5,6);
+   
+    }
+
+
+- When we must overload a method?
+  When we want to perform same operation with diff type/list/order arguments, we must overload methods.
+
+- When we call overload method. Which overload form method is executed?
+   * It depends on passed arguments.
+   * Passed argument matched parameters type method is executed.
+   * Matched parameter means -> 
+       1. Same type (or) its widening
+       2. AB(auto boxing) or its widening
+       3. Same type VA(Var-args) or its widening 
+       4. Same type 
+       
+
+       for example :
+       -> same type   -> m1(int)
+       -> AB          -> m1(Integer)
+       -> VA          -> m1(int...)
+
+       -> same type then widening -> m1(long/float/double)
+       -> AB(auto boxing) then widening -> m1(Integer/Number/Object)
+       -> VA(Var-Args) then widening -> m1(long.../float.../double...)
+
+    * If any of the above 6 types are not matched, we will get compile time error.
+
+
+
+* Can we overload a method just by changing RT/ELM/Non-Access Modifier ?
+Ans : NO it leads to CE.
+      Because when we call method, we use only method name and parameter so compiler can not differentiate first method from second method if they have same name and same parameter.
+
+
+* What are the rules in overlading a method?
+ -> Method name must be same.
+ -> and their parameters must be different either type/list(num of param)/order.
+ -> No need to consider return type, Access Modifier and Non - access modifier.
+
+* Can we overload a method in same class?
+Ans : Yes.
+
+* Can we overload a method in sub class and super class ? 
+Ans : Yes.
+
+* Can we overload the main method/static method ?
+
+Yes, we can overload the main method OR static method but the execution of the program will start from main method which accept String [] array as a parameter.
+
+Note :- The advantage of method overloading is same method name we can reuse for different functionality for refinement of the method.
+
+Note :- In System.out.println() or System.out.print(), print()
+        and println() and wait() methods are best example for Method Overloading
+
+
+Example Program:
+=====================
+Same Type:
+-------------
+public class Test02 {
+    static void m1(int a) {
+    	System.out.println("int");
+    }
+    static void m1(double a) {
+    	System.out.println("double");
+    }
+    static void m1(String a) {
+    	System.out.println("String");
+    }
+    
+    public static void main(String[] args) {
+		m1(10);   // int
+		m1(10.6); //double
+		m1("Raam");//String
+		
+	}
+    
+
+}
+
+---------------------------------------------------
+public class Test02 {
+    
+    static void m1(double a) {
+    	System.out.println("double");
+    }
+    static void m1(float a) {
+    	System.out.println("float");
+    }
+    
+    public static void main(String[] args) {
+		m1(10.5);
+		m1(50.6f);
+		
+	}
+    
+}
+
+
+
+Example 2 :
+//same type--> widening
+public class Test02 {
+    
+    static void m1(double a) {
+    	System.out.println("double");
+    }
+    static void m1(String a) {
+    	System.out.println("String");
+    }
+    
+    public static void main(String[] args) {
+		m1(10);   // double
+		m1(10.6); // double
+		m1("Raam");//String
+		
+	}
+    
+}
+--------------------------------------------
+//same type--> widening
+public class Test02 {
+    
+    static void m1(byte b, byte c) {
+    	System.out.println("byte-byte");
+    }
+    static void m1(int a, int b) {
+    	System.out.println("int-int");
+    }
+    
+    public static void main(String[] args) {
+	byte b1 =10, b2 = 20;
+	int x = b1, y = b2;
+	m1(b1,b1); //byte- byte
+	m1(x,y); // int-int
+	
+	m1(b1,x); //int int
+	
+		
+	}
+    
+}
+
+=========================================================================================================================
+
+
+public class Test04 {
+	public static void m1(char a) {System.out.println("char"); }
+	public static void m1(short a) {System.out.println("short"); }
+	public static void m1(int a) {System.out.println("int");}
+    public static void m1(long a) {System.out.println("long");}
+    public static void m1(float a) {System.out.println("float");}
+    public static void m1(double a) {System.out.println("double");}
+    public static void m1(Object a) {System.out.println("Object");}
+    public static void main(String[] args) {
+		   m1("Java");
+		   
+	} 
+}
+
+Example : 2: (Reference data type widening)
+class A {}
+class B extends A{}
+class C extends B {}
+class D{}
+public class Test04 {
+	public static void m1(A a) {System.out.println("A"); }
+	public static void m1(B a) {System.out.println("B"); }
+	public static void m1(C a) {System.out.println("C");}
+    public static void m1(D a) {System.out.println("D");}
+    public static void m1(Object a) {System.out.println("Object");}
+    public static void main(String[] args) {
+		//m1(new A());
+    	//m1(new B());
+    	//m1(new C());
+    	//m1(new D());
+		   
+	}  
+}
+
+Example : Auto Boxing and Auto Unboxing : 1.5
+/*
+ * abstract class Number
+ * 
+ * byte -> Byte
+ * short - >Short
+ * int -> Integer
+ * long -> Long
+ * float -> Float
+ * double -> Double
+ * 
+ * char -> Character
+ * boolean -> Boolean
+ * /
+public class Test04 {
+    public static void main(String[] args) {
+		int x = 10;//x = 10
+		Integer obj = new Integer(x); // 1000x -> value : 10
+		System.out.println(x);
+		System.out.println(obj.toString());
+		Integer obj2 = Integer.valueOf(x);
+		
+		double d = 78.0;
+		
+		Double d1 = new Double(d); //Boxing
+		Double d2 = Double.valueOf(d);
+		
+		Double d3 = d;//AutoBoxing
+		
+		double d4 = d3.doubleValue();//un boxing
+		double d5 = d3;//Auto unboxing
+		
+		
+		Integer i1 = 100;//Auto boxing
+		int a = i1;//Auto Unboxing	   
+	}    
+}
+
+Example 3: 
+public class Test04 {
+	public static void m1(int a) {System.out.println("int"); }
+	public static void m1(long a) {System.out.println("long"); }
+	public static void m1(Integer a) {System.out.println("Integer");}
+	public static void m1(Long a) {System.out.println("Integer");}
+	public static void m1(Number a) {System.out.println("Number");}
+    
+    
+    public static void main(String[] args) {
+	    m1(10);
+	   
+		   
+	}
+  
+}
+
+Example : 
+public class Test04 {
+	
+	public static void m1(Integer a) {System.out.println("Integer");}
+	public static void m1(Long a) {System.out.println("Integer");}
+	public static void m1(Number a) {System.out.println("Number");}
+    
+    
+    public static void main(String[] args) {
+    	m1(null);//CE : Ambiguous error 
+	   
+		   
+	}
+  
+}
+
+Example : 
+public class Test04 {
+	
+	public static void m1(Integer a) {System.out.println("Integer");}
+	public static void m1(Long a) {System.out.println("Integer");}
+	public static void m1(Number a) {System.out.println("Number");}
+	public static void m1(Object a) {System.out.println("Object");}
+    
+    
+    public static void main(String[] args) {
+	    //m1(10);
+    	int x  = 100;
+    	m1(x);
+    	//m1('a');
+    	//m1(null);
+    	m1(5.6);
+    	m1(true);
+	   
+		   
+	}
+  
+}
+
+Example: -
+---------------
+public class Test04 {
+	public static void m1(Integer a) {System.out.println("Integer");}
+	public static void m1(String a) {System.out.println("String");}
+	public static void m1(Object a) {System.out.println("Object");}
+    
+    public static void main(String[] args) {
+	    m1(null);	   
+	}
+  
+}
+
+
+
+
+
+
+Rule to remember:
+-------------------
+If the method call is matched with widening | auto boxing | var-arg type parameter methods then compiler changes the given argument type to the matched methods parameter types. Then, JVM further executes the method definition based on the changed argument value not with the actual given argument type in the source file. So we can say that JVM executes overloaded method definition which is kinked by compiler not with given argument value type as it is appeared in source code.'
+
+Reference type widening:
+-------------------------
+When we invoke an overloaded method by passing an object first compiler checks for same argument type parameter method. If type parameter method is not available then it search for its immediate super class parameter type method. IT repeats this searching till it found java.lang.Object class parameter method. IF no method found with this passed object matched parameter  compiler throws CE: cannot find symbol.
+
+
+
+
+
+
+
+Varargs:
+==============
+Varargs concepts which allows to take zero or more parameters of same type which is alternative to the method overloading and object argument. There is no fixed size for varargs length.
+
+Varargs are useful for any method that needs to deal with an indeterminate number of objects.
+
+Before Var-args concept:
+We have facility to use the same using the two options.
+
+1) Method Overloading
+2) Array
+
+
+Varargs (Variable Arguments) Rules:
+
+1) We must declare the varargs type.
+2) Its type can be primitive or wrapper or user defined type. Supports for all types.
+3) Ellips is symbol is indicated with three dot's as "..."
+
+4) Ellips is symbol is most important, should be present in between type and variable name as in syntax.
+5) It is legal to have other variables along with varargs variable.
+6) Varargs must be used only once in a method.
+7) It should be last method parameter in method.
+
+Disadvantages:
+
+1) we can not use multiple varargs in a method.
+2) This will not work if vararg is at first argument and not in last argument.
+
+
+
+Example : 
+public class Test07 {
+  public static void m1(int... a) {
+	  System.out.println("int...");
+  }
+  
+  public static void m1(Integer... a) {
+	  System.out.println("Integer...");
+  }
+  
+  public static void main(String[] args) {
+	int[] num = {1,3,4,5};
+	m1(num);
+	Integer[] obj = {1,2,3,4,5};
+	m1(obj);
+	
+	
+	
+}
+}
+
+
+For primitive type as argument
+----------------------------------
+Same type-> widening(nearest type) -> Auto boxing -> Auto boxing widening-> STVA -> WVA
+-> ABVA -> ABWVA -> CE
+
+
+For Wrapper class object as argument:
+--------------------------------------
+m1(wco)
+
+Same type -> widening -> AUB -> AUBW -> STVar
+-> STVarW -> AUBVar -> AUBVar W
+
+
+
+Example Program:
+---------------------
+public class Test02 {
+	
+ //  public static void m1(int a) {System.out.println("int");}
+    
+ //  public static void m1(long a) { System.out.println("long");}
+   
+ //   public static void m1(float a) { System.out.println("float");}
+ 
+ //  public static void m1(Integer a) {System.out.println("Integer");}
+   
+    public static void m1(Long a) {System.out.println("Long");}
+
+  // public static void m1(Number a) {System.out.println("Number");}
+   
+  // public static void m1(Object a) {System.out.println("Object");}
+    
+  // public static void m1(int... a) {System.out.println("int...");}
+   
+   public static void m1(long... a) {System.out.println("long...");}
+   
+ //  public static void m1(Integer... a) {System.out.println("Integer...");}
+
+  // public static void m1(Long... a) {System.out.println("Long...");}
+	 
+ //  public static void m1(Number... a) {System.out.println("Number...");}
+	  	
+  // public static void m1(Object... a) {System.out.println("Object...");}
+	
+  public static void main(String[] args) {
+	Integer obj = 5;
+	m1(obj);
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+             
+    
+     
+

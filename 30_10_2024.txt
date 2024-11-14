@@ -1,0 +1,307 @@
+Que-1) : What is the output of below program ?
+
+	class Example19 {
+		static {
+			int x = 10;
+			Example19.x = x+x;
+		}
+
+		static int x;
+		
+		public static void main(String[] args) {
+			System.out.println("Class Level X : "+Example19.x);
+		}
+
+		static {
+			x = x+Example19.x;
+		}
+	}
+
+output:-
+Class Level X : 40
+------------------------------------------------------
+
+Que-2) : What is the output of below program ?
+
+	class Example20 {
+		static int a;
+		
+		public static void main(String[] args) {
+			System.out.println(Example20.a);
+			Example20.a = Example20.initialize();
+			System.out.println(Example20.a);
+		}
+
+		static int initialize() {
+			Example20.a = 50;
+			return 60;
+		}
+		
+	}
+output:-
+0
+60
+------------------------------------------------------
+
+Que-3) : What is the output of below program ?
+
+	class Example21 {
+		static int x = Example21.m1();
+
+		public static void main(String[] args) {
+			System.out.println(Exmaple21.x);
+		}
+
+		static int m1() {
+			Example21.x = 10;
+
+			return Example21.m2();
+		}
+
+		static int m2() {
+			System.out.println(Example21.x);
+			return 20;
+		}
+	}
+output:-
+10
+20
+------------------------------------------------------
+
+Que-4) : What is the output of below program ?
+
+	class Example22 {
+		static int x = 10;
+
+		public static void main(String[] args) {
+			System.out.println(Example22.m1()+Example22.x);
+		}
+
+		static int m1() {
+			Example22.x = Example22.x+100;
+			return Example22.x;
+		} 
+	}
+
+output:- 220
+------------------------------------------------------
+
+Que-5) : What is the output of below program ?
+
+	class Example23 {
+		static int x = m1();
+
+		public static void main(String[] args) {
+			System.out.println(Example23.x);
+		}
+
+		static {
+			System.out.println(x);
+			Example23.x = x+20;
+		}
+
+		static int m1() {
+			Example23.x = 50;
+			return m2();		
+		} 
+
+		static int m2() {
+			System.out.println(Example23.x);
+			return 100;
+		}
+	}
+output:- 
+50
+100
+120
+------------------------------------------------------
+
+Que-6) : What is the output of below program ?
+
+	class Example24 {
+		static {
+			Example24.a = m1();
+		}
+
+		static int a = 50;
+
+		public static void main(String[] args) {
+			System.out.println(a);
+		}
+
+		static {
+			Example24.a = Example24.a+m1();
+		}
+
+		static int m1() {
+			Example24.a = 30;
+			return m2();
+		}
+
+		static int m2() {
+			System.out.println(a);
+			return Example24.a+20;
+		}
+	}
+output:- 
+30
+30
+100
+------------------------------------------------------
+
+Que-7) : What is the output of below program ?
+
+	class Example25 {
+		static int a = 50;
+
+		public static void main(String[] args) {
+			int a = 60;
+
+			a = a;
+
+			System.out.println(a);
+			System.out.println(Example25.a); 
+		}
+	}
+output:-
+60
+50
+------------------------------------------------------
+
+Que-8) : What is the output of below program ?
+
+class Test50 { 
+	public static void main(String[] args) 
+	{ 
+		int x = 20; 
+		System.out.println(x); 
+	} 
+	static
+	{ 
+		int x = 10; 
+		System.out.print(x + " "); 
+	} 
+}
+output:-
+10 20
+------------------------------------
+Que-9) : What is the output of below program ?
+
+class Test51 { 
+	int x = 10; 
+	public static void main(String[] args) 
+	{ 
+		System.out.println(x); 
+	} 
+	static
+	{ 
+		System.out.print(x + " "); 
+	} 
+}
+output:-
+error: non-static variable x cannot be referenced from a static context
+
+-------------------------------------
+Que-10) : What is the output of below program ?
+
+class Test52 { 
+	int x = 10; 
+	public static void main(String[] args) 
+	{ 
+		Test1 t1 = new Test1(); 
+		System.out.println(t1.x); 
+	} 
+	static
+	{ 
+		int x = 20; 
+		System.out.print(x + " "); 
+	} 
+}
+output:-
+20 10
+________________________________________________________________
+
+Que-11) : What is the output of below program ?
+
+class Test53 { 
+	int x = 10; 
+	public static void main(String[] args) 
+	{ 
+		System.out.println(Test53.x); 
+	} 
+	static
+	{ 
+		int x = 20; 
+		System.out.print(x + " "); 
+	} 
+}
+output:-
+error: non-static variable x cannot be referenced from a static context
+________________________________________________________________
+
+Que-12) : What is the output of below program ?
+
+class Test54 { 
+	static  int x = 10; 
+	public  static void main(String[] args) 
+	{ 
+		Test54 t1 = new Test54(); 
+		Test54 t2 = new Test54(); 
+
+		t1.x = 20; 
+		System.out.print(t1.x + " "); 
+		System.out.println(t2.x); 
+	} 
+}
+output:- 20 20
+________________________________________________________________
+
+Que-13) : What is the output of below program ?
+
+class Test55 { 
+		static  int i = 1; 
+	public static void main(String[] args) 
+	{ 
+		for (int i = 1; i < 10; i++) { 
+			i = i + 2; 
+			System.out.print(i + " "); 
+		} 
+	} 
+}
+
+output:- 3 6 9
+________________________________________________________________
+
+Que-14) : What is the output of below program ?
+
+class Test56 { 
+	static  int i = 1; 
+	public static void main(String[] args) 
+	{ 
+		int i = 1; 
+		for (Test56.i = 1; Test56.i < 10; Test56.i++) { 
+			i = i + 2; 
+			System.out.print(i + " "); 
+		} 
+	} 
+}
+
+output:- 3 5 7 9 11 13 15 17 19
+________________________________________________________________
+
+Que-15) : What is the output of below program ?
+
+class Test57 { 
+	static  int i = 1; 
+	public static void main(String[] args) 
+	{ 
+		static int i = 1; 
+		for (Test57.i = 1; Test57.i < 10; Test57.i++) { 
+			i = i + 2; 
+			System.out.print(i + " "); 
+		} 
+	} 
+}
+output:-
+ error: illegal start of expression
+                static int i = 1;

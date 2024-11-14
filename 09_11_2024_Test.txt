@@ -1,0 +1,581 @@
+ 													      SET-A
+ 			
+				  ---------
+Q-1)
+------
+Write a Java program to create a PrimeChecker class that has the following attributes and methods:
+
+Attributes:
+
+number (int): Stores the number to be checked if it's prime.
+Methods:
+
+PrimeChecker(int number): A constructor that initializes the number attribute using the this keyword.
+boolean isPrime(): This method should return true if the number is prime, and false otherwise. A number is considered prime if it is greater than 1 and has no divisors other than 1 and itself.
+void printResult(): This method should display the result in a question format, e.g., "Is [number] a prime number?" followed by either "Yes, it is a prime number." or "No, it is not a prime number."
+Task:
+
+In the main method:
+Create a PrimeChecker object with a specific number.
+Call the printResult() method to display whether the number is prime.
+
+Q-2)
+------
+
+ Design sports Model system
+
+Create  a class name Sports (BLC Class)
+
+
+Atributes :
+
+name 			Return Type
+-------			--------------
+sportName            :String 
+
+teamSize		      :int 
+
+sportType              :String 
+
+Acess modifier  :private (for all varriable)
+
+Take a no parameterize constructor and initialize all the default values to varriables.
+
+Take one more constructor with two parameteres sportName and teamSize
+and intialize with user values and write the validation logic
+
+Take another constructor with 3 parameters and intialize all the values and check the validation.
+
+Methods  :
+
+Method Name     : displayInfo
+Return Type 	     : void
+Acess Modifier    : public 
+
+and in this method to print all the details of the class.
+
+
+Take a Main Class(ELC Class)wich having main method and instatiate the object and execute the method.
+
+Test Cases:
+-------------
+
+for teamSize. If teamSize is less than or equal to zero, it sets teamSize to 0 and prints an error message.
+
+Test Case 1: Valid sport with name and team size
+Sport Name: Football
+Team Size: 11
+Sport Type: Unknown
+
+Expected Output :
+---------------------
+(print the details)
+
+Test Case 2: Invalid sport with negative team size
+Error: Team size must be positive.
+Sport Name: Volleyball
+Team Size: -1
+Sport Type: Unknown
+
+Expected Output :
+---------------------
+Error: Team size must be positive.
+
+
+Q-3)
+------
+
+Create a class Employee (Business Logic Class)
+
+Instance Variables: 
+
+employeeId   		:private-int
+
+employeeName 	: private-String
+
+employeeSalary	: private-double
+
+
+
+Create a parameterized constructor to initialilize all the fields.
+
+Methods :
+Create a static method getEmployeeObject() in the Employee class
+
+  Method Name 	 : getEmployeeObject()
+
+   Parameter		 : no parameter
+
+  Return type 		 : Employee
+
+Access modifier 	 : public
+
+
+
+getEmployeeObject() method of Employee class should take employeeId, employeeName, employeeSalary from the keyboard to initialize the instance variables, Create and return the Employee object from this method.
+
+
+
+Override toString() from Object class to print Employee class properties.
+
+
+
+Create another class Main which contains main method (ELC class).
+Employee data initialisation using scanner class.
+Accept 5 Employee Object from keyboard and print their data using toString() method 
+
+
+Test Cases :
+--------------
+case-1
+--------
+Sample Input :
+----------------
+Enter details for Employee 1:
+Enter Employee ID (positive integer): 101
+Enter Employee Name (non-empty): Virat Koholi
+Enter Employee Salary (non-negative): 50000
+
+Expected Output :
+
+Employee [ID: 101, Name: Virat Koholi, Salary: 50000.0]
+
+case-2
+--------
+Sample Input :
+-----------------
+Enter details for Employee :2
+
+Enter Employee ID (positive integer): -5
+Invalid input. Employee ID must be a positive integer.
+
+Enter Employee ID (positive integer): 102
+Enter Employee Name (non-empty): M.S Dhoni
+Enter Employee Salary (non-negative): 60000
+
+Expected Output :
+----------------------
+Invalid input. Employee ID must be a positive integer.
+Employee [ID: 102, Name:M.S Dhoni, Salary: 60000.0]
+
+
+
+
+Q-4)
+------
+Design a Student Model System
+Create a class named Student (BLC Class).
+
+Attributes (Instance Variables):
+Name	Return Type
+studentId	int
+studentName	String
+studentGPA	double
+Access modifier: private (for all variables)
+
+Constructor Requirements:
+Parameterized Constructor: Initializes all fields (studentId, studentName, and studentGPA) using values provided by the user.
+Methods:
+Static Method: getStudentObject()
+
+Method Name: getStudentObject()
+Parameters: none
+Return Type: Student
+Access Modifier: public
+Functionality: This method should prompt the user to input studentId, studentName, and studentGPA from the keyboard, initialize a Student object with these values, and return the Student object.
+Override toString():
+
+Override the toString() method from the Object class to return a string representation of the Student object's properties (studentId, studentName, and studentGPA).
+Main Class:
+Create a Main class (ELC Class) with the main method to perform the following tasks:
+
+Use a loop to accept 5 Student objects from the keyboard by calling the getStudentObject() method.
+Print the details of each Student object using the toString() method.
+
+Q-5)
+------
+
+Design an Order-Customer System
+Create the following classes:
+
+Order (Business Logic Class)
+
+Attributes (Instance Variables):
+Name	Type	Access Modifier
+orderId	int	private
+itemName	String	private
+itemPrice	double	private
+Constructor Requirements:
+Parameterized Constructor: Initializes all fields (orderId, itemName, and itemPrice) using values provided by the user.
+Methods:
+Override toString():
+Override the toString() method from the Object class to return a string representation of the Order object's properties.
+Customer (Business Logic Class)
+
+Attributes (Instance Variables):
+Name	Type	Access Modifier
+customerId	int	private
+customerName	String	private
+customerAddress	String	private
+order	Order	private
+Constructor Requirements:
+Parameterized Constructor: Initializes all fields (customerId, customerName, customerAddress, and order) using values provided by the user.
+Methods:
+Override toString():
+Override the toString() method from the Object class to return a string representation of the Customer object's properties, including the details of the associated Order object.
+Zomato (Executable Logic Class)
+
+Main Method:
+Create a Customer object with an associated Order object.
+Print the details of the Customer object using the toString() method.
+
+
+ 													      SET-B
+ 													     ---------
+Q-1)
+------
+Palindrome Checker :
+Write a Java program to create a PalindromeChecker class that has the following attributes and methods:
+
+Attributes:
+
+text (String): Stores the text to be checked if it's a palindrome.
+Methods:
+
+PalindromeChecker(String text): A constructor that initializes the text attribute using the this keyword.
+boolean isPalindrome(): This method should return true if the text is a palindrome and false otherwise. A text is considered a palindrome if it reads the same forward and backward, ignoring case and spaces.
+void printResult(): This method should display the result in a question format, e.g., "Is '[text]' a palindrome?" followed by either "Yes, it is a palindrome." or "No, it is not a palindrome."
+Task:
+
+In the main method:
+Create a PalindromeChecker object with a specific text.
+Call the printResult() method to display whether the text is a palindrome.
+
+Q-2)
+------
+
+Design a Vehicle Model System
+---------------------------------------
+Create a class named Vehicle (BLC Class)
+
+Attributes:
+Name		Return Type
+vehicleName	String
+maxSpeed	int
+fuelType		String
+
+Access modifier: private (for all variables)
+
+Constructor Requirements:
+
+No-parameter constructor: Initializes all variables with default values.
+Constructor with two parameters (vehicleName and maxSpeed): Initializes these values with user inputs and includes validation logic.
+Constructor with three parameters (vehicleName, maxSpeed, fuelType): Initializes all variables and includes validation logic.
+Methods:
+Method Name: displayInfo
+Return Type: void
+Access Modifier: public
+Prints all details of the Vehicle class.
+Main Class:
+Create a Main class (ELC Class) with the main method to instantiate a Vehicle object and call the displayInfo method.
+
+Validation & Test Cases:
+------------------------------
+For maxSpeed, if the value is less than or equal to zero, set maxSpeed to 0 and print an error message: "Error: Maximum speed must be positive."
+
+
+
+
+Q-3)
+------
+
+ Design sports Model system
+
+Create  a class name Sports (BLC Class)
+
+
+Atributes :
+
+name 			Return Type
+-------			--------------
+sportName            :String 
+
+teamSize		      :int 
+
+sportType              :String 
+
+Acess modifier  :private (for all varriable)
+
+Take a no parameterize constructor and initialize all the default values to varriables.
+
+Take one more constructor with two parameteres sportName and teamSize
+and intialize with user values and write the validation logic
+
+Take another constructor with 3 parameters and intialize all the values and check the validation.
+
+Methods  :
+
+Method Name     : displayInfo
+Return Type 	     : void
+Acess Modifier    : public 
+
+and in this method to print all the details of the class.
+
+
+Take a Main Class(ELC Class)wich having main method and instatiate the object and execute the method.
+
+Test Cases:
+-------------
+
+for teamSize. If teamSize is less than or equal to zero, it sets teamSize to 0 and prints an error message.
+
+Test Case 1: Valid sport with name and team size
+Sport Name: Football
+Team Size: 11
+Sport Type: Unknown
+
+Expected Output :
+---------------------
+(print the details)
+
+Test Case 2: Invalid sport with negative team size
+Error: Team size must be positive.
+Sport Name: Volleyball
+Team Size: -1
+Sport Type: Unknown
+
+Expected Output :
+---------------------
+Error: Team size must be positive.
+
+
+Q-4)
+------
+Design a Product Model System
+Create a class named Product (BLC Class).
+
+Attributes (Instance Variables):
+Name	Return Type
+productId	int
+productName	String
+productPrice	double
+Access modifier: private (for all variables)
+
+Constructor Requirements:
+Parameterized Constructor: Initializes all fields (productId, productName, and productPrice) using values provided by the user.
+Methods:
+Static Method: getProductObject()
+
+Method Name: getProductObject()
+Parameters: none
+Return Type: Product
+Access Modifier: public
+Functionality: This method should prompt the user to input productId, productName, and productPrice from the keyboard, initialize a Product object with these values, and return the Product object.
+Override toString():
+
+Override the toString() method from the Object class to return a string representation of the Product object's properties (productId, productName, and productPrice).
+Main Class:
+Create a Main class (ELC Class) with the main method to perform the following tasks:
+
+Use a loop to accept 5 Product objects from the keyboard by calling the getProductObject() method.
+Print the details of each Product object using the toString() method.
+
+Q-5)
+------
+Design a Library System
+
+Create the following classes:
+
+Book (Business Logic Class)
+
+Attributes:
+
+Name	Type	Access Modifier
+bookId	int	private
+title	String	private
+author	String	private
+
+
+Constructor Requirements:
+Parameterized constructor to initialize all fields (bookId, title, author).
+Methods:
+Override toString() to print Book properties.
+Member (Business Logic Class)
+
+Attributes:
+Name		      Type		  Access Modifier
+memberId	        int		         private
+memberName 	String	        private
+membershipType	String	       private
+book	                Book	       private
+
+
+Constructor Requirements:
+Parameterized constructor to initialize all fields (memberId, memberName, membershipType, and book).
+
+Methods:
+Override toString() to print Member properties along with Book properties.
+Library (Executable Logic Class)
+
+Main Method:
+Create a Member object with an associated Book object.
+Print the details of the Member object using the toString() method.
+
+ 													      SET-C
+ 													     ---------
+Q-1)
+------
+
+Armstrong Number Checker
+Write a Java program to create an ArmstrongChecker class that has the following attributes and methods:
+
+Attributes:
+
+number (int): Stores the number to be checked if it’s an Armstrong number.
+Methods:
+
+ArmstrongChecker(int number): A constructor that initializes the number attribute using the this keyword.
+boolean isArmstrong(): This method should return true if the number is an Armstrong number and false otherwise. An integer is considered an Armstrong number if the sum of its digits raised to the power of the number of digits is equal to the number itself (e.g., 153 is an Armstrong number: 
+1^3+5^3+3^3=153
+
+void printResult(): This method should display the result in a question format, e.g., "Is [number] an Armstrong number?" followed by either "Yes, it is an Armstrong number." or "No, it is not an Armstrong number."
+
+Take a 
+In the main method:
+Create an ArmstrongChecker object with a specific number.
+Call the printResult() method to display whether the number is an Armstrong number.
+
+Q-2)
+------
+Design an Appliance Model System
+Create a class named Appliance (BLC Class)
+
+Attributes:
+Name	Return Type
+applianceName	String
+powerRating	int
+applianceType	String
+Access modifier: private (for all variables)
+
+Constructor Requirements:
+No-parameter constructor: Initializes all variables with default values.
+Constructor with two parameters (applianceName and powerRating): Initializes these values with user inputs and includes validation logic.
+Constructor with three parameters (applianceName, powerRating, applianceType): Initializes all variables and includes validation logic.
+Methods:
+Method Name: displayInfo
+Return Type: void
+Access Modifier: public
+Prints all details of the Appliance class.
+Main Class:
+Create a Main class (ELC Class) with the main method to instantiate an Appliance object and call the displayInfo method.
+
+Validation & Test Cases:
+For powerRating, if the value is less than or equal to zero, set powerRating to 0 and print an error message: "Error: Power rating must be positive."
+
+Q-3)
+------
+Design an Appliance Model System
+Create a class named Appliance (BLC Class)
+
+Attributes:
+Name	 		Return Type
+applianceName	String
+powerRating		int
+applianceType	String
+Access modifier: 	private (for all variables)
+
+Constructor Requirements:
+No-parameter constructor: Initializes all variables with default values.
+Constructor with two parameters (applianceName and powerRating): Initializes these values with user inputs and includes validation logic.
+Constructor with three parameters (applianceName, powerRating, applianceType): Initializes all variables and includes validation logic.
+Methods:
+Method Name: displayInfo
+Return Type: void
+Access Modifier: public
+Prints all details of the Appliance class.
+Main Class:
+Create a Main class (ELC Class) with the main method to instantiate an Appliance object and call the displayInfo method.
+
+Validation & Test Cases:
+For powerRating, if the value is less than or equal to zero, set powerRating to 0 and print an error message: "Error: Power rating must be positive."
+
+Sample Input :
+-------------------
+Test Case 1: Valid appliance with name and power rating
+Appliance Name: Refrigerator
+Power Rating: 200
+Appliance Type: Unknown
+
+Expected Output :
+-----------------------
+Appliance Name: Refrigerator
+Power Rating: 200
+Appliance Type: Unknown
+
+Q-4)
+------
+
+Design an Employee Model System
+Create a class named Employee (BLC Class).
+
+Attributes (Instance Variables):
+Name	Return Type
+employeeId	int
+employeeName	String
+employeeSalary	double
+Access modifier: private (for all variables)
+
+Constructor Requirements:
+Parameterized Constructor: Initializes all fields (employeeId, employeeName, and employeeSalary) using values provided by the user.
+Methods:
+Static Method: getEmployeeObject()
+
+Method Name: getEmployeeObject()
+Parameters: none
+Return Type: Employee
+Access Modifier: public
+Functionality: This method should prompt the user to input employeeId, employeeName, and employeeSalary from the keyboard, initialize an Employee object with these values, and return the Employee object.
+Override toString():
+
+Override the toString() method from the Object class to return a string representation of the Employee object's properties (employeeId, employeeName, and employeeSalary).
+Main Class:
+Create a Main class (ELC Class) with the main method to perform the following tasks:
+
+Use a loop to accept 5 Employee objects from the keyboard by calling the getEmployeeObject() method.
+Print the details of each Employee object using the toString() method.
+
+Q-5)
+-------
+Design a Car Rental System
+Create the following classes:
+
+Car (Business Logic Class)
+
+Attributes:
+Name	Type	Access Modifier
+carId	int	private
+model	String	private
+dailyRate	double	private
+Constructor Requirements:
+Parameterized constructor to initialize all fields (carId, model, dailyRate).
+Methods:
+Override toString() to print Car properties.
+Renter (Business Logic Class)
+
+Attributes:
+Name	Type	Access Modifier
+renterId	int	private
+renterName	String	private
+renterAddress	String	private
+car	Car	private
+Constructor Requirements:
+Parameterized constructor to initialize all fields (renterId, renterName, renterAddress, and car).
+Methods:
+Override toString() to print Renter properties along with Car properties.
+CarRental (Executable Logic Class)
+
+Main Method:
+Create a Renter object with an associated Car object.
+Print the details of the Renter object using the toString() method.
+
+------

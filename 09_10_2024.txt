@@ -1,0 +1,142 @@
+Question-1
+--------------
+Create an Employee class (BLC Class)
+
+Attributes :
+
+names		Return Type
+--------		---------------		
+ firstName   	:String   
+ lastName      	:String  
+ employeeId 	:int  
+ salary  		:double  
+ NoOfProject 	:int 
+
+Access Modifier : private (for all varriables)  
+
+Implement constructors to initialize these properties.
+
+implement calculateSalary() method that will add extra ammount in salary based on NoOfProject.
+
+Return Type       : void
+Access modifier :public
+
+NoOfProject is more than 5 and less that 10 then add 5000
+NoOfProject is more than 10 and less that 20 then add 10000
+NoOfProject is more than 20 then add 15000
+
+Take another class Tester (ELC Class) which is having main method and instantiate the Employee object and execute the methods.
+
+
+Test Case 1: 
+----------------
+Valid Input with Projects Between 6 and 10
+Input:
+
+firstName: John
+lastName: Doe
+employeeId: 101
+salary: 50000.00
+NoOfProject: 7
+
+Expected Output:
+
+After executing calculateSalary(), the salary should be updated to 55000.00.
+Print output showing the updated salary: 55000.00.
+
+Test Case 2:
+---------------
+ Invalid Number of Projects (Negative Value)
+Sample Input:
+
+firstName: Michael
+lastName: Johnson
+employeeId: 105
+salary: 45000.00
+NoOfProject: -5
+
+Expected Output:
+
+Print an error message indicating invalid number of projects (e.g., "Number of projects cannot be negative").
+Salary remains 45000.00.
+
+------------------
+Question - 2
+------------------
+
+Design a Cricket Score Board by using following requirements 
+
+Take a Class Batter (Business Logic  Class)
+
+Instance variables:
+
+Names		Return Type
+---------	----------------
+name		: String
+runs		: int
+matches		: int
+batting_avg	: float.
+
+Access Modifier :public (for all varriables)
+
+ Create a no argument constructor that assigns default values to instance variables.
+ Create parameterized constructor that accepts name, runs, matches.
+
+Methods :
+
+Method name		: computeBattingAverage
+Access Modifier 	: public
+Return type		: void
+
+This method should print the batting average of the batter by dividing run with matches.
+
+Input: "Sachin", 18000, 463
+
+Output:
+Name: Sachin
+Batting_Avg: 38.87689
+
+Note: 
+
+a. If runs or matches values are negative print 'Error'.
+b. If runs are greater than 0 when matches are 0 print 'Error'.
+
+Method name: getStatistics
+Return type: void
+This method should print the details of the batter.
+
+Input: "Sachin", 18000, 463
+
+Output:
+Name: Sachin
+Runs: 18000
+Matches: 463
+Note: 
+a. If runs or matches values are negative print 'Error'.
+b. If runs are greater than 0 when matches are 0 print 'Error'.
+
+Given a class Testing (ELC Class) that contains main method. Use this class to test your code.
+
+Test Case -1 :
+-----------------
+
+Invalid Case: Empty name
+
+Sample Input: "", 5000, 100`
+
+Expected Output:
+
+Error: Name cannot be empty.
+Error: Name cannot be empty.
+
+Test Case-2 :
+----------------
+
+Invalid Case: Negative runs
+
+Sample Input: "Rahul", -15000, 300
+
+Expected Output:
+
+Error: Runs and matches must be non-negative.
+Error: Runs and matches must be non-negative.

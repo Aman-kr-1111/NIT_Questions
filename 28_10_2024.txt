@@ -1,0 +1,304 @@
+Q 1. what is the output of this program?
+
+      class Test1 {
+           public static void main (String[] args) {
+              int x=20;
+              System.out.println(x);
+         }
+         static {
+              int x = 10;
+              System.out.println(x+" ");
+        }
+      }
+
+output:- 10 20
+------------------------------------------------------
+
+Q 2. What is the output of this below program ?
+ class Test2 {
+	static {
+		System.out.println(“Test2 class Static Block”);
+}
+public static  void main(String[] args) {
+	System.out.println(“Test2 class main method”);
+} 
+} 
+
+output:-
+Test2 class Static Block
+Test2 class main method
+------------------------------------------------------
+
+Q 3. What is the output of this below program ?
+class Test3 {
+	public static  void  main(String[] args) {
+	  	int a;
+	System.out.println("A : "+a);
+} 
+}
+
+output:- 
+GuessOutput.java:4: error: variable a might not have been initialized
+        System.out.println("A : "+a);
+                                  ^
+1 error
+------------------------------------------------------
+
+Q 4. Can we declare local variable as static if not what is the error?
+	class Test4 {
+		public static void main(String[] args) {
+			static  int x =10;
+			System.out.println(x);
+		}
+	}
+output:- 
+ error: illegal start of expression
+                        static  int x =10;
+ ------------------------------------------------------
+
+ Q 5. Define a class having one static variable say  static int x=10 and invoke x variable 
+	        in m1() and main(-)  what is the output ?
+ 
+	class Test5 {
+		static int x = 10;
+		void m1() {
+			System.out.println("m1 X : "+x);
+		}
+		public static void main(String[] args) {
+			System.out.println("main X : "+x);			
+		}
+	}
+output:- 
+main X : 10
+ ------------------------------------------------------
+
+
+Q 6. Is it possible to access non-static variable in static method directly if not what is the   	        	error ?.
+
+	class Test6 {
+		int a = 10;
+		public static void main(String[] args) {
+			System.out.println("A  value :  "+a);
+		}
+	}
+output:-
+error: non-static variable a cannot be referenced from a static context
+------------------------------------------------------
+
+Q 7 . What are the different ways are there to call static variables ?
+	class Test7 {
+		//static variable a
+		static int a = 20;
+		public static void main(String[] args) {
+			//write code here to access a variable with diff ways
+        // 1. Access directly
+        System.out.println(a);
+
+        // 2. Access using the class name
+        System.out.println(Test7.a);
+
+        // 3. Access using an object of the class
+        Test7 obj = new Test7();
+        System.out.println(obj.a);
+
+		}
+	}
+------------------------------------------------------
+
+Q 8. What are the different ways to call/invoke static methods from main method 
+	class Test8 {
+		static void m1() {
+			System.out.println("Test8 : m1() called");
+		}
+
+		public static void main(String[] args) {
+			//write code here
+   	// 1. Direct access
+        m1();
+
+        // 2. Access using the class name
+        Test8.m1();
+
+        // 3. Access using an object of the class
+        Test8 obj = new Test8();
+        obj.m1();
+		}
+	}
+------------------------------------------------------
+
+Q 9. What is the output of the below program ?
+	class Test9 {
+		static void m1() {
+			System.out.println("Test9 : m1()");
+		}
+		static void m2() {
+			System.out.println("Test9 : m2()");
+		}
+
+		public static void main(String[] args) {
+			m1();
+			m2();
+		}
+	}
+output:-
+Test9 : m1()
+Test9 : m2()
+------------------------------------------------------
+
+Q 10. What is the output of the below program ?
+	class Test10 {
+		static{
+			System.out.println("SB1");
+		}
+		static void m1() {
+			System.out.println("m1()");
+		}
+		public static void main(String []args) {
+			Test10.m1();
+		}
+	}
+output:-
+SB1
+m1()
+------------------------------------------------------
+
+
+Q 11. Example on execution order of static members in same class?
+	class Test11 {
+		static int x=10;
+		static int y=20;
+		static {
+			System.out.println("---Test11 SB1 called---");
+			System.out.println("X : "+x);
+			System.out.println("y : "+y);
+		}
+		static void m1(){
+			System.out.println("X : "+x);
+			System.out.println("y : "+y);
+		}
+
+		public static void main(String[] args) {
+			m1();
+		}
+		static {
+			System.out.println("---Test11 SB2 called---");
+			System.out.println("X : "+x);
+			System.out.println("y : "+y);
+		}
+	} 
+output:-
+---Test11 SB1 called---
+X : 10
+y : 20
+---Test11 SB2 called---
+X : 10
+y : 20
+---Test11 m1() called---
+X : 10
+y : 20
+------------------------------------------------------
+
+Q 12 . Can we call static method inside static block if yes ,what is the output?
+	class Test12 {
+		static {	
+			System.out.println("Test12 : SB1 called");
+			m1();
+		}
+		static void m1() {
+			System.out.println("Test12 : m1() called");
+		}
+		public static void main(String[] args) {
+			//no operation
+		}
+	}
+output:-
+Test12 : SB1 called
+Test12 : m1() called
+------------------------------------------------------
+
+Q 13 . Is main method mandatory to execute java program if yes, what is the error ?
+	class Test13 {
+		static {
+			System.out.println("Test13 : SB1 called");
+		}
+		static void m1() {
+			System.out.println("Test13 : m1() called");
+		}
+	}
+output:-
+Error: Main method not found in class Test13, please define the main method as:
+------------------------------------------------------
+
+Q 14 . What is the  output below program ? 
+	class Test14 {
+		static int x =100;
+		static {
+			System.out.println("x :"+x);
+			System.exit(0);
+		}
+
+
+	}
+output:-
+Error: Main method not found in class Test14, please define the main method as:
+------------------------------------------------------
+
+Q 15 . What is the output of the below program ?
+	class Test15Super {
+		int x =10;
+		static void m1() {
+			System.out.println("Test15Super : m1()");
+		}
+		static {
+			System.out.println("Test15Super : SB1 called");
+		}
+	}
+	class Test15Sub extends Test15Super {
+		static int x =20;
+		static {
+			System.out.println("Test15Sub : SB1 called");
+		}
+		static void m2(){
+			m1();
+			System.out.println("Test15Sub : m2()");
+		}
+		public static void main(String[] args) {
+			m2();
+		}
+	}
+output:-
+Test15Super : SB1 called
+Test15Sub : SB1 called
+Test15Super : m1()
+Test15Sub : m2()
+-----------------------------------------------------------------------
+Q 16)
+public class JVMArc {
+	public static void main(String[] args) {
+		System.out.println(JVMArc.class.getClassLoader());
+		System.out.println(JVMArc.class.getClass());
+	}
+}
+output:-
+jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
+class java.lang.Class
+-----------------------------------------------------------------------
+Q 17)
+public class JVMArc {
+	public static void main(String[] args) {
+		System.out.println(JVMArc.class.getClassLoader());
+		System.out.println(JVMArc.class.getClassLoader().getParent());
+		System.out.println(JVMArc.class.getClassLoader().getParent().getParent());
+		
+	}
+}
+outut:-
+jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
+jdk.internal.loader.ClassLoaders$PlatformClassLoader@4517d9a3
+null
+
+
+
+
+
+

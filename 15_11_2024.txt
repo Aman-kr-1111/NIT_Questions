@@ -1,0 +1,279 @@
+Question -1
+--------------
+volume of a cube, cylinder, and sphere.
+
+Implement methods to calculate the volume of a cube, cylinder, and sphere. Overload these methods to handle different combinations of parameters like radius, height, and side length.
+
+ Parent class Shape
+
+ Method to calculate volume of a cube
+
+Method Name calculateVolume parameter (double sideLength)
+
+Access Modifier:-
+
+public 
+
+Return type:-
+
+double
+
+
+Take another class Cylinder
+
+ Method to calculate volume of a cylinder
+
+Method Name calculateVolume parameter (double radius,double height)
+
+Access Modifier:-
+
+public 
+
+Return type:-
+
+double
+
+
+Method to calculate volume of a sphere
+
+Method Name calculateVolume parameter (double radius)
+
+Access Modifier:-
+
+public 
+
+Return type:-
+
+double
+
+
+
+ Subclass Cube inheriting from Shape
+
+ Method overriding to provide specific implementation for cubes
+
+ Reusing the parent class method for cubes
+
+
+
+   Subclass Cylinder inheriting from Shape
+
+ Method overriding to provide specific implementation for cylinders
+
+ Reusing the parent class method for cylinders
+
+
+ Subclass Sphere inheriting from Shape
+
+ Method overriding to provide specific implementation for spheres
+ Reusing the parent class method for spheres
+
+ Create a class MainShape which contains main method to test your code.
+ Creating objects of different shapes, Calculating volumes using different methods based on shape
+ Call the methods.
+
+
+Formula:-
+
+Cube:- n*n*n
+
+Cylender:- pi*r*r*h
+
+Sphere:-4/3*pi*r*r
+
+
+
+Volume of the Cube: 27.0
+
+Volume of the Cylinder: 25.132741228718345
+
+Volume of the Sphere: 14.137166941154069
+
+
+
+Test Case 1: 
+---------------
+Negative Side Length for Cube
+
+Input:
+Cube side length: -3.0
+
+Expected Output:
+"Error: Side length cannot be negative."
+
+Test Case 2: Valid Input for Cube
+Input:
+Cube side length: 3.0
+Expected Output:
+Volume of the Cube: 27.0
+
+Test Case 3: Valid Input for Cylinder
+Input:
+Cylinder radius: 2.0, height: 2.0
+Expected Output:
+Volume of the Cylinder: 25.132741228718345
+
+
+
+Question-2
+--------------
+
+Create a superclass called Animal
+
+Impliment a method  makeSound() that prints a generic sound. 
+
+Method Name: makeSound
+Access Modifier: public
+Return Type: void
+
+
+
+Then, create subclasses Dog  
+
+Cat that override the makeSound() method to make specific 
+
+Method Name: makeSound
+Access Modifier: public
+Return Type: void
+
+sounds like (e.g bark..bark), respectively.
+
+Main Class:(ELC Class)
+
+Create instances of Animal, Dog, and Cat.
+Use polymorphism to call the makeSound method on each instance.
+Demonstrate the overridden behavior.
+
+
+Test Case 1:
+---------------
+ Calling makeSound on Animal instance
+
+Input:
+Create an instance of Animal.
+Call the makeSound method.
+
+Expected Output:
+"Some generic animal sound"
+
+Test Case 2: 
+---------------
+Calling makeSound on Dog instance
+
+Input:
+Create an instance of Dog.
+Call the makeSound method.
+
+Expected Output:
+"Bark! Bark!"
+
+
+
+Question-3
+--------------
+
+calculateFuelEfficiency
+
+Vehicle Class:
+
+Implement a Vehicle class with a method calculateFuelEfficiency that calculates fuel efficiency based on distance and fuel consumed. Overload this method to handle different units of distance (kilometers and miles).
+
+
+// Parent class Vehicle
+
+Instance variable:-
+
+double totalDistance,private
+
+double totalFuelConsumed,private
+
+
+// Constructor parameterise
+
+
+// Method to calculate fuel efficiency in kilometers per liter
+
+Method Name:-
+
+calculateFuelEfficiency()
+
+Access Modifier:-
+
+public
+
+Return Type:-
+
+double
+
+
+
+// Method to calculate fuel efficiency with miles and gallons as input
+
+Method Name:-
+
+calculateFuelEfficiency()
+
+Access Modifier:-
+
+public
+
+Return Type:-
+
+double
+
+
+// Subclass Car inheriting from Vehicle
+
+// Constructor parameterise with super class 
+
+// Override the calculateFuelEfficiency method to provide a specific implementation for Car
+
+calculateFuelEfficiency()
+
+Access Modifier:-
+
+public
+
+Return Type:-
+
+double
+
+
+// Assuming totalDistance and totalFuelConsumed are in kilometers and liters respectively
+
+// Convert efficiency from km/l to miles/gallon
+
+// 1 km/l = 2.35215 miles/gallon
+
+
+
+Create a class Main which contains main method to test your code.
+
+ Creating a Vehicle object
+ Calculating fuel efficiency in km/l using the first method
+ Calculating fuel efficiency in miles/gallon using the overloaded method
+
+ Creating a Car object
+
+ Calculating fuel efficiency in miles/gallon using the overridden method in Car class
+
+Taste Case -1:
+---------------
+Sample Input: 
+totalDistance = 500
+totalFuelConsumed = 50
+Expected Output:
+
+Fuel Efficiency (km/l): 10.0
+Fuel Efficiency (miles/gallon): 23.51743298568725
+Car Fuel Efficiency (miles/gallon): 23.51743298568725
+
+Taste Case-2 :
+---------------
+Sample Input: totalDistance = 500 
+totalFuelConsumed = 0
+
+Expected Output:
+
+Error: Fuel consumed cannot be zero.
+

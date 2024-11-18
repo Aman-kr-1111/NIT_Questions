@@ -1,0 +1,277 @@
+Question-1
+--------------
+Create a BLC class Named as Shape and it have three sub classes named as Circle, Triangle and Square for each class have two methods called as draw() and erase()
+
+For Shape class
+
+Methods:
+public static Shape randshape()
+No Argument constructor
+randshape(): Using switch ((int) (Math.random()*3))
+case 0: create an object for Circle Object using return
+case 1: create an object for Square Object using return
+case 2: create an object for Triangle Object using return
+default: Print as default message
+finally return an object for Shape class
+Use this class to test your solution's class and methods in main method
+
+For Shape class
+Methods: In draw():void and erase():void and No argument constructor
+draw(): print "shape draw"
+erase(): print "Shape erase"
+For Circle class sub class of Shape class
+Methods: In draw():void and erase():void and No argument constructor
+Override:
+draw() method print "Circle draw" and erase() method print "Circle erase"
+
+For Triangle class sub class of Shape class
+
+Take No argument constructor
+
+Methods: 
+
+In draw():void 
+ erase():void 
+Override:
+draw() method print "Triangle draw" and erase() method print "Triangle erase"
+
+
+For Square class sub class of Shape class
+
+Take No argument constructor
+
+Methods: 
+ draw():void 
+ erase():void 
+ 
+Override:
+draw() method print "Square draw" and erase() method print "Square erase"
+
+
+
+Create Main class(ELC Class) named as ShapeDemo and having main method and call the method and execute it.
+
+Test Cases -1 :
+-------------------
+Valid Case: Random Shape Generation
+
+Sample Input: [No input needed]
+Expected Output (example run, actual output will vary due to randomness):
+
+Triangle draw
+Triangle erase
+
+Square draw
+Square erase
+
+Circle draw
+Circle erase
+
+Circle draw
+Circle erase
+
+---------------
+Question-2
+---------------
+ Design a  Java program that models a Hospital Management System using inheritance:
+
+Create class HospitalStaff with following attributes
+
+declare variable:
+
+private String name;
+private int age;
+private String role;
+
+create one parameterized Constructor and initialize values
+
+method Name:- Work()
+Access specifier :-public
+return type:-void
+
+this method will print the role and there name with "is working massage"
+
+*create second class Doctor which will inherited with HospitalStaff
+
+declare variable:
+private String specialization;
+
+ take one parameterized Constructor and initialize values
+
+// Overriding work() method for doctors
+it will print Roll and Name with this massage" with specialization in " + specialization + " is treating patient
+s."
+
+* Create Nurse class which will inherite HospitalStaff
+
+Variables :-
+private int yearsOfExperience;
+
+take  one parameterized Constructor and initialize values
+
+// Overriding work() method for nurses
+it will print massage in this format
+Role + " " + NAME + " with " + yearsOfExperience + " years of experience is taking care of patients."
+
+create class HospitalManagementSystem inside this take main method where use this class for testing
+create object for every class and check
+
+Question - 3
+--------------
+Superclass Payment:
+
+Method to process a payment:
+
+Method Name: processPayment
+Access Modifier: public
+Return Type: void
+
+Task: Print a generic payment processing message (e.g., "Processing payment").
+
+
+Subclass CreditCardPayment:
+
+Override processPayment method to print a credit card-specific message:
+
+Method Name: processPayment
+Access Modifier: public
+Return Type: void
+
+Task: Print a message for credit card payment (e.g., "Processing credit card payment").
+
+Subclass PayPalPayment:
+
+Override processPayment method to print a PayPal-specific message:
+
+Method Name: processPayment
+Access Modifier: public
+Return Type: void
+ 
+Task: Print a message for PayPal payment (e.g., "Processing PayPal payment").
+
+
+Subclass BankTransferPayment:
+
+Override processPayment method to print a bank transfer-specific message:
+
+Method Name: processPayment
+Access Modifier: public
+Return Type: void
+
+Task: Print a message for bank transfer payment (e.g., "Processing bank transfer payment").
+
+
+Create a Main Class in which take main method and take one static method
+
+Method :
+
+Method to process multiple payments in a single transaction:
+
+Method Name: processMultiplePayments
+Access Modifier: public
+Return Type: void
+Arguments: Payment... payments
+
+Task: Loop through each payment and call the processPayment method.
+
+Create instances of Payment, CreditCardPayment, PayPalPayment, and BankTransferPayment.
+Use polymorphism to call the processPayment method on each instance.
+
+
+
+Test Case 1: 
+--------------
+Generic Payment
+Sample Input:
+if you are calling processPayment() of generic Payment
+
+Expected Output :
+Processing payment
+
+
+Test Case 2: Credit Card Payment
+---------------
+Sample Input:
+if you are calling processPayment() of Credit Card Payment
+
+Expected Output :
+Credit Card  payment done.
+
+Question-4
+-------------
+
+Develop a booking and maintenance system for a Hostel
+Create a class named as Room 
+
+Attributes :
+roomType :String (private)
+
+Contains an instance initializer block that sets default values for room properties. and with some relevant message.
+
+impliment three method 
+
+name :bookRoom()
+return type :void
+
+overload the bookRoom methods 
+
+name :bookRoom
+return Type :void
+Arguments :String 
+Access Modifier :public
+
+Take one more overridden method
+
+name :cleanRoom
+return Type :void
+Access Modifier :public
+
+Take another class HostelRoom which is subclass of Room
+
+Attributes :
+bedType(String) private
+
+Contains an instance initializer block that sets default values for room properties. and with some relevant message.
+
+impliment three method 
+
+name :bookRoom()
+return type :void
+
+overload the bookRoom methods 
+
+name :bookRoom()
+return Type :void
+Arguments :String ,String
+Access Modifier :public
+this method is giving information about roomtype and bedtype
+
+Take one more overridden method
+
+name :cleanRoom
+return Type :void
+Access Modifier :public
+
+//for achieving the runtime polymerphism this method print the specific message.
+
+Take a main class which is having main method and instantiate the object and calling the methods.
+
+Test cases :
+-------------
+case-1
+--------
+Booking a HostelRoom with an empty bed type:
+
+Sample Input: hostelRoom.bookRoom("Deluxe Hostel Room", "")
+Expected Output: Error: Bed type cannot be null or empty.
+
+case-2
+--------
+Booking a HostelRoom with valid room type and bed type:
+
+Sample Input: hostelRoom.bookRoom("Deluxe Hostel Room", "Double Bed")
+
+Expected Output: Deluxe Hostel Room with Double Bed booked
+
+
+

@@ -1,0 +1,125 @@
+Program: 1
+-----------
+Define an abstract class 'Shape' with following specifications
+Methods:
+1. Name: getArea
+   ReturnType: double
+   Modifier: abstract
+2. Name: printDetails
+    ReturnType: double
+    Modifier: abstract
+Define sub-classes of Shape as Rectangle, Circle and Triangle that overrides the methods of shape
+Rectangle class
+Fields:
+	1. length - double
+	2. breadth - double
+Constructors:
+	A parametrized constructor the accepts and initializes length and breadth.
+Circle class
+Fields:
+	1. radius - double
+Constructors:
+	A parametrized constructor the accepts and initializes radius.
+Triangle class
+Fields:
+	1. base - double
+	2. height - double
+Constructors:
+	A parametrized constructor the accepts and initializes base and height.
+All the sub-classes of Shape should override the methods of the shape.
+getArea() should return the area of the respective shape.
+printDetails() should print the shape details as below
+	input:  Rectangle(30.3, 45.4)
+	output:
+		Type = Rectangle
+		Length = 30.3
+		Breadth = 45.4
+		Area = 1375.62
+	input: Circle(23.2)
+	output:
+		Type = Circle
+		Radius = 23.2
+		Area = 1690.0736
+	input: Triangle(146.2, 40.0);
+	output:
+		Type = Triangle
+		Base = 146.2
+		Height = 40.0
+		Area = 2924.0
+Given a class Testing with main method to test your code.
+------------------------------------------------------------------------- Program 2:
+----------
+We have a class named as Car and it is abstract class we need to implement abstract method in 
+sub class named as Test
+For abstract class Car 
+Instance Variables:
+brand : String default
+model : String default
+mileage : int default
+top_speed : int default
+yearOfManufacturing : int default
+Methods:
+No Argument Constructor
+carBrand() : String : It return brand of the car by using brand variable so initialize brand variable and return it.
+
+carModel() : String : It return model of the car by using model variable so initialize model variable and return it.
+
+carMileage() : int : It return mileage of the car by using mileage variable so initialize mileage variable and return it 
+
+carTopSpeed() : int : It return topspeed of the car by using top_speed variable so initialize top-speed variable and return it 
+
+carYear() : int : It return year of manufacturing of the car by using yearOfManufacturing 
+
+variable so initialize yearOfManufacturing variable and return it
+display() : void : abstract : This is abstract method to implement in 
+
+sub class
+Create a sub class of Car called as Test
+Methods:
+@Override
+display(): void : It print all the details of parent class
+This class having main method to test the solutions of parent class
+------------------------------------------------------------------------
+Program 03 :
+------------
+Nutrition in food can be broken down into proteins, fats, and carbohydrates. Implement the following classes about food and nutrition to complete this challenge:
+
+1. abstract class Food with the following properties:
+
+double proteins
+double fats
+double carbs
+double tastyScore
+void getMacroNutrients [Abstract Method]
+
+2. class Egg which extends class Food and has the following properties:
+
+Constructor to initialize the attributes (proteins, fats, and carbs) in the same order.
+int tastyScore = 7
+String type = "non-vegetarian"
+void getMacroNutrients => prints("An egg has [this.proteins] gms of protein, [this.fats] gms of fats and [this.carbs] gms of carbohydrates.")
+
+3. class Bread which extends class Food and has the following properties:
+
+Constructor to initialize the attributes (proteins, fats, and carbs) in the same order.
+int tastyScore = 8
+String type = "vegetarian"
+void getMacroNutrients => prints(" A slice of bread has [this.proteins] gms of protein, [this.fats] gms of fats and [this.carbs] gms of carbohydrates.")
+ 
+
+Create an ELC class Testing
+The first line contains an integer, n, the number of food items.
+
+Every food item takes input in the next 4 lines where the first line is the name of the food and the next three lines are method calls (getType, getTaste, and getMacros) 
+
+Input :-
+1
+Bread
+getType
+getMacros
+getTaste
+Output :-
+
+Bread is vegetarian
+A slice of bread has 4.0 gms of protein, 1.1 gms of fats and 13.8 gms of carbohydrates.
+Taste: 8

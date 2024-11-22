@@ -1,0 +1,206 @@
+Q-1)
+----
+Create an interface AdvancedArithmetic
+
+which contain method  :
+
+Method name :divisorSum
+return Type    :int
+Argument type:int
+Access Modifier :public
+non-access modifier :abstract
+
+ 
+Then write a class called MyCalculator which implements the interface AdvancedArithmetic. 
+
+divisorSum function just takes an integer as input and return the sum of all its divisors.
+
+For example divisors of 6 are 1,2,3 and 6, so divisorSum should return 12. 
+
+Sample Input 
+6 
+Sample Output 
+12 
+Explanation 
+Divisors of 6 are 1,2,3 and 6. 1+2+3+6=12. 
+A class Testing is given to you with a main method. Use this class to test your solution's classes and meth
+ods.
+
+
+Example :
+-----------
+Test Case 1 : 
+--------------
+Sample Input: 6
+
+Expected Output:
+
+Sum of divisors: 12
+Explanation: Divisors of 6 are 1, 2, 3, and 6. 1 + 2 + 3 + 6 = 12.
+
+Test Case 2 : 
+--------------
+Sample Input: -6
+
+Expected Output:
+Error: Input must be a positive integer.
+
+
+Test Case 3:
+--------------
+Sample Input: 0
+
+Expected Output:
+Error: Input must be a positive integer.
+
+Test Case 4:
+--------------
+Input: abc
+
+Expected Output:
+
+Error: Invalid input. Please enter a valid positive integer.
+
+Test Case 5: 
+--------------
+Input: 28
+
+Expected Output:
+Sum of divisors: 56
+Explanation: Divisors of 28 are 1, 2, 4, 7, 14, and 28. 1 + 2 + 4 + 7 + 14 + 28 = 56.
+
+Q-2)
+-----
+Employee Management System:
+
+Employee Interface :
+
+Create an interface named Employee with two methods: 
+
+Method Name   :calculateSalary() 
+Return Type      :double
+Acess Modifier  :public 
+
+Method Name  : generatePayroll()
+Return Type     :void
+Acess Modifier :public 
+
+The calculateSalary() method should compute the salary for the employee.
+The generatePayroll() method should generate the payroll information for the employee.
+
+FullTimeEmployee Class :
+
+Implement a class named FullTimeEmployee that implements the Employee interface.
+
+Include Attributes :
+employeeId     	:(int)
+employeeName   	:(String)
+monthlySalary 	:(double) 
+benefits 			:(double)
+
+Acess modifier :private(for all the varriable )
+
+Provide a constructor that initializes the employee details.
+
+Implement the calculateSalary() method to calculate the salary for a full-time employee, including benefits.
+
+Implement the generatePayroll() method to print the payroll information for a full-time employee.
+
+Testing :
+
+Take a main clas  Employee Management System.
+Create instances of  FullTimeEmployee.
+Call the calculateSalary() and generatePayroll() methods to ensure correct calculations and information generation.
+
+Test Case 1 : 
+--------------
+for Negative Salary
+Sample Input:
+if user eneterd negative salary
+
+Expected Output :
+Error: Monthly salary cannot be negative.
+
+
+Test Case 2 :
+--------------
+ Empty Employee Name
+Input:
+
+if employee is passed by the user is ""(empty)
+
+Expected Output:
+
+Error: Employee name cannot be empty.
+
+Test Case 3 :
+--------------
+Sample Input :
+if all the information is valid input
+
+Expected Output :
+Print all the detail information.
+
+
+Question -3
+--------------
+Social Media System: 
+
+Post Interface :
+
+Create an interface named Post with two methods.
+
+Method Name   :publish() 
+Return Type      :void
+Acess Modifier  :public 
+
+Method Name  : like()
+Return Type     :void
+Acess Modifier :public 
+
+
+The publish() method should print a message indicating that the post has been published.
+The like() method should increment a counter for the number of likes and print a message indicating that the post has been liked.
+
+TextPost Class :
+
+Implement a class named TextPost that implements the Post interface.
+
+Include Attributes :
+
+ textContent 	  :(String) 
+ likes                 : (int)
+
+take a  constructor, and  initialize the likes to 0.
+
+Provide an implementation for the publish() method to print the text content of the post.
+Provide an implementation for the like() method to increment the likes counter and print the updated number of likes.
+
+Include an additional method, e.g., getTextContent(), to retrieve the text content of the post.
+
+Testing :
+
+Write a test program that demonstrates the functionality of your social media system.
+Create instances of TextPost. 
+Call the like and publish method and show that the number of likes are increasing.
+
+Test Case -1: 
+---------------
+Empty Text Content
+Sample Input: textContent =""
+
+Expected Output :
+Error: Text content cannot be empty.
+
+Test Case -2 :
+
+Sample Input: textContent ="Hello, world!"
+
+Expected Output :
+Post Liked! Total likes: 1
+Post Liked! Total likes: 2
+
+Post 1: Hello, world! | Likes: 2
+
+
+

@@ -97,7 +97,7 @@ Expected Output:
 Error: Length and width must be non-negative.
 
 
-Question -3
+Question -3 
 -------------
 
 Create a class Employee (BLC Class)
@@ -106,16 +106,16 @@ Attributes:
 
 names           		datatype
 --------    	     		-----------
-hoursWorked        :double
-hourlyRate            :double
-annualSalary	      :double
-salesAmount         :double
+hoursWorked        		:double
+hourlyRate            		:double
+annualSalary	      		:double
+salesAmount         		:float
 
 Acess modifier :private for all varriables
 
 Implement three constructors:
 
-One for an hourly employee that accepts hoursWorked and hourlyRate.
+One for an hourly employee that accepts hoursWorked and hourlyRate. 
 
 One for a salaried employee that accepts annualSalary.
 
@@ -144,7 +144,6 @@ Acess Modifier	:public
 Create a Tester Class(ELC Class) Create instances of each type of employee.
 Calculate and display the salary for each employee type using the appropriate method.
 
-
 Test Cases :
 --------------
 Case 1:
@@ -168,7 +167,6 @@ Expected Output : Monthly salary of salaried employee: 5000.0
 Input: salesAmount = 50000, commissionRate = 0.10
 Expected Output: Commission of employee: 5000.0
 
-
 Question - 4
 ---------------
 Design a librart borrowing system
@@ -177,7 +175,7 @@ Take a BookBorrowing class :
 
 Attributes:
 
-bookTitle           (String) -private         
+bookTitle (String) -private         
 borrowerName (String) -private
 
 Constructor:
@@ -191,7 +189,7 @@ Take a DVDBorrowing Class
 
 Attributes : 
 
- dvdTitle             (String) - private 
+ dvdTitle (String) - private 
  borrowerName (String)	 - private	
 
 Take a parameterize constructor to initialize the properties

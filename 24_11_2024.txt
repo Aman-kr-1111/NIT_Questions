@@ -140,8 +140,6 @@ Take another subclass InstagramUser whose super class is User
 in this class for initializing super class properties we can take constructor.
 
 take one concrete method 
-
- 
 Method Name 		: sendDirectMessage
 Return Type   		: void 
 Arguments Type 	: String
@@ -154,7 +152,7 @@ and in this class just override the sendMessage method of the interface.
 this method is implementing the functionality which only allow the InstagramUser class not allowing to other class give error message.[User is not an Instagram user.]
 
 Take the main class named as InstagramChatTest which is having main method 
-and inthis just demonstarte the functionality and invoke the method based on requirement.
+and in this just demonstarte the functionality and invoke the method based on requirement.
 
 Question-4
 --------------

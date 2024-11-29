@@ -15,6 +15,7 @@ public class FunctionalInterface {
 	}
 }
 
+output:- 10
 
 2.Choose the correct output of the following program
 @FunctionalInterface
@@ -31,7 +32,7 @@ public class FunctionalInterface {
 		System.out.println(cube.cube(a));
 	}
 }
-
+output:- 9261
 
 3.What is the output of the following program
 interface Add
@@ -46,7 +47,7 @@ public class FunctionalInterface {
 		System.out.println(add.add(a));
 	}
 }
-
+output:- compile time error
 
 4.What is the output of the following program
 @FunctionalInterface
@@ -60,8 +61,7 @@ public class FunctionalInterface {
 		System.out.println(str.methodStr("2"));
 	}
 }
-
-
+output:- bad return type in lambda expression
 
 5.Choose the correct output of the following program
 public class FunctionalInterface {
@@ -70,7 +70,7 @@ public class FunctionalInterface {
 		System.out.println(str);
 	}
 }
-
+output:- compile time error
 
 6.What is the output of the following code
 @FunctionalInterface
@@ -91,6 +91,9 @@ public class FunctionalInterfaceExample
 		System.out.println(result);
 	}
 }
+output:-
+Hai Welcome to
+Hai NARESHIT
 
 7.By using FunctionalInterface annotation following code is correct or not?
 @FunctionalInterface
@@ -100,6 +103,7 @@ interface NIT
 	String newInterface();
 	
 }
+output:- No
 
 8.What is the output of the following code
 @FunctionalInterface
@@ -134,6 +138,8 @@ public class FunctionalInterfaceExample implements NIT{
      return x*x;
  }
 }
+output:-
+30 20 125 5 36
 
 9.What is the output of the following code
 @FunctionalInterface
@@ -169,6 +175,8 @@ public class FunctionalInterfaceExample{
      System.out.print(sq.square(6));
  }
 }
+output:-
+30 20 125 5 36
 
 10. public class FunctionalInterfaceExample{
 	public static void main(String[] args) {
@@ -176,7 +184,7 @@ public class FunctionalInterfaceExample{
 		System.out.println(fun.apply("Hyderabad"));
 	}
 }
-
+output:- der
 
 11.By using FunctionalInterface annotation following code is correct or not?
 @FunctionalInterface
@@ -192,6 +200,7 @@ interface NIT
 		return a;
 	}
 }
+output:- Correct
 
 12.Is there any error in following code?
 @FunctionalInterface
@@ -201,7 +210,7 @@ interface NIT
 	int hashCode(); //Object class methods
 	String toString();	
 }
-
+output:- error
 
 13.Is there any error in following code?
 @FunctionalInterface
@@ -214,6 +223,8 @@ interface NIT
 	void notify();
 	
 }
+output:- error
+
 
 14.What is the output of the following code
 public class FunctionalInterfaceExample{
@@ -229,6 +240,9 @@ public class FunctionalInterfaceExample{
 		
 	}
 }
+output:- 
+true
+true
 
 15.What is the output of the following code
 public class FunctionalInterfaceExample{
@@ -244,7 +258,7 @@ public class FunctionalInterfaceExample{
 		}
 	}
 }
-
+output:- Java
 
 16.What is the output of the following code
 interface NIT
@@ -259,6 +273,7 @@ public class Java8 {
 		System.out.println(i);
 	}
 }
+output:- 7
 
 17.What is the output of the following code?
 @FunctionalInterface
@@ -281,6 +296,9 @@ public class Java8 {
 		result.alpha("");
 	}
 }
+output:-
+125
+Welcome to NareshIT
 
 18.What is the output of the following code?
 public class Java8 {
@@ -289,7 +307,7 @@ public class Java8 {
 		value.accept(5);
 	}
 }
-
+output:- 15
 
 19. What is the output of the following code?
 public class Java8 {
@@ -298,6 +316,7 @@ public class Java8 {
 		value.accept("");
 	}
 }
+output:- Naresh I Technologies
 
 20. What is the output of the following code?
 public class Java8 {
@@ -306,3 +325,4 @@ public class Java8 {
 		value.accept("NareshIT");
 	}
 }
+output:- nareshit

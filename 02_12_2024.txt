@@ -142,6 +142,7 @@ public class Java8 {
 		nit.myInterface(15);
 	}
 }
+output:- 20
 
 12.What is the output of the following code?
 interface NIT
@@ -344,7 +345,7 @@ public class Java8 {
 	}
 }
 Answer:
-3
+0
 
 24.What is the output of the following code?
 interface NIT
@@ -404,9 +405,9 @@ public class Java8 {
 	}
 }
 Answer:
-6
-0
-NIT
+error: cannot find symbol
+        private void operation(int a, int b, Calculate cal)
+
 
 27.What is the output of the following code?
 interface NIT

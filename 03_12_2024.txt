@@ -1,0 +1,157 @@
+Ques - 1
+--------------
+Create a Java program that demonstrates the usage of the Predicate interface to test if a number is even or prime. Your task is to implement a method testPredicate in the NumberTester class that tests a given number against a provided predicate.
+
+NumberTester Class(ELC):
+
+In the main method:
+Define two predicates:
+isEven: Checks if a given number is even.
+isPrime: Checks if a given number is prime.
+
+Define a sample integer number (e.g., 13).
+
+Test each predicate using the testPredicate method and print the result indicating whether the number satisfies each predicate.
+
+Test Cases:
+
+Test Case 1:
+Input: 13
+Output:
+Is 13 even? false
+Is 13 prime? true
+
+Test Case 2:
+Input: 5
+Output:
+Is 5 even? false
+Is 5 prime? true
+
+Test Case 3:
+Input: 20
+Output:
+Is 20 even? true
+Is 20 prime? false
+
+Ques - 2
+-------------
+Create a Java program that demonstrates the usage of the Consumer interface to perform various operations on a given integer and string value. Your task is to define and use consumers to modify and display these values.
+
+ValueModifier class (ELC) :
+
+Instructions:
+Inside the main method, define two consumers:
+
+stringConsumer: Converts the string to uppercase and prints it.
+integerConsumer: Squares the integer value and prints it.
+
+Define a sample string value (e.g., "hello") and an integer value (e.g., 3).
+
+Use each consumer to perform the corresponding operation on the sample values and print the results.
+
+Test Cases:
+Test Case 1:
+
+Input: "world", 5
+Output:
+Original string: world
+Original integer: 5
+After converting string to uppercase: WORLD
+After squaring the integer: 25
+
+Test Case 2:
+Input: "java", 7
+Output:
+Original string: java
+Original integer: 7
+After converting string to uppercase: JAVA
+After squaring the integer: 49
+
+Test Case 3:
+Input: "example", 4
+Output:
+Original string: example
+Original integer: 4
+After converting string to uppercase: EXAMPLE
+After squaring the integer: 16
+
+
+Ques - 3
+-----------
+Create a Java program that utilizes the Supplier interface to generate random values. Implement two Supplier instances: one for generating a random alphanumeric string in the format "NIT" followed by four random digits, and another for generating a random integer within a specified range.
+
+RandomValueGenerator class(ELC):
+
+Inside the main method, define two consumers:
+String Supplier (stringSupplier):
+Generates a random alphanumeric string in the format "NIT" followed by four random digits.
+Example output: "NIT1234", "NIT5678", etc.
+
+Integer Supplier (integerSupplier):
+Generates a random integer between a specified minimum and maximum value (inclusive).
+Example output: 57, 92, etc.
+
+Tasks to Implement:
+Define the stringSupplier and integerSupplier instances using the Supplier interface and lambda expressions.
+
+Inside the main method, use these suppliers to generate random values and print the results.
+
+Test Cases:
+
+Test Case 1:
+Output:
+Generated random string: NIT1234
+Generated random integer: 57
+
+Test Case 2:
+Output:
+Generated random string: NIT5678
+Generated random integer: 92
+
+Test Case 3:
+
+Output:
+Generated random string: NIT0192
+Generated random integer: 14
+
+Ques - 4
+------------
+Design a Java program that utilizes the Function interface within the main method to perform operations on both strings and integers. Implement two functions for string operations: calculating the string length and formatting an integer division result. Your task is to implement these operations inline within the main method using lambda expressions.
+
+FunctionApplier class(ELC):
+
+Requirements:
+Main Method:
+
+Define two lambda expressions by using Function<-,->:
+getStringLength: Computes and returns the length of the input string.
+divideAndFormat: Takes an integer input, divides it by 2.0, and returns the formatted result as a double.
+
+Print the results by calling the functions.
+
+Test Case 1:
+
+Input:
+String testString = "Hello";
+int testInteger = 10;
+Output:
+String length of "Hello": 5
+Result of dividing 10 by 2: 5.0
+
+Test Case 2:
+Input:
+String testString = "Java Programming";
+int testInteger = 15;
+Output:
+String length of "Java Programming": 17
+Result of dividing 15 by 2: 7.5
+
+Test Case 3:
+
+Input:
+String testString = "";
+int testInteger = 8;
+
+Output:
+String length of "": 0
+Result of dividing 8 by 2: 4.0

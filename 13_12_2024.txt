@@ -1,0 +1,317 @@
+Find out the output of the following Program :
+
+Q1)
+class A implements Runnable 
+{  
+  public void run() 
+  {
+     System.out.print(Thread.currentThread().getName());
+  }  
+}  
+class B implements Runnable
+{  
+  public void run() 
+  {  
+    new A().run();  
+    new Thread(new A(),"T2").run();  
+    new Thread(new A(),"T3").start();  
+   }
+}  
+public class Test
+{  
+  public static void main (String[] args) 
+  {  
+    new Thread(new B(),"T1").start();  
+  }
+}
+
+Q2)
+public class Test extends Thread 
+{
+static String name = "ravi";
+
+public static void main(String args[]) 
+{
+Test t = new Test();
+t.Test(name);
+System.out.print(" " + name);
+}
+
+public void Test(String name) {
+start();
+System.out.print(" method");
+}
+
+public void run() {
+System.out.print(" run");
+}
+}
+
+Q3)
+
+class Job extends Thread 
+{
+    private Integer number = 0;
+    public void run() 
+    {
+        for (int i = 1; i < 1000000; i++) 
+	{
+            number++;
+        }
+    }
+    public Integer getNumber() 
+    {
+        return number;
+    }
+}
+public class Test {
+    public static void main(String[] args) {
+        Job thread = new Job();
+        thread.start();
+		try
+		{
+			thread.join();
+		}
+		catch (Exception e)
+		{
+		}
+        System.out.println(thread.getNumber());
+    }
+}
+
+
+Q4)
+class MyData extends Thread
+{
+private boolean request;
+private String  data;
+public void run()
+	{
+		storeMessage("Hello");
+		String str=retrieveMessage();
+		System.out.println(str);
+	}
+public synchronized void storeMessage(String data) 
+  {
+      request = true;
+      this.data = data;
+  }
+
+  public synchronized String retrieveMessage() 
+  {
+    request = false;
+    return data+" : "+request;
+  }
+ }
+public class Test
+{
+	public static void main(String[] args) 
+	{
+		MyData md = new MyData();
+		md.start();
+        	
+		
+	}
+}
+
+Q5)
+public class Test extends Thread {
+
+    public static void main(String[] args) throws Exception {
+    Test t = new Test();
+    t.start();
+    t.method();
+    }
+
+    public void run() {
+    System.out.println("run");
+    }
+
+    public void method() {
+	hello();
+    System.out.println("method");
+}
+
+public void hello()
+	{
+	hello1();
+	System.out.println("PR");
+	}
+
+	public void hello1()
+	{
+	
+	System.out.println("RR");
+	}
+}
+
+
+Q6)
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Runnable r = new Runnable() {
+ public void run() {
+ System.out.print("Cat");
+ }
+ };
+ Thread t = new Thread(r) {
+ public void run() {
+ System.out.print("Dog");
+ }
+ };
+ t.start();
+		
+	}
+}
+
+
+Q7)
+
+class MyThread extends Thread
+{
+	public void run()
+	{
+		System.out.println("MyThread: run()");
+	}
+
+	public void start()
+	{
+		System.out.println("MyThread: start()");
+	}
+}
+
+class MyRunnable implements Runnable
+{
+	public void run()
+	{
+		System.out.println("MyRunnable: run()");
+	}
+
+	public void start()
+	{
+		System.out.println("MyRunnable: start()");
+	}
+}
+
+public class Test 
+{
+	public static void main(String args[])
+	{
+		MyThread myThread  =  new MyThread();
+		MyRunnable myRunnable = new MyRunnable();
+		Thread thread  =  new Thread(myRunnable);
+		myThread.start();
+		thread.start();
+	}
+}
+
+
+Q8)
+
+class MyThread extends Thread
+{
+	String myName;
+
+	MyThread(String name)
+	{
+		myName = name;
+	}
+
+	public void run()
+	{
+		for(int i=0; i<10;i++)
+		{
+			System.out.println(myName);
+		}
+	}
+}
+public class Test
+{
+	public static void main(String args[])
+	{
+		try
+		{
+			MyThread mt1 = new MyThread("mt1");
+			MyThread mt2 = new MyThread("mt2");
+			mt1.start();
+			mt1.join();
+			mt2.start();
+		}
+		catch(InterruptedException ex)
+		{
+		}
+	}
+}
+
+
+Q9)
+class MyThread implements Runnable
+{
+	String str;
+	MyThread(String str)
+	{
+		this.str=str;
+	}
+	public void run()
+	{
+		for(int i=1; i<=10; i++)
+		{
+			System.out.println(str+ " : "+i);
+			try
+			{
+				Thread.sleep(100);
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+}
+public class Test
+{
+	public static void main(String [] args)
+	{
+	MyThread obj1 = new MyThread("Cut the Ticket");
+	MyThread obj2 = new MyThread(" Show the Seat");
+
+		Thread t1 = new Thread(obj1);
+		Thread t2 = new Thread(obj2);
+
+		t1.start();
+		t2.start();
+
+	}
+}
+
+Q10)
+public class Test76 
+{
+public static void main(String[] args) 
+{
+ new Test76().go();
+ }
+ public void go() 
+ {
+ Runnable r = new Runnable()
+ {
+ public void run() 
+ {
+ System.out.println("foo");
+ }};
+  Thread t = new Thread(r);
+  t.start();
+  t.run();
+ }
+ }
+-----------------------------------------------------------------------------
+Program 01:
+----------
+Write a program in java to show the drawback of Multithreading by booking Railway Reservation System.
+
+In this scenario, only 1 seat is available and two threads are accessing this seat to book the ticket. 
+
+Write a Program to show that both the thread will get the ticket.
+

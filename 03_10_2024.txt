@@ -1,0 +1,33 @@
+Program 01
+----------
+Write a Program on OOPs to define Dog class properties and behaviour.
+
+properties :
+
+name    : String
+height  : double
+age	: int
+
+behaviour:
+
+getDogInformation() : public void
+             bark() : public void    
+------------------------------------------------------------------------
+Program 02
+----------
+Write a Program on OOPs to define Fan class properties and behaviour.
+
+properties :
+
+name    : String
+coil    : String
+wings	: int
+
+behaviour:
+
+switchOn()  : public void
+switchOff() : public void   
+------------------------------------------------------------------------
+Program 03
+-----------
+Write 2 programs on OOPs by your own thinking and imagination.

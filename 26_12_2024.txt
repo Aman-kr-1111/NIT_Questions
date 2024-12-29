@@ -1,0 +1,918 @@
+Que-1)
+----------------------------
+class NewPlatForm2
+{
+    public static void main(String args[])
+    {
+      {
+         new Thread()
+         {
+            public void run()
+              {
+            	for(int i=1;i<=(3^5);i++)
+            	{
+                System.out.println("Enjoy Your NewPlatForm..."+i);
+                break;
+            	}
+              }
+         }.start();
+
+        new Thread()
+           {
+              public void run()
+               {
+            	  for(int i=1;i<=(3^5);i++)
+              	{
+            		  if(i==(3^4))
+                  System.out.println("Experience this NewPlatForm..."+i);
+              	}
+               }
+           }.start();
+
+      }
+   } 
+}
+
+A)Enjoy Your NewPlatForm...1
+  Experience this NewPlatForm...3
+
+B)Compile time error
+
+C)Enjoy Your NewPlatForm...1
+
+D)No output
+
+Ans =>c
+________________________________________________________________________
+Que-2)
+---------------------------
+class NewPlatForm3
+{
+   public static void main(String args[])
+     {
+       Runnable r1=new Runnable()
+        {
+          public void run()
+           {
+             System.out.println("How about your NewPlatForm?");
+           }
+        };
+
+       Runnable r2=new Runnable()
+          {
+             public void run()
+               {
+                  System.out.println("Are you Enjoying NewPlatform?");
+               }
+           };
+           Thread t1=new Thread(r1);
+           Thread t2=new Thread(r2);
+
+          t1.start();
+          t2.start();
+      }
+}
+A)Are you Enjoying NewPlatform?
+  How about your NewPlatForm?
+
+B)How about your NewPlatForm?
+  Are you Enjoying NewPlatform?
+
+c)Only A
+
+D)Only B
+
+E)Both A and B
+
+Ans =>E
+____________________________________________________________________
+Que-3
+---------------------
+class Test extends Thread
+{
+	public void run()
+	{
+		for(int i=0; i<=3; i++)
+		{
+			System.out.println("Hello Welcome here.."+i);
+		}
+	}
+}
+class NewPlatForm1
+{
+	public static void main(String[] args) 
+	{
+		Test t = new Test();
+		t.start();
+                Test t2= new Test();
+		t.start();
+	}
+}
+       A)  Hello Welcome here..0
+           Hello Welcome here..1
+           Hello Welcome here..2
+           Hello Welcome here..3
+
+        B) Hello Welcome here..0
+           Hello Welcome here..1
+           Hello Welcome here..0
+           Hello Welcome here..1
+           Hello Welcome here..2
+           Hello Welcome here..3
+           Hello Welcome here..2
+           Hello Welcome here..3
+
+        C) IllegalThreadStateException
+
+        D) Compililation error
+Ans =>c
+____________________________________________________________________
+Que-4)
+------------------------
+class NewPlatForm4
+{
+    public static void main(String args[])
+    {
+      {
+         new Thread()
+         {
+            public void run()
+              {
+            	for(int i=1;i<=(3^5);i++)
+            	{
+                System.out.println("Enjoy Your NewPlatForm..."+i);
+                break;
+            	}
+              }
+         }.start();
+
+        new Thread()
+           {
+              public void run()
+               {
+            	  for(int i=1;i<=(3^5);i++)
+              	{
+            		  int n=10;
+            		  if(i==(n/=n/=2))
+                  System.out.println("Experience this NewPlatForm..."+i);
+              	}
+               }
+           }.start();
+
+      }
+   } 
+}
+
+A)Enjoy Your NewPlatForm...1
+  Experience this NewPlatForm...3
+
+B)Enjoy Your NewPlatForm...1
+  Experience this NewPlatForm...2
+
+C)Experience this NewPlatForm...2
+  Enjoy Your NewPlatForm...1
+D)Enjoy Your NewPlatForm...1
+
+Ans => B
+___________________________________________________________________________
+Que-5)
+--------------------------
+wait(), notify() & notifyAll() are methods of which class or interface?
+
+A)Thread class
+B)Runnable interface
+C)Object
+D)None
+Ans => C
+___________________________________________________________________________
+Que-6)
+-------------------------
+What are valid statements for yield method?
+
+A)yield() method when called on thread gives a hint to the thread scheduler that 
+the current thread is willing to yield its current use of  processor. 
+The thread scheduler is free to ignore this hint.
+
+B)yield() method stops thread for unpredictable time.
+
+C)yield() is a static method, hence calling Thread.yield() causes currently executing thread to yield.
+
+D)All
+
+Ans => D
+___________________________________________________________________________
+Que-7
+---------------------
+public class NewPlatForm6 implements Runnable {
+    public void run() 
+    { 
+    	System.out.printf("%d", 3); 
+    }
+    public static void main(String[] args)
+        throws InterruptedException
+    {
+        Thread thread = new Thread(new NewPlatForm6());
+        thread.start();
+        System.out.printf("%d", 1);
+        thread.join();
+        System.out.printf("%d", 2);
+    }
+}
+A)123
+B)213 or 231
+C)132 or 312
+D)321
+
+Ans =>C
+_____________________________________________________________________________
+Que-8)
+----------------------
+class CheckingMyDaemonThread extends Thread {
+	
+public void run()
+    {
+       if (Thread.currentThread().isDaemon()) {
+          System.out.println("I am daemon thread and I am working");
+        }
+   else {
+          System.out.println("I am user thread and I am working");
+        }
+    }
+}
+class NewPlatForm7 {
+  public static void main(String[] args)
+    {
+        CheckingMyDaemonThread t1= new CheckingMyDaemonThread();
+        CheckingMyDaemonThread t2= new CheckingMyDaemonThread();
+        CheckingMyDaemonThread t3= new CheckingMyDaemonThread();
+        t1.start();
+        t2.start();
+        t3.start();
+        t2.setDaemon(true);
+    }
+}
+A)I am user thread and I am working
+  I am user thread and I am working
+  I am user thread and I am working
+
+B)I am daemon thread and I am working
+  I am user thread and I am working
+  I am user thread and I am working
+
+C)Compilation error
+
+D)IllegalThreadStateException
+
+Ans =>D
+___________________________________________________________________________
+Que-9)
+---------------------------
+class TickTock {
+	int count;
+	public synchronized void increment()
+	{
+		count++;
+	}
+}
+class NewPlatForm8 {
+	public static void main(String[] args) throws Exception
+	{
+		TickTock tt = new TickTock();
+		Thread t1 = new Thread(new Runnable() {
+			public void run()
+			{
+				for (int i = 0; i < 100000; i++) {
+					tt.increment();
+				}
+			}
+		});
+		Thread t2 = new Thread(new Runnable() {
+			public void run()
+			{
+				for (int i = 0; i < 100000; i++) {
+					tt.increment();
+				}
+			}
+		});
+                t1.start();
+		t2.start();
+		t1.join();
+		t2.join();
+		System.out.println("Count : " + tt.count);
+	}
+}
+A)Count : 199999
+B)Count : 99999
+C)Count : 200000
+D)Count : 0
+
+Ans => C
+___________________________________________________________________________
+Que-10)
+----------------------------
+class TickTock {
+	int count;
+	public synchronized void increment()
+	{
+		count++;
+	}
+}
+class NewPlatForm8 {
+	public static void main(String[] args) throws Exception
+	{
+		TickTock tt = new TickTock();
+		Thread t1 = new Thread(new Runnable() {
+			public void run()
+			{
+				for (int i = 0; i < 100000; i++) {
+					tt.increment();
+				}
+			}
+		});
+		Thread t2 = new Thread(new Runnable() {
+			public void run()
+			{
+				for (int i = 0; i < 100000; i++) {
+					tt.increment();
+				}
+			}
+		});
+                t1.start();
+		t2.start();
+		t1.join();
+		System.out.println("Count : " + tt.count);
+	}
+}
+A)Count : 194145
+B)Count : 191433
+C)Count : only A
+D)Count : Both A & B
+E)Count : 0 or 200000
+
+Ans => D
+___________________________________________________________________________
+Que-11)
+----------------------
+public class NewPlatForm9
+{
+    public static void main(String[] args) throws InterruptedException
+    {
+        final PC pc = new PC();
+        Thread t1 = new Thread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                try
+                {
+                    pc.produce();
+                }
+                catch(InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        });
+ 
+        Thread t2 = new Thread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                try
+                {
+                    pc.consume();
+                }
+                catch(InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        });
+  
+        t1.start();
+        t2.start();
+  
+        t1.join();
+        t2.join();
+    }
+    public static class PC
+    {
+        public void produce()throws InterruptedException
+        {
+            synchronized(this)
+            {
+                System.out.println("producer thread running");
+                wait();
+                System.out.println("Resumed");
+            }
+        }
+        public void consume()throws InterruptedException
+        {
+            Thread.sleep(1000);
+            Scanner s = new Scanner(System.in);
+            synchronized(this)
+            {
+                System.out.println("Waiting for return key.");
+                s.nextLine();
+                System.out.println("Return key pressed");
+                notify();
+                Thread.sleep(2000);
+            }
+        }
+    }
+}
+
+A)producer thread running
+
+B)Waiting for return key.
+
+C)producer thread running
+  Waiting for return key.
+
+D)producer thread running
+  Waiting for return key.
+
+  Return key pressed
+  Resumed
+
+Ans => D
+___________________________________________________________________________
+Que-12
+--------------------- 
+        public class Test implement Runnable
+        {
+
+	public static void main(String[] args) 
+	{
+	     Thread t= new Thread(this);
+	     t.start();
+
+	}
+	public void run()
+	{
+		System.out.println("test");
+	}
+
+      }
+    
+
+ A :  The program does not compile because this connot be referenced in a static
+       method.
+
+ B : The program compiles fine, but it does not print anything because t does 
+       not invoke the run () method.
+
+ C : The program compiles and runs fine and displays test on the consol.
+  
+ D : None of the above.
+
+Ans. A  
+................................................................................
+Que :-13
+---------------------
+    public class  Test extends Thread
+ {
+	 public static void main(String[] args) 
+	 {
+		Test t = new Test();
+		t.run();
+		t.start();
+	}
+	 public void run ()
+	 {
+		 System.out.println("run-test");
+	 }
+ }
+
+
+A. run-test run-test
+
+B. run-test
+
+C. Compilation fails due to an error on line 4
+
+D. Compilation fails due to an error on line 7
+
+E. None of these
+
+Ans:  A
+................................................................................
+Que :-14
+-----------------------------
+      class  A implements Runnable
+       {
+	  public void run()
+	  {
+		  System.out.println("run-a");
+	  }
+	 
+       }
+       public class Test 
+        {
+	  public static void main(String[] args)
+	  {
+		  A a= new A();
+		  Thread t= new Thread(a);
+		      t.start();
+		      t.start();
+		
+	}
+    }
+
+    A:run-a
+
+    B:run-a run-a
+
+    C:Compilation fails with an error at line 6
+
+    D:Compilation succeed but Runtime Exception
+
+    E:None of these
+
+ Ans.D
+................................................................................         
+ Que:-15
+-----------------------
+       class MyThread extends Thread {
+	   public void run() {
+	      System.out.print("Child ");
+	   }
+	}
+
+	public class Test {
+	   public static void main(String[] args) 
+	                 throws InterruptedException {
+	      MyThread t = new MyThread();
+	      t.start();
+	      t.join();
+	      System.out.print("Main ");
+	   }
+	}
+ A: Main Child
+
+ B: Child Main
+
+ C: Main Main
+
+ D: Child Child
+
+Ans:B
+................................................................................
+Que:-16)
+------------------
+       class MyThread extends Thread {
+	   public static Thread mt;
+
+	   public void run() {
+	      try {
+	         mt.join();
+	      } catch(InterruptedException ie) {}
+	      System.out.print("Child ");
+	   }
+	}
+
+	public class Test {
+	   public static void main(String[] args) 
+	                 throws InterruptedException {
+	      MyThread.mt = Thread.currentThread();
+	      MyThread t = new MyThread();
+	      t.start();
+	      Thread.sleep(1000);
+	      System.out.print("Main ");
+	   }
+	}
+
+  
+A: Main Child
+B: Child Main
+C: Main Main
+D Child Child
+
+Ans: A
+...............................................................................
+Que:-17)
+------------------
+    
+     class MyThread extends Thread {
+   public static Thread mt;
+
+   public void run() {
+      try {
+         mt.join();
+      } catch(InterruptedException ie) {}
+      System.out.print("Child ");
+   }
+}
+
+public class Test {
+   public static void main(String[] args) 
+                 throws InterruptedException {
+      MyThread.mt = Thread.currentThread();
+      MyThread t = new MyThread();
+      t.start();
+      t.join();
+      System.out.print("Main ");
+   }
+}
+    
+   A: Main Child
+   B: Child Main
+   C: Waiting for each other to complete the execution
+   D: Deadlock
+  
+   Ans:C
+................................................................................
+Que-18)
+------------------
+What is the output of below program
+
+public class ThreadPriority extends Thread {
+
+public void run() {
+System.out.println(Thread.currentThread().getPriority());
+}
+
+public static void main(String[] args)
+throws InterruptedException {
+
+ThreadPriority t1 = new ThreadPriority();
+ThreadPriority t2 = new ThreadPriority();
+
+t1.start();
+t2.start();
+
+}
+}
+
+A) compile time as two time start method call
+B) 5 5
+C) 5
+D) None of these
+
+Ans:B
+_____________________________________________________________________________________________
+Que-19)
+-------------------------
+What is the output of below program
+class MyThread extends Thread{
+public void run(){
+System.out.println("thread running....");
+}
+public static void main(String args[]){
+MyThread obj=new MyThread();
+obj.start();
+}
+}
+
+A) Blank screen 
+B) thread running....
+C) Compile time error
+D) @override is compulsary to write in run
+
+Ans:B
+_____________________________________________________________________________________________
+Que-20)
+--------------------------
+How can you explicitly set the priority of a thread?
+
+A) By calling the setThreadPriority(int priority) method.
+B) By setting the priority field directly on the Thread instance.
+C) By calling the setPriority(int priority) method on the Thread instance.
+D) By passing the desired priority as a parameter to the start() method.
+
+Answer: C) 
+_____________________________________________________________________________________________
+Que-21)
+---------------------------
+What is the range of values for the thread priority in Java?
+
+A) 1 to 5
+B) 1 to 10
+C) 0 to 100
+D) -10 to 10
+
+Answer: B) 1 to 10
+__________________________________________________________________________________________
+Que-22)
+--------------------------
+What is the output of below program
+import java.io.*;
+class MyThread extends Thread{
+public boolean stop=true;
+public void run(){
+for(int i=1;i<3;i++){
+System.out.println(i);
+if(stop == false){
+return;
+}
+}
+}
+}
+class Use{
+public static void main(String args[])throws IOException{
+MyThread mt=new MyThread();
+mt.start();
+System.out.print("Press Enter to Stop Thread :\n");
+System.in.read();
+mt.stop=false;
+}
+}
+
+A)Press Enter to Stop Thread : 1 2
+B)Press Enter to Stop Thread : 2
+C)Blank Screen
+D)Compile time error
+
+Ans:A
+_____________________________________________________________________________________________
+Que-23)
+-----------------------------
+What is the output of below program
+class MyThread extends Thread {
+public void run(){
+for(int i=1;i<3;i++){
+try{
+Thread.sleep(2000);//two second
+System.out.println(i);
+}catch(InterruptedException ie){
+ie.printStackTrace();
+}
+}
+}
+public static void main(String[] args)
+{
+MyThread mt=new MyThread();
+mt.start();
+}
+}
+
+A) Exception Occured and catch executed 
+B) 2
+C) 1 2
+D) Compile time error 
+
+Ans:C
+_____________________________________________________________________________________________
+Que-24)
+-----------------------------
+What is the output of below program
+class MyThread extends Thread
+{
+public void run()
+{
+for(int i=0;i<=3;i++)
+System.out.println(i);
+}
+public static void main(String[] args)
+{
+MyThread obj =new MyThread();
+Thread t1 = new Thread(obj);
+Thread t2 = new Thread(obj);
+t1.setPriority(2);
+t2.setPriority(Thread.NORM_PRIORITY);
+t1.start();
+t2.start();
+}
+}
+
+A) concurrent result as run will call 2 time.
+B) sequential way the run method will execute.
+C) Compile time error.
+D) 0 1 2 
+
+Ans: A
+_____________________________________________________________________________________________
+Que-25)
+----------------------------
+What is the output of below program
+class DaemonTest extends Thread  {
+public void run(){
+if(Thread.currentThread().isDaemon()){
+System.out.println("Daemon thread is running");
+}else{
+System.out.println("Not Running");
+}
+}
+public static void main(String[] args) {
+DaemonTest obj = new DaemonTest();
+obj.setDaemon(true);
+obj.start();
+}
+}
+
+A)Not Running
+B)Daemon thread is running
+C)Blank screen 
+D)None of these blank screen 
+
+Ans: B
+_____________________________________________________________________________________________
+Que-26)
+-----------------------------
+What is the output of below program
+public class MyThread implements Runnable {
+public void run() {
+System.out.println("running...");
+}
+public static void main(String[] args) {
+Thread thread = new Thread(new MyThread());
+thread.start();
+System.out.println(thread.isDaemon());
+}
+
+}
+
+A) true running
+B) false running
+C) compile time error
+D) None of these
+
+Ans: B
+_____________________________________________________________________________________________
+Que-27)
+------------------------------
+What is the output of below program
+class ThreadGroupTest extends Thread{
+public void run(){
+System.out.println("Thread is running");
+}
+public static void main(String[] args){
+ThreadGroup tg = new ThreadGroup("First Group");
+ThreadGroupTest obj=new ThreadGroupTest();
+Thread t1=new Thread(tg,obj,"First Thread");
+Thread t2=new Thread(tg,obj,"Second Thread");
+Thread t3=new Thread(tg,obj,"Third Thread");
+tg.setMaxPriority(7);
+System.out.println(tg.getName());
+}
+}
+
+A) First Group
+
+B) First Thread Second Thread Third Thread
+
+c) compile time error
+
+D) None of these
+
+Ans: A
+_________________________________________________________________________________________
+Que-28)
+---------------------------------
+class MyThread extends Thread{
+public void run(){
+System.out.println("thread running....");
+}
+public static void main(String args[]){
+    Object obj=new Object();
+    obj.start();
+    MyThread obj1=new MyThread();
+    obj1.start();
+}
+}
+
+A) thread running
+B) Compile time error
+C) thread running 2 time executed
+D) None of these
+
+Ans: A
+_____________________________________________________________________________________________
+Que-29)
+-----------------------------
+
+class AscendingAndDescendingThreads extends Thread{
+	public void run(){
+		for(int i=1;i<=2;i++){
+		System.out.println(“run:”+i);
+}
+}
+}
+
+class TestA&D{
+	public static void main (String []args){
+		for(int i=3;i<=5;i++){
+		System.out.println(“main:”+i);
+}
+}	
+}
+
+A) main:3, main:4, main:5, run:1, run:2.
+B) Concurrent result
+C) main:3 ,main:4 
+D) Compile time error
+
+Ans: A
+
+_____________________________________________________________________________________________
+Que-30)
+----------------------------
+What is the difference between a process and a thread?
+
+A) A process has its own memory space, while threads share the same memory space.
+B) A process can execute multiple tasks concurrently, while threads can execute only one task at a time.
+C) A process is a high-level abstraction, while threads are a low-level implementation detail.
+D) A process is a single unit of execution, while a thread is a collection of related processes.
+
+Answer: A) A process has its own memory space, while threads share the same memory space.

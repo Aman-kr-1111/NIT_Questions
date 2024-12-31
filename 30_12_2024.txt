@@ -1,0 +1,268 @@
+ArrayList is Similar to Vector so, try
+---------------------------------------
+Que-1)
+_____________________________________________
+What will be the output of the following Java code?
+import java.util.*;
+class VectorDemo{
+public static void main(String args[]){
+Vector obj = new Vector(4,2);
+obj.addElement(new Integer(3));
+obj.addElement(new Integer(2));
+obj.addElement(new Integer(5));
+System.out.println(obj.elementAt(1));
+}
+}
+a)0 b)3
+c)2 d) 5
+______________________________________________
+Que-2)
+-----------------
+What will be the output of the following Java code?
+ import java.util.*;
+ class VectorDemo 
+ {
+ public static void main(String args[]) 
+ {
+ Vector obj = new Vector(4,2);
+ obj.addElement(new Integer(3));
+ obj.addElement(new Integer(2));
+ obj.addElement(new Integer(5));
+ System.out.println(obj.capacity());
+ }
+ }
+a)2 b)3
+c)4 d)6
+_____________________________________________
+Que-3)
+------------------
+What will be the output of the following Java code?
+ import java.util.*;
+ class VectorDemo 
+ {
+ public static void main(String args[]) {
+ Vector obj = new Vector(4,2);
+ obj.addElement(new Integer(3));
+ obj.addElement(new Integer(2));
+ obj.addElement(new Integer(6));
+ obj.insertElementAt(new Integer(8), 2);
+ System.out.println(obj);
+ }
+ 
+}
+a) [3, 2, 6]
+b) [3, 2, 8]
+c) [3, 2, 6, 8]
+d) [3, 2, 8, 6]
+_____________________________________________
+Que-4)
+------------------
+What will be the output of the following Java code?
+ import java.util.*;
+ class VectorDemo 
+ {
+ public static void main(String args[]) 
+ {
+ Vector obj = new Vector(4,2);
+ obj.addElement(new Integer(3));
+ obj.addElement(new Integer(2));
+ obj.addElement(new Integer(5));
+ obj.removeAll(obj);
+ System.out.println(obj.isEmpty());
+ }
+ }
+a)0
+b)1
+c)true
+d) false
+______________________________________________
+Que-5)
+-----------------
+.What will be the output of the following Java program?
+import java.util.*;
+ class Array 
+ {
+ public static void main(String args[]) 
+ {
+ int array[] = new int [5];
+ for (int i = 5; i > 0; i--)
+ array[5-i] = i;
+ Arrays.fill(array, 1, 4, 8);
+ for (int i = 0; i < 5 ; i++)
+ System.out.print(array[i]);
+ }
+ }
+_______________________________________________
+Que-6)
+------------------
+What will be the output of the following Java program?
+ import java.util.*;
+ class ArrayListDemo 
+ {
+ public static void main(String args[])
+ {
+ ArrayList obj1 = new ArrayList();
+ ArrayList obj2 = new ArrayList();
+ obj1.add("A");
+ obj1.add("B");
+ obj2.add("A");
+ obj2.add(1, "B");
+ System.out.println(obj1.equals(obj2));
+ }
+ }
+______________________________________________
+Que-7)
+-------------------
+What will be the output of the following Java program?
+import java.util.ArrayList;
+import java.util.List;
+public class ArrayListTest {
+public static void main(String[] args)
+{
+ List<String> list = new ArrayList<String>();
+ list.add("Patna");
+ list.add(0, "New York");
+ list.add("Mumbai");
+ list.add(2, "Sydney");
+ System.out.println(list);
+ }
+}
+________________________________________________
+Que-8)
+------------------
+What will be the output of the following Java program?
+import java.util.List;
+public class ArrayListTest {
+public static void main(String[] args)
+{
+ List<String> list = new ArrayList<String>();
+ list.add("Orange");
+ list.add(0, "Banana");
+ 
+ ArrayList<String> arList = new ArrayList<>();
+ arList.add("Apple");
+ list.add("Grapes");
+ list.addAll(3, arList);
+ System.out.println(list);
+ }
+}
+________________________________________________
+Que-9)
+--------------------
+What will be the output of the following Java program?
+import java.util.ArrayList;
+public class ArrayListTest {
+public static void main(String[] args)
+{
+ ArrayList<String> list = new ArrayList<String>();
+ list.add(null);
+ list.add(0, "A");
+ list.add(3, "B");
+ list.add(1, "C");
+ System.out.println(list);
+ }
+}
+________________________________________________
+Que-10)
+------------------
+What will be the output of the following Java program?
+import java.util.ArrayList;
+public class ArrayListTest {
+public static void main(String[] args)
+{
+ ArrayList<String> list = new ArrayList<String>();
+ list.add(null);
+ list.add(0, "A");
+ list.add(2, "B");
+ list.add(1, "C");
+ System.out.println(list);
+ }
+}
+_________________________________________________
+Que-11)
+--------------------
+What is the output of the following code if there is no error in the code?
+import java.util.ArrayList;
+public class ArrayListTest {
+public static void main(String[] args)
+{
+ ArrayList<String> list = new ArrayList<String>();
+ list.add(null);
+ list.add(0, "A");
+ list.add(null);
+ list.add(2, "B");
+ list.add("20");
+ list.add(1, "C");
+ System.out.println(list);
+ }
+}
+___________________________________________________
+Que-12)
+--------------------
+import java.util.ArrayList;
+public class ArrayListTest {
+public static void main(String[] args)
+{
+ ArrayList<String> list = new ArrayList<String>();
+ list.add(null);
+ list.add(0, "A");
+ list.add(null);
+ list.add(2, "B");
+ list.add("20");
+ list.add(1, "C");
+ System.out.println(list);
+ }
+}
+-------------------------------------------------------------------------
+
+
+Que-13)
+--------------------
+import java.util.ArrayList;
+public class ArrayListTest {
+public static void main(String[] args)
+{
+ ArrayList<String> list = new ArrayList<>();
+ list.add(12);
+ list.add(16);
+ list.add(34);
+ list.add(78);
+ list.remove(12);
+ System.out.println(list);
+ }
+}
+
+Que-14)
+--------------------
+import java.util.ArrayList;
+public class ArrayListTest {
+public static void main(String[] args)
+{
+ ArrayList<String> list = new ArrayList<>();
+ list.add('a');
+ list.add('b');
+ list.add('c');
+ list.add('d');
+ list.remove('c');
+ System.out.println(list);
+ }
+}
+------------------------------------------------------------------------
+Que-15)
+--------------------
+import java.util.ArrayList;
+public class ArrayListTest {
+public static void main(String[] args)
+{
+ ArrayList<String> list = new ArrayList<>();
+ list.add(12);
+ list.add(16);
+ list.add(34);
+ list.add(78);
+ list.remove(Integer.valueOf(16));
+ System.out.println(list);
+ }
+}
+
+
+

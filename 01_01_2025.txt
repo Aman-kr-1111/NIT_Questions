@@ -1,0 +1,64 @@
+Program: 1
+----------------
+Write a Program in Java to Perform Serialization and De-serialization
+operation on ArrayList Object.
+Take a BLC class Student
+Instance variables
+studentId – private – Integer
+studentName – private – String
+studentFees – private – Double
+dateOfAdmission – private – Date
+Take a parameterized constructor to initialize the instance variables
+Take a Method getStudentObject()
+Method Name - getStudentObject()
+Parameter - No Parameter
+Access Modifier - public and static
+Return type - Student
+This method should take the Student data from client, create and 
+return Student object from this method.
+
+Override toString() method to print Student class properties or 
+variables.
+Take an ELC class StoreObject
+Inside the main method create a for loop which will read the Student 
+object with user choice and Store the Student object to a file called 
+Student.txt
+Take another ELC class RetrieveObject
+This class will retrieve the Student Object from file and print the 
+Student information data.
+
+Program: 2
+----------------
+Write a Java program to convert Array to List.
+A BLC class called ArrayToList is given to you.
+Add a static method: convertToList(String[] inputArray) : This method 
+takes an array of strings as an argument. It should convert the given 
+array to a list of Strings and return this list. 
+Note that the length of the list must be the same as that of the array. 
+Return null for errors a null array or an empty list for an empty 
+array.
+An ELC Class called Tester with the main method is given to you. Use 
+this class to test your solution
+
+Program: 3
+----------------
+Write a java program to find duplicates in an arrayList.
+A BLC class Duplicates is given to you. Add the following 
+implementations in the class:
+1. A List attribute called numberList. This must be a list of Integers
+3
+2. Getter/Setter for the list
+3. Implement the No Argument constructor.
+ Implement the parameter constructor.
+ Implement the method getDuplicatesList():
+4. This method must scan through the numberList field of the class. 
+All the numbers in the list that are duplicated
+ (occurs more than once) must be returned as a new List. 
+ For example, if the numberList is initialized to { 
+33,45,67,89,33,47,21,45}, the method should return a new list that 
+contains { 33,45}.
+ Note that a number may be repeated any number of times in the 
+list, but it should be present in the returned list only once. 
+ For example, if the numberList is initialized to { 66,66,77,66,66}, 
+the method should return a new list that contains { 66}.
+5. If the numberList is empty, or null, return null.

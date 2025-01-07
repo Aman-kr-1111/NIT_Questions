@@ -1,0 +1,277 @@
+1.What is the output of following code?
+
+public class Test6 
+{
+	 public static void main(String[] args) 
+	 {
+		         int number = 1;
+		         String letters = "abc"; 
+		         number = number(number); 
+		         letters(letters);   
+		         System.out.println(number + letters);    
+		      }
+		      public static int number(int number) 
+		      {
+		        number++;
+		        return number;
+		     }
+		    public static String letters(String letters)//abc 
+		    {
+		        letters += "d";
+		        return letters;
+		     }
+}
+
+
+2. What is the output of following code?
+
+public class Test4 
+{
+  public static void main(String[] args) 
+  {
+	   int original1 = 1;
+	   int original2 = 2;
+	   swap(original1, original2);
+	   System.out.println(original1);   
+	   System.out.println(original2);   
+	
+  }
+  
+  public static void swap(int a, int b) {
+	   int temp = a;
+	   a = b;
+	   b = temp;
+	 }
+}
+
+3. What is the output of following code?
+class Laptop
+{
+void access()
+{
+System.out.println("Copy java soft copies... ");
+}
+}
+class Faculty
+{
+static Laptop password = new Laptop();
+}
+class Student
+{
+public static void main(String[] args)
+{
+Faculty.password.access();
+}
+}
+
+4. Write a java program how many objects can be created for a class?
+class Example
+{
+int x=10;
+int y=20;
+public static void main(String[] args)
+{
+Example e1=new Example();
+Example e2=new Example();
+System.out.println(e1.x+" ..."+e1.y);
+System.out.println(e2.x+" ..."+e2.y);
+}
+}
+
+5. Write a java program creating multiple objects and modifying their
+values?
+class Example
+{
+int a=10;
+int b=20;
+public static void main(String[] args)
+{
+Example e1=new Example();
+Example e2=new Example();
+System.out.println(e1.a+". .."+e1.b);
+System.out.println(e2.a+". .."+e2.b);
+e1.a=50;
+e2.b=60;
+System.out.println(e2.a+". .."+e2.b);
+System.out.println(e2.a+". .."+e2.b);
+}
+}
+
+6. Write a java program to show overriding toString() method to print object data?
+
+class Example
+{
+int eid;
+String ename;
+String company;
+public String toString(){
+return
+"eid:"+eid+"\n"+"ename:"+ename+"\n"+"company:"+company+"\n";
+}
+public static void main(String[] args)
+{
+Example e1=new Example();
+e1.eid=7279;
+e1.ename="Ganesh";
+e1.company="Naresh IT";
+System.out.println(e1);
+e1=new Example();
+System.out.println(e1);
+}
+}
+
+7. Write a java program shows creating class with static and non-static variables and their modifications?
+class Example
+{
+static int a=10;
+static int b=20;
+int x=30;
+int y=40;
+public static void main(String[] args)
+{
+Example e1=new Example();
+Example e2=new Example();
+Example e3=null;
+e1.a=50;
+e1.b=60;
+e1.x=70;
+e1.y=80;
+}
+}
+
+8. Find the output
+public class Test 
+{
+	public static void main(String[] args) 
+	{
+		 String name = "NIT";
+		 modifyName(name);
+		 System.out.println(name);
+	}
+	
+	public static void modifyName(String name)
+	{
+		name = "Hyd";
+		
+	}
+	
+}
+
+9. Find the output
+class Customer
+{
+	private double bill = 1200;
+
+	public void setBill(double bill) 
+	{
+		this.bill = bill;
+	}
+	
+	public double getBill()
+	{
+		return this.bill;
+	}
+	
+}
+
+
+public class PassByValueTest 
+{
+	public static void main(String[] args) 
+	{
+	  Customer c1 = new Customer();	
+	  
+	  updateCustomerBill(c1);
+	  System.out.println(c1.getBill());
+	}
+	
+	public static void updateCustomerBill(Customer cust)
+	{
+		cust.setBill(1800);
+	}
+}
+
+10. Find the output.
+class Customer
+{
+	private double bill = 1200;
+
+	public void setBill(double bill) 
+	{
+		this.bill = bill;
+	}
+	
+	public double getBill()
+	{
+		return this.bill;
+	}
+	
+}
+
+
+public class PassByValueTest 
+{
+	public static void main(String[] args) 
+	{
+	  Customer c1 = new Customer();	
+	  
+	  updateCustomerBill(c1);
+	  System.out.println(c1.getBill());
+	}
+	
+	public static void updateCustomerBill(Customer cust)
+	{
+		cust = new Customer(); //Another Object
+		cust.setBill(1800);
+	}
+	
+}
+
+-----------------------------------------------------------------
+Create a class Rectangle
+ 
+Attributes :
+names		datatypes
+--------	------------
+width   	double-privatre
+height 		double-private
+
+Implement an instance block that initializes
+the instance variables to 0 . 
+
+Implement a parameterized constructor that sets the instance variables width and height.
+
+Methods :
+
+both the method is [public and return type is double]
+
+Implement an instance method getArea() that returns the area of the rectangle. 
+
+Implement another instance method getPerimeter()that returns the perimeter of the rectangle. 
+
+Take one Main class ELC class which is having main method,
+Create a Rectangle object with width 5 and height 10 and call
+the getArea() and getPerimeter() methods on it.
+
+
+Test Cases -1 :
+------------------
+Valid Case: width = 5, height = 10
+
+Sample Input: width = 5, height = 10
+
+Expected Output:
+
+Area: 50.0
+Perimeter: 30.0
+
+Test Cases -2 :
+------------------
+Invalid Case: Negative width
+
+Sample Input: width = -5, height = 10
+
+Expected Output:
+
+Error: Width and height must be non-negative.
+

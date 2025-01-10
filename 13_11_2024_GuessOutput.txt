@@ -1,0 +1,569 @@
+Simple Programs
+1.Fill the code and the Output is "Welcome to NareshIT"
+
+public class OopsTest
+{
+    public String nit()
+    {
+        return "Welcome ";
+    }
+
+    public static void main(String[] args)
+    {
+    	OopsTest n = new OopsTest();
+        System.out.print(n.nit());
+        OopsTest nit1 = new NIT();
+        System.out.print(nit1.nit());
+    }
+}
+class NIT extends OopsTest
+{
+    //Add code here
+}	
+
+2.	What is the output of the following code?
+class NIT
+{	int name;
+		NIT(int name)
+		{	this.name = name;
+		}
+}
+public class OopsTest
+{	public static void main(String[] args) 
+{	NIT f1 = new NIT(10);
+	NIT f2 = new NIT(10);
+	NIT f3 = f2;
+	System.out.println(f1==f2);
+	System.out.println(f2==f3);
+	System.out.println(f1.name==f2.name);
+	System.out.println(f2.name==f3.name);
+	System.out.println(f1!=f3);
+		}
+}
+
+3.	What is the output of the following code?
+class Mammal{
+void eat(Mammal m){
+System.out.println(“Mammal eats food”);
+}
+}
+
+class Cattle extends Mammal{
+void eat(Cattle c){
+System.out.println(“Cattle eats hay”);
+}
+}
+
+class Horse extends Cattle{
+void eat(Horse h){
+System.out.println(“Horse eats hay”);
+}
+}
+public class Test{
+public static void main(String[] args){
+Mammal h = new Horse();
+Cattle c = new Horse();
+c.eat(h);
+}
+}
+4. Solve the below code having error
+class NIT
+{
+	int a;
+	public NIT(int a) {
+		this.a=a;
+	}
+	static int getNum()
+	{
+		return this.a;
+	}
+}
+class NIT1 extends NIT
+{
+	int a;
+	public NIT1(int a,int b) {
+		super(a);
+		this.a=b;
+	}
+	int getVal()
+	{
+		return this.a;
+	}
+}
+class OopsMCQ{
+public static void main(String[] args) {
+	NIT1 nit = new NIT1(74,152);
+	System.out.print(nit.getNum()+" "+nit.getVal());
+	}
+}
+
+5.What is the output for the code given below?
+class NIT
+{
+	static int a=90;
+	String object;
+	public NIT(String name) {
+		this.object=name;
+		NIT.this.a+=1;
+	}
+	static int get_counter()
+	{
+		return NIT.a;
+	}
+}
+
+public class OopsTest
+{
+	public static void main(String[] args) {
+		NIT nit = new NIT("nit");
+		NIT nit1 = new NIT("nit");
+		NIT nit2 = new NIT("nit");
+		NIT nit3 = new NIT("nit");
+		NIT nit4 = new NIT("nit");
+		NIT nit5 = new NIT("nit");
+		NIT nit6 = new NIT("nit");
+		NIT nit7 = new NIT("nit");
+		System.out.println(NIT.get_counter()-91);
+	}
+}
+
+
+6.What is the output for the code given below?
+class NIT
+{
+	static int a=90;
+	String object;
+	public NIT(String name) {
+		this.object=name;
+		NIT.this.a+=1;
+	}
+	static int get_counter()
+	{
+		return NIT.a;
+	}
+}
+
+public class OopsTest
+{
+	public static void main(String[] args) {
+		NIT nit = new NIT("nit");
+		NIT nit1 = new NIT("nit");
+		NIT nit2 = new NIT("nit");
+		NIT nit3 = new NIT("nit");
+		NIT nit4 = new NIT("nit");
+		NIT nit5 = new NIT("nit");
+		NIT nit6 = new NIT("nit");
+		NIT nit7 = new NIT("nit");
+		System.out.println(NIT.get_counter()-91);
+	}
+}
+
+7.What is the output of the following code?
+class NIT
+{
+	public int nit() { 
+		return 10;
+	}
+	
+	protected  int nit1() 
+	{
+		return 5;
+	}
+}
+
+class NIT1 extends NIT
+{
+	@Override
+	public int nit() {
+		return super.nit();
+	}
+	
+	public int nit1() 
+	{
+		return 15;
+	}
+	
+	private int nit2() 
+	{
+		return 20;
+	}
+}
+
+class NIT2 extends NIT1
+{
+	public int nit() 
+	{
+		return 0;
+		
+	}
+	
+	int nit1() 
+	{
+		return 50;
+	}
+}
+class OopsTest
+{
+	public static void main(String[] args) {
+		NIT object = new NIT();
+		NIT object1 = new NIT1();
+		NIT object2 = new NIT2();
+		NIT1 object3 = new NIT2();		System.out.println(object.nit()+object1.nit1()+object1.nit()+object3.nit1()+object2.nit1());
+	}
+}
+
+8.	What is the output of the following code
+class NIT{
+	String name;
+	public NIT(String name) {
+		this.name=name;
+	}
+}
+class NIT1 extends NIT{
+	String programmingLanguage;
+	public NIT1(String programmingLanguage, String name) {
+		super(name);
+		this.programmingLanguage=programmingLanguage;
+	}
+}
+class NIT2 extends NIT{
+	String faculty;
+	public NIT2(String faculty) {
+		super("Naresh");
+		this.faculty=faculty;
+	}
+}
+class OopsTest{
+public static void main(String[] args) {
+	NIT nit = new NIT("Project");
+	System.out.print(nit.name+" ");
+	NIT1 nit1= new NIT1("Java","NareshIT");
+	System.out.print(nit1.name+" "+nit1.programmingLanguage+" ");
+	NIT2 nit2 = new NIT2("Naidu");
+	System.out.println(nit2.name+" "+nit2.faculty);
+	}
+}
+
+9.What is the output of the following code
+class NIT
+{
+	static String val = "Welcome to nareshIT";
+	String language;
+	String faculty;
+	String student;
+	
+	public NIT(String language, String faculty, String student) {
+		this.faculty = faculty;
+		this.language = language;
+		this.student = student;
+	}	
+	public void get() 
+	{
+		System.out.println(this.faculty+" "+this.language+" "+this.student);
+	}
+}
+class OopsTest
+{
+	public static void main(String[] args) {
+		NIT nit = new NIT("Java", "Naresh", "IT");
+		nit.get();
+	}
+}
+
+10.We found errors in line1, line2 and line3. How to resolve the errors in the below code
+class NIT
+{
+	String val = "NareshIT";
+	String language;
+	String faculty;
+	String student;
+	
+	public NIT(String language, String faculty, String student) {
+		this.faculty = faculty;
+		this.language = language;
+		this.student = student;
+	}
+	
+	static public String get() 
+	{
+		return val; // line 1
+	}
+	
+	public void getValues() 
+	{
+		System.out.println(NIT.this.faculty+" "+NIT.language+" "+NIT.student); // line 2
+	}
+	
+}
+
+class OopsTest
+{
+	public static void main(String[] args) {
+		System.out.println("Welcome to "+NIT.get());
+		new NIT("Java", "Naresh", "IT");
+		NIT.getValues(); // line 3
+	}
+}
+
+
+Q11) Find the output of the following Program
+
+What will be the output?
+class A{
+int i = 10;
+public void printValue(){
+System.out.print(“Value-A”);
+}
+}
+
+class B extends A{
+int i = 12;
+public void printValue(){
+System.out.print(“Value-B”);
+}
+}
+
+public class Test{
+public static void main(String args[]){
+A a = new B();
+a.printValue();
+System.out.print(a.i);
+}
+}
+Q12) Find the output of the following Program
+class Parent
+{
+int a = 15;
+int display()
+{
+int b = a*a;
+return b;
+}
+}
+class Child extends Parent
+{
+float display()
+{
+float d = a/2;
+return d;
+}
+}
+public class Main
+{
+public static void main(String args[])
+{
+Child ob = new Child();
+float num = ob.display();
+System.out.println(num);
+}
+}
+Q13) Find the output of the following Program.
+class A{
+public A(){
+System.out.println(“A”);
+}
+public A(int i){
+this();
+System.out.println(i);
+}
+}
+class B extends A{
+public B(){
+System.out.println(“B”);
+}
+public B(int i){
+this();
+System.out.println(i+3);
+}
+}
+public class Test{
+public static void main (String[] args){
+new B(5);
+}
+}
+Q14) Find the output of the following Program
+
+class A{
+public void printValue(){
+System.out.println(“Value-A”);
+}
+}
+class B extends A{
+public void printNameB(){
+System.out.println(“Name-B”);
+}
+}
+class C extends A{
+public void printNameC(){
+System.out.println(“Name-C”);
+}
+}
+
+public class Test{
+public static void main (String[] args){
+B b = new B();
+C c = new C();
+newPrint(b);
+newPrint(c);
+}
+public static void newPrint(A a){
+a.printValue();
+}
+}
+
+Q15) Find the output of the following Program
+class Vehicle {
+public void printSound() {
+System.out.print(“vehicle”);
+}
+}
+
+class Car extends Vehicle {
+public void printSound() {
+System.out.print(“car”);
+}
+}
+
+class Bike extends Vehicle {
+public void printSound() {
+System.out.print(“bike”);
+}
+}
+
+public class Test1 {
+public static void main(String[] args) {
+Vehicle v = new Car();
+Car c = (Car) v;
+
+    v.printSound();
+    c.printSound();
+}   
+}
+
+
+Q16) Find the output of the following Program
+
+class Check
+{
+   public void accept(int ...x, float ...y)
+   {
+      System.out.println(x[0] +":"+y[0]);
+   }
+}
+public class Test
+{
+  public static void main(String [] args)
+  {
+     Check c = new Check();
+     c.accept(12,56,89.90F,67.56F);
+  }
+}
+
+Q17) Find the output of the following Program
+
+class Super
+{
+	public void show()
+	{
+		System.out.println("Show method of super class!!!!");
+	}
+}
+class Sub extends Super
+{
+	@Override
+	protected void show() 
+	{
+		System.out.println("Show method of sub class!!!!");
+	}
+}
+public class VisibilityMode 
+{
+	public static void main(String[] args) 
+	{
+		Super s = new Sub();
+		s.show();
+	}
+}
+
+
+Q18) Find the output of the following Program
+
+class Super
+{
+	private void show()
+	{
+		System.out.println("Show method of super class!!!!");
+	}
+}
+class Sub extends Super
+{
+	
+	public void show() 
+	{
+		System.out.println("Show method of sub class!!!!");
+	}
+}
+public class VisibilityMode 
+{
+	public static void main(String[] args) 
+	{
+		Super s = new Sub();
+		s.show();
+	}
+}
+
+Q19) Find the output of the following Program
+
+class Super
+{
+	public void access(int ...x)
+	{
+	  System.out.println("Var args method :"+x[0]);	
+	}
+}
+class Sub extends Super
+{	
+	public void access(int x)
+	{
+	  System.out.println("Instance method :"+x);	
+	}
+	
+}
+public class Test 
+{
+	public static void main(String[] args)
+	{
+		Super s1 = new Super();  s1.access(10);
+		
+		Sub s2 = new Sub(); s2.access(20);
+		
+		Super s3 = new Sub(); s3.access(30);
+	}
+}
+
+Q20) Find the output of the following Program
+class Super
+{
+	public void access(long x)
+	{
+	  System.out.println("Widening");	
+	}
+}
+class Sub extends Super
+{	
+	public void access(Integer x)
+	{
+	  System.out.println("Autoboxing");	
+	}
+	
+}
+public class OverloadingWithSuperAndSub 
+{
+
+	public static void main(String[] args)
+	{
+		Sub s1 = new Sub(); s1.access(30);
+	}
+}
+
+

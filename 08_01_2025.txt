@@ -1,0 +1,166 @@
+
+1. What is the output of the following code
+public class CollectionExample {
+	public static void main(String[] args) {
+		TreeSet<String> tree = new TreeSet<>();
+		tree.add("25");
+		tree.add("Naresh");
+		tree.add("A");
+		tree.add("37");
+		for(String str: tree)
+			System.out.print(str+" ");
+	}
+}
+
+2.What is the output of the following code
+public class CollectionExample {
+	public static void main(String[] args) {
+		Set<String> tree = new TreeSet<>();
+		tree.add("25");
+		tree.add("Naresh");
+		tree.add("A");
+		tree.add("37");
+		for(String str: tree)
+			System.out.print(str+" ");
+	}
+}
+
+3.What is the output of the following code
+public class CollectionExample 
+{
+	public static void main(String[] args) {
+		Set<String> tree = new TreeSet<>();
+		tree.add("25");
+		tree.add("Naresh");
+		tree.add("37");
+		tree.add("A");
+		tree.add("37");
+		for(String str: tree)
+			System.out.print(str+" ");
+	}
+}
+
+4.Choose the correct output of the following code
+public class CollectionExample {
+	public static void main(String[] args) {
+		Set<String> tree = new TreeSet<>();
+		tree.add("google");
+		tree.add("Naresh");
+		tree.add("Information");
+		tree.add("Technology");
+		for(int i=2;i<tree.size();i++) 
+		{
+			System.out.print(tree.remove(i));
+		}
+	}
+}
+
+5.What is the output of the following code
+public class CollectionExample {
+	public static void main(String[] args) {
+		Set<String> tree = new TreeSet<>();
+		tree.add("google");
+		tree.add("Naresh");
+		tree.add("Information");
+		tree.add("Technology");		
+		for(String str: tree) 
+		{
+			if(tree.contains("Naresh"))
+				System.out.print(str+" ");
+		}
+	}
+}
+
+6.What is the output of the following code
+public class CollectionExample {
+	public static void main(String[] args) {
+		HashMap hash = new HashMap<>();
+		hash.put("nit", 500);
+		hash.put("info", 644);
+		hash.put("tech", "google");
+		System.out.println(hash.get("tech"));
+		System.out.println(hash.get("google"));
+		System.out.println(hash.getOrDefault("nit", "Technology"));
+		System.out.println(hash.get("info"));
+	}
+}
+
+7.What is the output of the following code
+public class CollectionExample {
+	public static void main(String[] args) {
+		HashSet hash = new HashSet<>();
+		hash.add("nit");
+		hash.add("NIT");
+		System.out.println(hash);
+		System.out.println(hash.size());
+	}
+}
+
+
+8.What is the output of the following code
+public class CollectionExample {
+	public static void main(String[] args) {
+		HashSet hash = new HashSet<>();
+		hash.add("nit");
+		hash.add("nit");
+		System.out.println(hash);
+		System.out.println(hash.size());
+	}
+}
+
+
+9.What is the output of the following code
+public class CollectionExample {
+	public static void main(String[] args) {
+		HashSet set = new HashSet<>();
+		set.add(new StringBuffer("nit"));
+		set.add(new StringBuffer("nit"));
+		System.out.println(set);
+		System.out.println(set.size());
+	}
+}
+
+
+10.What is the output of the following code
+public class CollectionExample {
+	public static void main(String[] args) {
+		TreeSet tree = new TreeSet<>();
+		tree.add("nit");
+		tree.add("Naresh");
+		tree.add(25);
+		System.out.println(tree.tailSet("a"));
+	}
+}
+
+11.What is the output of the following snippet
+public class CollectionExample {
+	public static void main(String[] args) {
+		TreeSet tree = new TreeSet<>();
+		tree.add("nit");
+		tree.add("Naresh");
+		tree.add("Technology");
+		System.out.println(tree.tailSet("a"));
+	}
+}
+
+12.What is the output of the following snippet
+public class CollectionExample {
+	public static void main(String[] args) {
+		SortedMap smap = new TreeMap();
+		smap.put(101,"nit");
+		smap.put(105,"Technology");
+		smap.put(103,"Naresh");
+		System.out.println(smap);
+	}
+}
+
+13.What is the output of the following code
+public class CollectionExample {
+	public static void main(String[] args) {
+		TreeSet tree = new TreeSet();
+		tree.add("nit");
+		tree.add("Technology");
+		tree.add("Naresh");
+		System.out.println(tree.descendingSet());
+	}
+}

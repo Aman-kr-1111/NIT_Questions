@@ -119,7 +119,7 @@ Ans : NO it leads to CE.
       Because when we call method, we use only method name and parameter so compiler can not differentiate first method from second method if they have same name and same parameter.
 
 
-* What are the rules in overlading a method?
+* What are the rules in overloading a method?
  -> Method name must be same.
  -> and their parameters must be different either type/list(num of param)/order.
  -> No need to consider return type, Access Modifier and Non - access modifier.
@@ -239,6 +239,7 @@ public class Test04 {
     public static void m1(float a) {System.out.println("float");}
     public static void m1(double a) {System.out.println("double");}
     public static void m1(Object a) {System.out.println("Object");}
+
     public static void main(String[] args) {
 		   m1("Java");
 		   

@@ -2,29 +2,23 @@ Question-1
 -------------
 Design a Software System for a Media Player
 ---------------------------------------------------
-Define an interface named as MediaPlayer 
- in this interface declare two abstract method
+Define an interface named as MediaPlayer in this interface declare two abstract method
 
 Methods :
-
-name 			: play()
+name 			:play()
 Return Type  		:void
 Access Modifier 	:public
 
-
 Methods :
-
-name 			: stop()
+name 			:stop()
 Return Type  		:void
 Access Modifier 	:public
 
-Define another interface AdvancedmediaPlayer that extends MediaPlayer
-and in this interface add one more abstract method i.e :
+Define another interface AdvancedmediaPlayer that extends MediaPlayer and in this interface add one more abstract method i.e :
  
-name 			: pause()
+name 			:pause()
 Return Type  		:void
 Access Modifier 	:public
-
 
 Create a class MusicPlayer that implements AdvancedMediaPlayer and provides implementations for the methods, and write some standard printing message.
 
@@ -32,16 +26,12 @@ Create a class VideoPlayer that implements AdvancedMediaPlayer and provides impl
 
 Take  a Test class to demonstrate the functionality of the media player system.
 
-
 Test Case-1 :
 --------------
-
 Sample Input:
-
 Song Title: " Life"
 
 Expected Output :
-
 MusicPlayer [Song Title: Life]
 Playing music	: Life
 Pausing music	: Life
@@ -55,29 +45,23 @@ Sample Input :" "
 Expected Output :
 error message :Title is not be empty string.
 
-
-
 Question-2
 -------------
-
 Design a Caluculator Program
 
 Define an interface Calculator :
- create one abstract method 
+create one abstract method 
 
 Methods :
 
-name 			: calculateSum ()
+name 			:calculateSum ()
 Return Type  		:void
-Arguments Type       :varargs type
+Arguments Type       	:varargs type
 Access Modifier 	:public
 
-Take one normal class SimpleCalculator which implements Calculator interface
+Take one normal class SimpleCalculator which implements Calculator interface in this class just implement the overriden method calculateSum and write the specific logic in this method.
 
-in this class just implement the overriden method calculateSum and write the specific logic in this method.
-
-Create a Main class named as CalculatorTest nad instantiate the object and call the method for execution.
-
+Create a Main class named as CalculatorTest and instantiate the object and call the method for execution.
 
 Test Case-1:
 
@@ -104,22 +88,18 @@ Expected Output: "Sum of the numbers: 0"
 
 Question -3
 --------------
-
 Design a Media Chat process :
 
- Define an interface  Messanger 
-inside this having an abstract method 
+Define an interface Messanger inside this having an abstract method 
 
 Method Name  		:sendMessage
 Return Type    		:void
-Arguments Type 	:User[Class Type]
+Arguments Type 		:User[Class Type]
 Acess Modifier		:public
 
 Create a base class named as User
-
 Attributes :
-name     :String (private)
-
+name       :String (private)
 
 create an parameterize constructor for initializing the properties.
 
@@ -127,32 +107,25 @@ in this class declare one method :
 
 Method Name 		: displayMessage
 Return Type   		: void 
-Arguments Type 	: String
-Acess Modifier		:public
-
+Arguments Type 		: String
+Acess Modifier		: public
 in this method print all the information.
-
 
 class InstagramUser :
 
-Take another subclass InstagramUser whose super class is User
-
-in this class for initializing super class properties we can take constructor.
+Take another subclass InstagramUser whose super class is User in this class for initializing super class properties we can take constructor.
 
 take one concrete method 
 Method Name 		: sendDirectMessage
 Return Type   		: void 
-Arguments Type 	: String
-Acess Modifier		:public
+Arguments Type 		: String
+Acess Modifier		: public
 
-Take another class InstagramChat which is extend from the Messenger class
-
-and in this class just override the sendMessage method of the interface.
+Take another class InstagramChat which is extend from the Messenger class and in this class just override the sendMessage method of the interface.
 
 this method is implementing the functionality which only allow the InstagramUser class not allowing to other class give error message.[User is not an Instagram user.]
 
-Take the main class named as InstagramChatTest which is having main method 
-and in this just demonstarte the functionality and invoke the method based on requirement.
+Take the main class named as InstagramChatTest which is having main method and in this just demonstarte the functionality and invoke the method based on requirement.
 
 Question-4
 --------------
@@ -161,22 +134,19 @@ Define an interface named as Notifier :
 it's having one abstract method  :
 
 Method Name 		: notifyUsers
-Return type              : void
-Argument Type         :Varargs type
+Return type             : void
+Argument Type           :Varargs type
 Access Modifier		:public
 
 Create a base class User :
 
 Attributes :
-
 name  : String (private)
 email  : String (private)
-
 
 Take a parameterize constructor to initialize all the varriables
 
 Take one implemented class named as  EmailNotifier which is implements Notifier
-
 EmailNotifier :
 -----------------
 
@@ -185,10 +155,9 @@ in this class override the notifyUsers method and give the standard implementati
 in this class take one concrete method as private type :
 
 Method Name 		: sendEmail
-Return type              : void
-Argument Type         :User
+Return type             : void
+Argument Type         	:User
 Access Modifier		:private
-
 
 Take one Main class named as NotifierTest Demonstrates the functionality of the EmailNotifier class by creating instances of User and calling the notifyUsers method with multiple users.
 

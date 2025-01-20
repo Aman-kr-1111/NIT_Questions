@@ -28,13 +28,13 @@ d. If we want to call parent class constructor, it must be called in first line 
 	D. public Test()     //correct
 
 5) Can we define method with same name of class name?
-	A. Yes 	
-	B. No    //correct
+	A. Yes 	//correct
+	B. No    
 	
 6) What happens if we add return type to constructor ?
-	A. Compile time error 	//correct	
+	A. Compile time error 		
 	B. Run Time Error
-	C. JVM treats that as method	            
+	C. JVM treats that as method	//correct            
 	D. None of these
 	
 7) Can we declare constructor as private ?
@@ -48,8 +48,8 @@ d. If we want to call parent class constructor, it must be called in first line 
 	D. same as class accessibility modifier  //correct
 
 9) Can we define a constructor using all four access modifiers: public, protected, default and private?
-	A. Yes      	//correct
-	B. No
+	A. Yes      	
+	B. No   //correct
 
 10) Choose correct option for the following code
 public class ConstructorTest {
@@ -184,7 +184,7 @@ public class Test7 {
 		Test7 t = new Test7(35);
 	}
 }
-//output :- 35;
+//output:- error: modifier static not allowed here
 
 18) What is the output of the below program? 
 public class Test9 {

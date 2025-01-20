@@ -38,10 +38,8 @@ class Test3 {
 }
 
 output:- 
-GuessOutput.java:4: error: variable a might not have been initialized
-        System.out.println("A : "+a);
-                                  ^
-1 error
+error: variable a might not have been initialized
+
 ------------------------------------------------------
 
 Q 4. Can we declare local variable as static if not what is the error?
@@ -52,12 +50,11 @@ Q 4. Can we declare local variable as static if not what is the error?
 		}
 	}
 output:- 
- error: illegal start of expression
-                        static  int x =10;
- ------------------------------------------------------
+error: illegal start of expression
 
- Q 5. Define a class having one static variable say  static int x=10 and invoke x variable 
-	        in m1() and main(-)  what is the output ?
+------------------------------------------------------
+
+ Q 5. Define a class having one static variable say  static int x=10 and invoke x variable in m1() and main(-)  what is the output ?
  
 	class Test5 {
 		static int x = 10;
@@ -71,9 +68,7 @@ output:-
 output:- 
 main X : 10
  ------------------------------------------------------
-
-
-Q 6. Is it possible to access non-static variable in static method directly if not what is the   	        	error ?.
+Q 6. Is it possible to access non-static variable in static method directly if not what is the error ?.
 
 	class Test6 {
 		int a = 10;
@@ -161,8 +156,6 @@ output:-
 SB1
 m1()
 ------------------------------------------------------
-
-
 Q 11. Example on execution order of static members in same class?
 	class Test11 {
 		static int x=10;
@@ -226,9 +219,8 @@ Q 13 . Is main method mandatory to execute java program if yes, what is the erro
 		}
 	}
 output:-
-Error: Main method not found in class Test13, please define the main method as:
+Error: Main method not found in class
 ------------------------------------------------------
-
 Q 14 . What is the  output below program ? 
 	class Test14 {
 		static int x =100;
@@ -236,11 +228,9 @@ Q 14 . What is the  output below program ?
 			System.out.println("x :"+x);
 			System.exit(0);
 		}
-
-
 	}
 output:-
-Error: Main method not found in class Test14, please define the main method as:
+Error: Main method not found in class
 ------------------------------------------------------
 
 Q 15 . What is the output of the below program ?
@@ -296,9 +286,5 @@ outut:-
 jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
 jdk.internal.loader.ClassLoaders$PlatformClassLoader@4517d9a3
 null
-
-
-
-
 
 

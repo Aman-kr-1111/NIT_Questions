@@ -19,35 +19,28 @@ For Shape class
 Methods: In draw():void and erase():void and No argument constructor
 draw(): print "shape draw"
 erase(): print "Shape erase"
+
 For Circle class sub class of Shape class
 Methods: In draw():void and erase():void and No argument constructor
 Override:
 draw() method print "Circle draw" and erase() method print "Circle erase"
 
 For Triangle class sub class of Shape class
-
 Take No argument constructor
-
 Methods: 
-
 In draw():void 
- erase():void 
+erase():void 
 Override:
 draw() method print "Triangle draw" and erase() method print "Triangle erase"
 
-
 For Square class sub class of Shape class
-
 Take No argument constructor
-
 Methods: 
- draw():void 
- erase():void 
+draw():void 
+erase():void 
  
 Override:
 draw() method print "Square draw" and erase() method print "Square erase"
-
-
 
 Create Main class(ELC Class) named as ShapeDemo and having main method and call the method and execute it.
 
@@ -73,12 +66,9 @@ Circle erase
 ---------------
 Question-2
 ---------------
- Design a  Java program that models a Hospital Management System using inheritance:
+Design a  Java program that models a Hospital Management System using inheritance:
 
-Create class HospitalStaff with following attributes
-
-declare variable:
-
+Create class HospitalStaff with following attributes declare variable:
 private String name;
 private int age;
 private String role;
@@ -89,14 +79,14 @@ method Name:- Work()
 Access specifier :-public
 return type:-void
 
-this method will print the role and there name with "is working massage"
+this method will print the role and there name with "is working message"
 
 *create second class Doctor which will inherited with HospitalStaff
 
 declare variable:
 private String specialization;
 
- take one parameterized Constructor and initialize values
+take one parameterized Constructor and initialize values
 
 // Overriding work() method for doctors
 it will print Roll and Name with this massage" with specialization in " + specialization + " is treating patient
@@ -128,7 +118,6 @@ Return Type: void
 
 Task: Print a generic payment processing message (e.g., "Processing payment").
 
-
 Subclass CreditCardPayment:
 
 Override processPayment method to print a credit card-specific message:
@@ -140,7 +129,6 @@ Return Type: void
 Task: Print a message for credit card payment (e.g., "Processing credit card payment").
 
 Subclass PayPalPayment:
-
 Override processPayment method to print a PayPal-specific message:
 
 Method Name: processPayment
@@ -199,7 +187,6 @@ Credit Card  payment done.
 
 Question-4
 -------------
-
 Develop a booking and maintenance system for a Hostel
 Create a class named as Room 
 
@@ -209,37 +196,31 @@ roomType :String (private)
 Contains an instance initializer block that sets default values for room properties. and with some relevant message.
 
 impliment three method 
-
 name :bookRoom()
 return type :void
 
 overload the bookRoom methods 
-
 name :bookRoom
 return Type :void
 Arguments :String 
 Access Modifier :public
 
 Take one more overridden method
-
 name :cleanRoom
 return Type :void
 Access Modifier :public
 
 Take another class HostelRoom which is subclass of Room
-
 Attributes :
 bedType(String) private
 
 Contains an instance initializer block that sets default values for room properties. and with some relevant message.
 
 impliment three method 
-
 name :bookRoom()
 return type :void
 
 overload the bookRoom methods 
-
 name :bookRoom()
 return Type :void
 Arguments :String ,String
@@ -247,7 +228,6 @@ Access Modifier :public
 this method is giving information about roomtype and bedtype
 
 Take one more overridden method
-
 name :cleanRoom
 return Type :void
 Access Modifier :public

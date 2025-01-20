@@ -118,7 +118,7 @@ public static void main(String args[ ])
 {
 new Test();
 }
-{
+{ 
 System.out.println(this.a);
 this.a = 100 ;
 }
@@ -286,8 +286,7 @@ eid:7279
 ename:Ganesh
 company:Naresh IT
 
-16. Write a java program shows creating class with static and non-static
-variables and their modifications?
+16. Write a java program shows creating class with static and non-static variables and their modifications?
 class Example
 {
 static int a=10;
@@ -375,6 +374,11 @@ t1.m1(t2);
 System.out.println("t2:"+t2);
 }
 }
+output:-
+t2:Test@4517d9a3
+t:Test@4517d9a3
+t:Test@7adf9f5f
+t2:Test@4517d9a3
 
 20. write a Java program to demonstrate non-static variables ?
 class Test
@@ -383,8 +387,7 @@ int a = 10;
 public static void main(String[] args)
 {
 Test t = new Test();
-System.out.println("Non static variable"+ " accessed using instance"
-+ " of a class");
+System.out.println("Non static variable"+ " accessed using instance"+ " of a class");
 System.out.println("Non Static variable "+ t.a);
 }
 }

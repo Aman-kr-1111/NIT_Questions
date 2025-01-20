@@ -1,16 +1,13 @@
 Q-1)
 ----
-Create an interface AdvancedArithmetic
+Create an interface AdvancedArithmetic which contain method.
 
-which contain method  :
+Method name    		:divisorSum
+return Type    		:int
+Argument type  		:int
+Access Modifier     	:public
+non-access modifier 	:abstract
 
-Method name :divisorSum
-return Type    :int
-Argument type:int
-Access Modifier :public
-non-access modifier :abstract
-
- 
 Then write a class called MyCalculator which implements the interface AdvancedArithmetic. 
 
 divisorSum function just takes an integer as input and return the sum of all its divisors.
@@ -23,9 +20,7 @@ Sample Output
 12 
 Explanation 
 Divisors of 6 are 1,2,3 and 6. 1+2+3+6=12. 
-A class Testing is given to you with a main method. Use this class to test your solution's classes and meth
-ods.
-
+A class Testing is given to you with a main method. Use this class to test your solution's classes and methods.
 
 Example :
 -----------
@@ -34,7 +29,6 @@ Test Case 1 :
 Sample Input: 6
 
 Expected Output:
-
 Sum of divisors: 12
 Explanation: Divisors of 6 are 1, 2, 3, and 6. 1 + 2 + 3 + 6 = 12.
 
@@ -53,15 +47,7 @@ Sample Input: 0
 Expected Output:
 Error: Input must be a positive integer.
 
-Test Case 4:
---------------
-Input: abc
-
-Expected Output:
-
-Error: Invalid input. Please enter a valid positive integer.
-
-Test Case 5: 
+Test Case 4: 
 --------------
 Input: 28
 
@@ -74,7 +60,6 @@ Q-2)
 Employee Management System:
 
 Employee Interface :
-
 Create an interface named Employee with two methods: 
 
 Method Name   :calculateSalary() 
@@ -89,15 +74,13 @@ The calculateSalary() method should compute the salary for the employee.
 The generatePayroll() method should generate the payroll information for the employee.
 
 FullTimeEmployee Class :
-
 Implement a class named FullTimeEmployee that implements the Employee interface.
 
 Include Attributes :
 employeeId     	:(int)
 employeeName   	:(String)
 monthlySalary 	:(double) 
-benefits 			:(double)
-
+benefits 	:(double)
 Acess modifier :private(for all the varriable )
 
 Provide a constructor that initializes the employee details.
@@ -147,7 +130,6 @@ Question -3
 Social Media System: 
 
 Post Interface :
-
 Create an interface named Post with two methods.
 
 Method Name   :publish() 
@@ -158,18 +140,15 @@ Method Name  : like()
 Return Type     :void
 Acess Modifier :public 
 
-
 The publish() method should print a message indicating that the post has been published.
 The like() method should increment a counter for the number of likes and print a message indicating that the post has been liked.
 
 TextPost Class :
-
 Implement a class named TextPost that implements the Post interface.
 
 Include Attributes :
-
- textContent 	  :(String) 
- likes                 : (int)
+textContent 	 :(String) 
+likes            : (int)
 
 take a  constructor, and  initialize the likes to 0.
 

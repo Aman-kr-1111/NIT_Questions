@@ -1,8 +1,6 @@
 Que 1 : Simple Vehicle Inheritance in Java
 ===========================================
-
 Demonstrating Inheritance to Simplify and Extend Class Functionality and this motto emphasizes the key educational goal of the program: to show how inheritance can be used to simplify code by reusing existing class functionality and extending it with new features specific to derived classes.
-
 
 Define the base class Vehicle
 -------------------------------
@@ -175,10 +173,9 @@ Class Circle is given to you.
 Add below details to the class
 
 1. Instance variables:
-
 radius: double.
 
-2. Create a no constructor that assigns default values to instance variables.
+2. Create a no parameterized constructor that assigns default values to instance variables.
 
 3. Create parameterized constructor that accepts radius.
 
@@ -196,36 +193,30 @@ Create a sub class of Circle with name Cylinder
 Add below details to the class
 
 1. Instance variables:
-
 height: double.
 
-2. Create a No constructor that assigns default values to instance variables.
+2. Create a No parameterized constructor that assigns default values to instance variables.
 
 3. Create parameterized constructor that accepts radius, height.
 
 4. Create below methods,
 
 Method name: getVolume
-
 Return type: double
 
 This method should return the volume of the cylinder. Return -1 if height is negative.
 
 An ELC class ShapeTester is given to you with a main method. Use this class to test your
 
-
-
 Condition :
 -----------
 if any numeric value is zero or negative then print "Error Invalid Input".
-
 
 TEST CASE 1 :
 -------------
 sample input  : When your reading values for Circle Class OR Cylinder class then make sure if any numeric value is <=0 then print "Error Invalid Input".
                 
 sample output : Error Invalid Input
-
 
 TEST CASE 2 :
 -------------

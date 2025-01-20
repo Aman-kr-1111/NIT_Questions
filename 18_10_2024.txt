@@ -2,7 +2,7 @@ Question-1
 -------------
 Programming Question: Student Class with Grade Calculation
 
- Design a Java class named Student that encapsulates information about students, including name, ID, course, fee, grade, and average. Your class should include a constructor for creating a student object by copying another student object and a method to calculate the grade based on the average.
+Design a Java class named Student that encapsulates information about students, including name, ID, course, fee, grade, and average. Your class should include a constructor for creating a student object by copying another student object and a method to calculate the grade based on the average.
 
 Take a  Student class  (BLC Class)
 
@@ -10,13 +10,12 @@ should have the following elements:
 
 Attributes/properties/varriables :
 
-
 Names			data type		
 ------------		---------------       
-Name      			: String
+Name      		: String
 ID            		: int
-Course  			: String
-Fee				: double
+Course  		: String
+Fee			: double
 Grade			: char
 Average			: double
 
@@ -47,25 +46,19 @@ Tester Class:(ELC Class)
 
 In the main method, demonstrate the usage of the Student class by creating instances with different constructors, setting average values, and calculating grades.
 
-
 Test Case-1 :
 ---------------
- Valid Case:
+Valid Case:
 
- Average = 76
-
- Sample Input: average = 76
-
+Average = 76
+Sample Input: average = 76
 Expected Output: "Grade for average 76: C"
-
 
 Test Case-2 :
 ---------------
 
 Valid Case: Average = 58
-
 Sample Input: average = 58
-
 Expected Output: "Grade for average 58: F"
 
 Test Case-3 :

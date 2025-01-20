@@ -5,11 +5,11 @@ Create an Employee class (BLC Class)
 Attributes :
 
 names		Return Type
---------		---------------		
+--------	---------------		
  firstName   	:String   
  lastName      	:String  
  employeeId 	:int  
- salary  		:double  
+ salary  	:double  
  NoOfProject 	:int 
 
 Access Modifier : private (for all varriables)  
@@ -18,7 +18,7 @@ Implement constructors to initialize these properties.
 
 implement calculateSalary() method that will add extra ammount in salary based on NoOfProject.
 
-Return Type       : void
+Return Type     : void
 Access modifier :public
 
 NoOfProject is more than 5 and less that 10 then add 5000

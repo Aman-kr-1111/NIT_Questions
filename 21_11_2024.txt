@@ -8,6 +8,7 @@ Methods:
 2. Name: printDetails
     ReturnType: double
     Modifier: abstract
+
 Define sub-classes of Shape as Rectangle, Circle and Triangle that overrides the methods of shape
 Rectangle class
 Fields:
@@ -49,8 +50,7 @@ printDetails() should print the shape details as below
 Given a class Testing with main method to test your code.
 ------------------------------------------------------------------------- Program 2:
 ----------
-We have a class named as Car and it is abstract class we need to implement abstract method in 
-sub class named as Test
+We have a class named as Car and it is abstract class we need to implement abstract method in sub class named as Test
 For abstract class Car 
 Instance Variables:
 brand : String default

@@ -1,6 +1,5 @@
 Que 1 : Car Has A Engine 
 ========================
-
 Create the Engine Class
 -----------------------
 A class to represent an engine with a model attribute.
@@ -14,9 +13,7 @@ Getter Method Declaration:
 public String getModel() — A method to get the engine model.
 
 toString Method Declaration:
-@Override public String toString() — A method to return a string representation of 
-the engine.
-
+@Override public String toString() — A method to return a string representation of the engine.
 
 Create the Car Class
 --------------------
@@ -33,7 +30,6 @@ public Car(String make, String model, Engine engine) — A constructor that initia
 toString Method Declaration:
 @Override public String toString() — A method to return a string representation of the car.
 
-
 Create TestCar class
 ---------------------
 -> Create main method 
@@ -41,11 +37,9 @@ Create TestCar class
 -> Create a car object that includes the engine.
 -> Display the car's information.
 
-
 Condition :
 -----------
 if any numeric value is zero or negative then print "Error Invalid Input".
-
 
 TEST CASE 1 :
 -------------
@@ -56,13 +50,11 @@ sample output : Error Invalid Input
 
 TEST CASE 2:
 ------------
-sample input  :
-                Engine engine = new Engine("V6 Hybrid");
+sample input  : Engine engine = new Engine("V6 Hybrid");
                 Car car = new Car("Hyundai", "Camry", engine);
                 System.out.println(car);
 
 sample output : Car Make: Hyundai, Model: Camry, Engine Model: V6 Hybrid
-
 
 ##########################################################################################
 
@@ -126,8 +118,7 @@ sample output : Error Invalid Input
 
 TEST CASE 2:
 ------------
-sample input  :
-                Order order = new Order("123456", "Laptop");
+sample input  : Order order = new Order("123456", "Laptop");
                 Customer customer = new Customer("James", "James@example.com", order);
                 System.out.println(customer);
 
@@ -174,8 +165,7 @@ sample output : Error Invalid Input
 
 TEST CASE 2:
 ------------
-sample input  :
-                Address address = new Address("123 Elm Street", "Springfield");
+sample input  : Address address = new Address("123 Elm Street", "Springfield");
                 Person person = new Person("John Doe", address);
                 System.out.println(person);
        

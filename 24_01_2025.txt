@@ -1,0 +1,167 @@
+Ques - 1
+------------
+Using TreeMap for Student Score Management
+Objective:
+Write a Java program that demonstrates the use of TreeMap to manage student scores. The program should allow users to add student names along with their scores and then display the students in sorted order by their names.
+
+Instructions:
+Define the Main Method:
+
+Create a main method that initializes a TreeMap and allows the user to add student names and their scores.
+Adding Student Names and Scores:
+
+Prompt the user to enter student names and scores to add to the TreeMap.
+Display Students in Sorted Order:
+
+Print the student names and scores in sorted order by their names.
+Test Cases:
+Handle cases where the TreeMap is empty.
+Test Cases:
+
+Test Case 1: Add Multiple Students
+Input:
+Enter the number of students: 3
+Enter student name 1: Alice
+Enter score for Alice: 85
+Enter student name 2: Bob
+Enter score for Bob: 90
+Enter student name 3: Charlie
+Enter score for Charlie: 78
+Expected Output:
+Student names and scores in sorted order:
+Alice -> 85
+Bob -> 90
+Charlie -> 78
+
+Test Case 2: No Students
+Input:
+Enter the number of students: 0
+Expected Output:
+Student names and scores in sorted order:
+
+Test Case 3: Single Student
+Input:
+Enter the number of students: 1
+Enter student name 1: David
+Enter score for David: 92
+Expected Output:
+Student names and scores in sorted order:
+David -> 92
+
+Test Case 4: Duplicate Student Names
+Input:
+Enter the number of students: 2
+Enter student name 1: Eve
+Enter score for Eve: 88
+Enter student name 2: Eve
+Enter score for Eve: 91
+Expected Output:
+Student names and scores in sorted order:
+Eve -> 91
+
+Ques - 2
+------------
+Store and Display Numbers in Reverse Order using TreeMap
+Objective:
+Write a Java program that stores a set of numbers in a TreeMap in reverse order and then displays the numbers.
+
+Instructions:
+Define the Main Method:
+
+Create a main method that initializes a TreeMap with a reverse order comparator.
+Store Numbers in TreeMap:
+Add a set of numbers to the TreeMap.
+Display Numbers:
+Print the numbers stored in the TreeMap in reverse order.
+
+Test Case 1: General Case
+Input:
+numberMap.put(10, "Ten");
+numberMap.put(5, "Five");
+numberMap.put(20, "Twenty");
+numberMap.put(1, "One");
+numberMap.put(15, "Fifteen");
+Expected Output:
+Numbers in reverse order:
+20 -> Twenty
+15 -> Fifteen
+10 -> Ten
+5 -> Five
+1 -> One
+
+Test Case 2: Negative Numbers
+Input:
+numberMap.put(-1, "Minus One");
+numberMap.put(-5, "Minus Five");
+numberMap.put(0, "Zero");
+numberMap.put(-10, "Minus Ten");
+numberMap.put(5, "Five");
+Expected Output:
+Numbers in reverse order:
+5 -> Five
+0 -> Zero
+-1 -> Minus One
+-5 -> Minus Five
+-10 -> Minus Ten
+
+Test Case 3: Single Element
+Input:
+numberMap.put(100, "One Hundred");
+Expected Output:
+Numbers in reverse order:
+100 -> One Hundred
+
+Ques - 3
+------------
+ Store and Display Numbers in Descending Order using TreeMap
+Objective:
+Write a Java program that stores a set of numbers in a TreeMap and prints all the keys in descending order using descendingKeySet and forEach.
+
+Instructions:
+Define the Main Method:
+
+Create a main method that initializes a TreeMap.
+Store Numbers in TreeMap:
+Add a set of numbers to the TreeMap.
+Print Keys in Descending Order:
+Use the predefined method to get the keys in descending order.
+Use forEach to print each key.
+Test Cases:
+
+Test Case 1: General Case
+Input:
+numberMap.put(10, "Ten");
+numberMap.put(5, "Five");
+numberMap.put(20, "Twenty");
+numberMap.put(1, "One");
+numberMap.put(15, "Fifteen");
+Expected Output:
+Keys in descending order:
+20
+15
+10
+5
+1
+
+Test Case 2: Negative Numbers
+Input:
+numberMap.put(-1, "Minus One");
+numberMap.put(-5, "Minus Five");
+numberMap.put(0, "Zero");
+numberMap.put(-10, "Minus Ten");
+numberMap.put(5, "Five");
+
+Expected Output:
+Keys in descending order:
+5
+0
+-1
+-5
+-10
+
+Test Case 3: Single Element
+Input:
+numberMap.put(100, "One Hundred");
+Expected Output:
+Keys in descending order:
+100

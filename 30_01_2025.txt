@@ -1,0 +1,98 @@
+Ques - 1
+------------
+Write a Java program that creates a stream of integers using Stream.of, filters out the even numbers and then prints each squared number using forEach.
+Input (Stream):
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Output:
+2
+4
+6
+8
+10
+
+Ques - 2
+-----------
+Write a Java program that uses the Stream.of method to create a stream of strings, filters out the empty strings, and then concatenate the remaining strings into a single string..
+
+Input:
+A stream of strings ["Hello", "", "World", " ", "from", " ", "Java", "!"].
+
+Output:
+A single concatenated string:
+HelloWorld from Java!
+
+
+Ques - 3
+-----------
+You have a Student record with the following fields:
+name : (String)
+course : (String)
+
+Create a ELC class StudentFilter.
+Given a list of Student objects, where each student is enrolled in different courses, write a Java program to filter out the students who are enrolled in the "Java" course and print their names using the forEach method and the stream API.
+
+Test Case 1:
+Input:
+List<Student> students =  [("Alice", "Java"),
+   ("Bob", "Python"),
+   ("Charlie", "Java"),
+   ("David", "C++"),
+   ("Eve", "JavaScript")]
+Expected Output:
+Alice
+Charlie
+
+Test Case 2:
+Input:
+List<Student> students = [("Alice", "Python"),
+    ("Bob", "Python"),
+    ("Charlie", "Python"),
+    ("David", "C++"),
+   ("Eve", "JavaScript")]
+Expected Output:
+
+Test Case 3:
+Input:
+List<Student> students = [
+    ("Alice", "Java"),
+    ("Bob", "Java"),
+    ("Charlie", "Java"),
+    ("David", "Java"),
+    ("Eve", "Java")]
+Expected Output:
+Alice
+Bob
+Charlie
+David
+Eve
+
+Ques - 4
+------------
+Write a Java program that reads an array of integers, filters out the negative numbers, and then calculates the sum of the squares of the remaining positive numbers using streams and the reduce method.
+
+Input:
+Input array: [-3, 2, -5, 6, -1, 4]
+Output:
+Sum of squares of positive numbers: 52
+
+Ques - 5
+--------------
+Write a Java program that processes a list of names to filter, sort, and print names with a length of exactly 4 characters.
+Requirements:
+Use a list of strings containing names as input.
+Filter out names that are not exactly 4 characters long.
+Sort the filtered names in lexicographical order (alphabetical order).
+Limit the output to the first 2 names after sorting.
+Print each name on a new line.
+
+Input : 
+A List of strings: ["Toby", "Anna", "Leroy", "Alex"]
+Expected Output:
+Anna
+Alex
+
+Ques - 6
+---------------
+Create a record of Employee with attributes name:(String) and id:(String)
+Given a list of Employee objects with name and salary properties, write a program to filter the list of Employees by salary in who are having salary > 30000 and print the employee names.
+

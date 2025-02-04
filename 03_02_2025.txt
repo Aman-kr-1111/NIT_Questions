@@ -1,0 +1,423 @@
+1)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(12);
+		list.add(13);
+		list.add(12);
+		list.add(114);
+		List<Integer> list2 = list.stream().distinct().toList();
+		System.out.println(list2);
+	}
+}
+
+2)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(10);
+		list.add(13);
+		list.add(16);
+		list.add(18);
+		List<Integer> list2 = list.stream().filter(x->x%2!=0).collect(Collectors.toList());
+		System.out.println(list2);
+	}
+}
+
+
+3)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(12);
+		list.add(13);
+		list.add(16);
+		list.add(14);
+		Optional<Integer> max = list.stream().max((x, y) -> x.compareTo(y));
+		System.out.println(max);
+	}
+}
+
+
+4)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		ArrayList<Integer> arrayList = new ArrayList<Integer>();
+		arrayList.add(20);
+		arrayList.add(21);
+		arrayList.add(22);
+		arrayList.add(23);
+		List<Integer> collect = arrayList.stream().sorted((x, y) -> y.compareTo(x)).collect(Collectors.toList());
+		System.out.println(collect);
+	}
+}
+
+
+5)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		ArrayList<String> al = new ArrayList<String>();
+		al.add("A");
+		al.add("BC");
+		al.add("CDE");
+		al.add("DEFG");
+		List<String> list = al.stream().filter(x -> x.length() >= 2).peek(x -> {}).toList();
+		System.out.println(list);
+	}
+}
+
+
+6)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		ArrayList<Integer> al=new ArrayList<Integer>();
+		al.add(9);
+		al.add(10);
+		al.add(11);
+		al.add(12);
+		List<Integer> list = al.stream().dropWhile(x->x<=10).toList();
+		System.out.println(list);
+	}
+}
+
+
+7)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		ArrayList<Integer> al=new ArrayList<Integer>();
+		al.add(9);
+		al.add(10);
+		al.add(11);
+		al.add(12);
+		List<Integer> list = al.stream().takeWhile(x->x<=10).toList();
+		System.out.println(list);
+	}
+}
+
+
+8)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		ArrayList<Integer> al=new ArrayList<Integer>();
+		al.add(-1);
+		al.add(-2);
+		al.add(-5);
+		al.add(0);
+		al.add(1);
+		al.add(2);
+		List<Integer> list = al.stream().skip(1).filter(y->y<=0).peek(x->{}).toList();
+		System.out.println(list);
+	}
+}
+
+
+9)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		TreeSet<Integer> treeSet=new TreeSet<Integer>((x,y)->y.compareTo(x));
+		treeSet.add(10); 
+		treeSet.add(14);
+		treeSet.add(13);
+		System.out.println(treeSet);
+		treeSet.stream().sorted(new Comparator<Integer>() {
+			@Override
+			public int compare(Integer o1, Integer o2) {
+				return o1 + o2;
+			}
+		}).forEach(System.out::println);
+	}
+}
+
+
+10)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		al.add(1);
+		al.add(2);
+		al.add(3);
+		al.add(4);
+		al.add(5);
+		al.add(6);
+		List<Integer> list = al.stream().limit(4).toList();
+		System.out.println(list);
+	}
+}
+
+
+11)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		List<Integer> list = Arrays.asList(1,2,3,4,5);
+		list.stream().map(k -> k*2+3-k).forEach(k -> System.out.print(k +" "));
+	}
+}
+
+
+12)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		List<List<String>> list= Arrays.asList(Arrays.asList("1","2","3","4","5"));
+		list.stream().flatMap(x -> list.stream())
+		.forEach(System.out::print);
+	}
+}
+
+
+13)Choose the correct output for following code Snippet?
+
+public class Test {
+    public static void main(String[] args) {
+        List<String> words = Arrays.asList("apple", "banana", "cherry");
+        long count = words.stream()
+                          .map(String::toUpperCase)
+                          .filter(s -> s.startsWith("A"))
+                          .count();
+        System.out.println(count);
+    }
+}
+
+
+14)What is a Stream in the context of the Java 8 Stream API?
+
+A) A data structure for storing elements.
+B) A sequence of data elements that can be processed in parallel or sequentially.
+C) A container for holding collections.
+D) A type of exception thrown during runtime.
+
+Answer: B (A sequence of data elements that can be processed in parallel or sequentially.)
+
+15)Which method is used to create a Stream from a collection in Java 8?
+
+A) getStream()
+B) parallelStream()
+c) stream()
+D) createStream()
+
+Answer:C (stream())
+
+16)What is the purpose of the collect() method in the Stream API?
+
+A) To transform the elements of a Stream.
+B) To filter the elements in a Stream based on a predicate.
+C) To perform a reduction operation on the Stream elements.
+D) To accumulate the elements of a Stream into a collection or a summary result.
+
+Answer:D (To accumulate the elements of a Stream into a collection or a summary result.)
+
+17)What is the purpose of the Optional class in Java?
+
+A) To handle null values more gracefully
+B) To create immutable objects
+C) To manage thread synchronization
+D) To optimize memory usage
+
+Answer:A (To handle null values more gracefully)
+
+18)What is the purpose of the `peek` method in the Stream API?
+
+A) It is used to modify the elements of the stream
+B) It is used to perform an action without interfering with the elements
+C) It is used to skip elements in the stream
+D) It is used to concatenate streams
+
+Answer:B (It is used to perform an action without interfering with the elements)
+
+19)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		List<String> words = Arrays.asList();
+		String result = words.stream().map(String::toUpperCase).reduce((s1, s2) -> s1 + s2).orElse("NULL");
+		System.out.println(result);
+	}
+}
+
+A)No output
+B)NullPointer Exception
+C)NULL
+D)Compilation Error
+
+
+
+20)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		List<String> al = Arrays.asList("A", "B", "C", "D");
+		List<String> list = al.stream().skip(1).filter(x -> x.startsWith("B")).peek(x -> {}).toList();
+		System.out.println(list);
+
+	}
+}
+
+
+
+21)Choose the correct output for following code Snippet?
+
+public class Test {
+	public static void main(String[] args) {
+		List<Integer> list = List.of(2, 3, 4, 5, 6);
+		list.stream().takeWhile(x -> x >= 0).map(x -> x * 0 + 2 + 3).peek(System.out::print).toList();
+	}
+}
+
+
+
+22) import java.util.*;
+public class Test {
+	public static void main(String[] args) {
+		List<Integer> list = List.of(54,34,234,23,364,3);
+		list.stream().map(k -> k-k+2).filter(k -> k!=0).map(k -> 100)
+		.forEach(k -> System.out.print(k - 10 + " "));
+	}
+}
+
+23) What happens when you call get() on an empty Optional object?
+
+a) Returns null
+b) Returns a default value
+c) An NoSuchElementException is thrown
+d) An OptionalException is thrown
+
+Answer : C) An NoSuchElementException is thrown
+
+
+24) What is the difference between the map() and flatMap() methods in Optional?
+
+a) map() can return null, flatMap() cannot
+b) map() returns an Optional, flatMap() returns the value directly
+c) flatMap() flattens nested Optionals, map() does not
+d) There is no difference
+
+Answer : c) flatMap() flattens nested Optionals, map() does not
+
+
+25)  Which is the new method introduced in java 8 to iterate over a collection?
+a) for (String i : StringList)
+b) foreach (String i : StringList)
+c) stringList.forEach()
+d) List.for()
+
+Answer : c  (stringList.forEach())
+
+26) public class Test {
+	public static void main(String[] args) {
+		Comparator<Integer> comparator = new Comparator<Integer>() {
+			public int compare(Integer o1, Integer o2) {
+				return o2.compareTo(o1);
+			}
+		};
+		List<Integer> list = List.of(54,34,234,23,364,3);
+		list.stream().sorted(comparator).filter(k -> k%2 == 1).forEach(k -> System.out.print(k + " "));
+	}
+}
+
+
+27) import java.util.*;
+public class Test {
+	static class Employee
+	{
+		private Integer id;
+		private String name;
+		public Integer getId() {
+			return id;
+		}
+		public String getName() {
+			return name;
+		}
+		public Employee(Integer id, String name) {
+			super();
+			this.id = id;
+			this.name = name;
+		}
+		@Override
+		public String toString() {
+			return "Employee [id=" + id + ", name=" + name + "]";
+		}
+	}
+	public static void main(String[] args) {
+		List<Employee> list = List.of(new Employee(1, "John") , 
+									new Employee(5, "Ram") ,
+									new Employee(7, "Tear") ,
+									new Employee(4, "Jerry") ,
+									new Employee(22, "You"));
+		list.stream().limit(3).sorted((o1,o2)->o1.getId() - o2.getId()).forEach(System.out::println);
+	}
+}
+
+28)public class Test {
+	public static void main(String[] args) {
+		ArrayDeque<String> de = new ArrayDeque<String>();
+		de.push("well !!");
+		de.push("prepare");
+		System.out.println("Hi Everyone All The Best!!!");
+		for (Object element : de) {
+			System.out.println(element);
+		}
+	}
+}
+
+
+29) public class Capital {
+    public static void main(String args[]) {
+        List mylist = new ArrayList();
+        int[] val = {15, 5565, 646, 233, 100};
+        for (int element : val)
+            mylist.add(new Integer(element));
+        System.out.println(mylist);
+        Iterator iterator = mylist.iterator();
+        int i = mylist.size();  //i = 
+        while (iterator.hasNext()) {
+            Integer element = (Integer) iterator.next();
+            int value = element.intValue();
+            i--;
+            if ((value < 100) || mylist.get(i).equals(100))
+                iterator.remove();
+        }
+        System.out.println(mylist);
+    }
+}
+
+
+30) public class Testing 
+{	public static void main(String[] args) 
+	{		
+		class demo
+		{  String name;Integer id;
+			public demo(String name, Integer id) 
+			{	this.name = name;this.id = id;
+			}
+			public String getName() {return name;}
+			public Integer getId() {return id;}
+			static void meth()
+			{
+				TreeMap<demo, Integer> tm 
+                                = new TreeMap<>((a,b)->a.getName().compareTo(b.getName()));
+				tm.put(new demo("Hello", 01), 1);
+				tm.put(new demo("zello", 05), 2);
+				tm.put(new demo("Bello", 011), 3);
+				tm.put(new demo("Oello", 010), 4);
+				WeakHashMap<demo, Integer> wm = new WeakHashMap<>(tm);
+				wm.forEach(new BiConsumer<demo, Integer>()
+				{
+					public void accept(demo t, Integer u) 
+					{
+						System.out.println(t.getName()+ " " + t.getId() + " " + u);
+					}
+				});}}
+		demo.meth();
+	}
+}

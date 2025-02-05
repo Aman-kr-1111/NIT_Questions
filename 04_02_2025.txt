@@ -1,0 +1,108 @@
+Ques - 1
+-----------------------
+Filtering and Mapping:
+Write a Java 8 stream pipeline that takes a list of integers and filters out the even numbers, then squares each remaining number, and finally prints the result.
+
+Input:
+List<Integer> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+Output:
+1
+9
+25
+49
+81
+-------------------------------------------------------------------------
+Ques - 2
+-------------------
+Sorting:
+Write a program to sort a list of strings in descending order using Java 8 streams.
+Input:
+List<String> strings = ["apple", "banana", "orange", "grape", "pear"];
+Expected Output:
+Sorted Strings in Descending Order:
+pear
+orange
+grape
+banana
+apple
+-------------------------------------------------------------------------
+
+Ques - 3
+---------------
+Flattening Lists:
+Given a list of lists of integers, flatten it into a single list and then remove duplicates using Java 8 streams.
+
+Input:
+List<List<Integer>> = [[1,2,3],[2,3,4,5],[4,5,6]]
+Expected Output:
+Flattened List without Duplicates:
+1
+2
+3
+4
+5
+6
+
+Ques - 4
+---------------
+Given a list of Employee objects, where each employee has a name, salary, and years of experience, write a Java program to increase the salary of employees with more than 5 years of experience by 10%. Use the Stream API to perform this operation and then print all the employees.
+
+Test Input:
+Employee("John", 50000, 6));
+Employee("Jane", 45000, 4));
+Employee("Tom", 60000, 7));
+Employee("Lucy", 52000, 5));
+Employee("Anna", 48000, 8));
+
+Expected Output:
+Employee{name='John', salary=55000.0, yearsOfExperience=6}
+Employee{name='Jane', salary=45000.0, yearsOfExperience=4}
+Employee{name='Tom', salary=66000.0, yearsOfExperience=7}
+Employee{name='Lucy', salary=52000.0, yearsOfExperience=5}
+Employee{name='Anna', salary=52800.0, yearsOfExperience=8}
+
+Ques - 5
+---------------
+You are given a list of strings. Write a Java program to count the number of vowels in each string and store the results in a Map where the key is the string and the value is the count of vowels. Use the Stream API to perform this operation.
+
+Test Input:
+List<String> strings = ["hello", "world", "java", "stream", "api"]
+
+Expected Output:
+hello -> 2
+world -> 1
+java -> 2
+stream -> 2
+api -> 2
+
+Ques - 6
+---------------
+Sorting Map:
+You are given a HashMap where the keys are strings and the values are integers. Write a Java program to sort this HashMap based on its values using the Stream API. The sorted result should be stored in a LinkedHashMap to maintain the order of sorting. Finally, print the sorted HashMap.
+
+Test Case 1:
+Map<String, Integer> map = [("A", 10), ("B", 5), ("C", 20), ("D", 15)]
+Expected Output:
+B -> 5
+A -> 10
+D -> 15
+C -> 20
+
+Test Case 2:
+Map<String, Integer> map = [("X", 3), ("Y", 1), ("Z", 2)]
+Expected Output:
+Y -> 1
+Z -> 2
+X -> 3
+
+Test Case 3:
+Map<String, Integer> map = [("Apple", 50), ("Banana", 30), ("Cherry", 40), ("Date", 10), ("Elderberry", 20)]
+
+Expected Output:
+Date -> 10
+Elderberry -> 20
+Banana -> 30
+Cherry -> 40
+Apple -> 50
+
+

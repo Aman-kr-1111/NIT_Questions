@@ -1,0 +1,14 @@
+Q1) 
+Write a program to process a list of strings. Use a custom predicate to filter strings that start with a vowel and have a length greater than 5.
+
+Q2)
+Use Stream.iterate or Stream.generate to create an infinite stream. Then filter and map the data to produce the first 10 odd squares.
+
+Q3)
+Given a list of strings, sort them by length first and lexicographically second. Implement this using sorted.
+
+Q4)
+Given a list of sentences (Strings), use flatMap to create a list of all unique words in lowercase.
+
+Q5)
+Implement a method using streams to convert a list of objects (e.g., Employee) into another list containing only one property of the object (e.g., Employee.name).
